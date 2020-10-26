@@ -5,7 +5,7 @@ use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
 entity ULA is
     generic
     (
-        larguraDados : natural := 8
+        larguraDados : natural := 32
     );
     port
     (

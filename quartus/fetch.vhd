@@ -10,7 +10,7 @@ entity fetch is
 	);
 	port(
 		clk, rst : in std_logic;
-		instrucao : out std_logic_vector((dataWidth - 1) doownto 0);
+		instrucao : out std_logic_vector((dataWidth - 1) doownto 0)
 	);
 end entity;
 
@@ -35,5 +35,5 @@ architecture of fetch is
 											port map (entradaA => constanteSoma,
 													  entradaB => pcOut,
 												      saida => proxInst);
-	
+		
 end architecture;

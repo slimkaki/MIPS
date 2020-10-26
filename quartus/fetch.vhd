@@ -10,18 +10,19 @@ entity fetch is
 	);
 	port(
 		clk, rst : in std_logic;
-		instrucao : out std_logic_vector((dataWidth - 1) doownto 0)
+		instrucao : out std_logic_vector((dataWidth - 1) downto 0)
 	);
 end entity;
 
-architecture of fetch is
-
-	signal pcOut, proxInst : std_logic_vector((romAddrWidth - 1) downto 0);
-	signal constanteSoma : std_logic_vector((romAddrWidth - 1) downto 0) := "000100";
+architecture comportamento of fetch is
+	signal pcOut, proxInst : std_logic_vector((dataWidth - 1) downto 0);
+--	signal  : std_logic_vector((romAddrWidth - 1) downto 0);
+	signal constanteSoma : std_logic_vector((dataWidth - 1) downto 0) := "00000000000000000000000000000100";
 
 	begin
-		PC   : entity work.registradorGenerico generic map (larguraDados => romAddrWidth)
-									   		   port map(DIN => proxInst,
+	
+		PC   : entity work.registradorGenerico generic map (larguraDados => dataWidth)
+									   		  port map(DIN => proxInst,
 												  DOUT => pcOut,
 												  ENABLE => '1',
 												  CLK => clk,
@@ -31,9 +32,9 @@ architecture of fetch is
 											 Endereco => pcOut,
 											 Dado => instrucao); 
 	
-		SOMA : entity work.somador generic map (larguraDados => romAddrWidth)
+		SOMA : entity work.somador generic map (larguraDados => dataWidth)
 											port map (entradaA => constanteSoma,
-													  entradaB => pcOut,
+													   entradaB => pcOut,
 												      saida => proxInst);
 		
 end architecture;

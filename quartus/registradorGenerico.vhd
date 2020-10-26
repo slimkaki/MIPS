@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity registradorGenerico is
     generic (
-        larguraDados : natural := 8
+        larguraDados : natural := 6
     );
     port (
        DIN : in std_logic_vector(larguraDados-1 downto 0);

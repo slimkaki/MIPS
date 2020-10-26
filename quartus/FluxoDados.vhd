@@ -15,14 +15,14 @@ entity FluxoDados is
     );
 end entity;
 
-architecture of FluxoDados is
+architecture comportamento of FluxoDados is
     signal endA, endB, endC : std_logic_vector(4 downto 0);
     signal outA, outB : std_logic_vector((instructWidth - 1) downto 0);
     signal flagZ : std_logic;
     signal saidaULA : std_logic_vector((instructWidth - 1) downto 0);
 
     begin
-        FETCH : entity work.fetch generic map (dataWidth => instructWidth)
+        fetchInstruction : entity work.fetch generic map (dataWidth => instructWidth)
                                   port map(clk => clk,
                                            rst => rst,
                                            instrucao => instrucao);
@@ -39,12 +39,12 @@ architecture of FluxoDados is
                                                             dadoEscritaC => saidaULA,
                                                             escreveC => escritaC,
                                                             saidaA => outA,
-                                                            saidaB => outB)
+                                                            saidaB => outB);
 
         ULAmips : entity work.ULA port map (entradaA => outA,
                                             entradaB => outB,
                                             seletor => operacaoULA,
                                             saida => saidaULA,
-                                            flagZero => flagZ)
+                                            flagZero => flagZ);
                                             
 end architecture;

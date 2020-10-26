@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "instrucao[0]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instrucao[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

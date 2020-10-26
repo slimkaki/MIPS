@@ -1,0 +1,21 @@
+Quartus Prime Archive log --	/home/rafaelalmada/Documents/MIPS/quartus/entrega1_mips.qarlog
+
+Archive:	/home/rafaelalmada/Documents/MIPS/quartus/entrega1_mips.qar
+Date:		Mon Oct 26 20:14:16 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/mips.qpf
+/home/rafaelalmada/Documents/MIPS/quartus/mips.qsf
+/home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/somador.vhd
+/home/rafaelalmada/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 10 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

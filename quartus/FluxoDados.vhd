@@ -20,14 +20,14 @@ architecture comportamento of FluxoDados is
     signal outA, outB : std_logic_vector((instructWidth - 1) downto 0);
     signal flagZ : std_logic;
     signal saidaULA : std_logic_vector((instructWidth - 1) downto 0);
-    signal extendInstruc : std_logic(15 downto 0);
+    signal extendInstruc : std_logic_vector(15 downto 0);
     signal saidaSigExt : std_logic_vector((instructWidth - 1) downto 0);
     signal andBEQZero : std_logic;
     signal saida_MUXimed : std_logic_vector((instructWidth-1) downto 0);
     signal saidaRAM : std_logic_vector((instructWidth-1) downto 0);
-    signal saida_MUXimed : std_logic_vector((instructWidth-1) downto 0);
+    --signal saida_MUXimed : std_logic_vector((instructWidth-1) downto 0);
     signal saida_MUXulaRAM : std_logic_vector((instructWidth-1) downto 0);
-    signal saida_MUXRd : std_logic_vector((instructWidth-1) downto 0);
+    signal saida_MUXRd : std_logic_vector(4 downto 0);
 
     alias muxRtRd        :  std_logic is palavraControle(10);  
     alias habEscritaReg  :  std_logic is palavraControle(9);  
@@ -75,12 +75,14 @@ architecture comportamento of FluxoDados is
                                            port map (estendeSinal_IN  => extendInstruc,
                                                      estendeSinal_OUT => saidaSigExt);
 
-        muxRtRd  : entity work.muxGenerico2x1 port map (entradaA_MUX  => endB,
+		   mux_RTRD  : entity work.muxGenerico2x1 generic map (larguraDados => 5)
+															 port map (entradaA_MUX  => endB,
                                                         entradaB_MUX  => endC,
                                                         seletor_MUX   => muxRtRd,
                                                         saida_MUX     => saida_MUXRd);
 
-        muxRTimed  : entity work.muxGenerico2x1 port map (entradaA_MUX  => outB,
+        mux_RTimed  : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+																port map (entradaA_MUX  => outB,
                                                           entradaB_MUX  => saidaSigExt,
                                                           seletor_MUX   => muxRtImed,
                                                           saida_MUX     => saida_MUXimed);
@@ -97,7 +99,8 @@ architecture comportamento of FluxoDados is
                                             dado_in  => outB,
                                             dado_out => saidaRAM);
         
-        muxULAram  : entity work.muxGenerico2x1 port map (entradaA_MUX  => saidaULA,
+        muxULAram  : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+																port map (entradaA_MUX  => saidaULA,
                                                           entradaB_MUX  => saidaRAM,
                                                           seletor_MUX   => muxULAmem,
                                                           saida_MUX     => saida_MUXulaRAM);

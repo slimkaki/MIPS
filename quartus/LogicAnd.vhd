@@ -13,6 +13,6 @@ end LogicAnd ;
 architecture arch of LogicAnd is
 
 begin
-    andOUT <= flgZ and BEQ;
+    andOUT <= flagZ and BEQ;
 
 end architecture ;

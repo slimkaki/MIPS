@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity fetch is
 	
 	generic(
-		dataWidth : natural := 32;   -- cada instrucao possui 32 bits, ou, 4 bytes
+		dataWidth : natural := 32   -- cada instrucao possui 32 bits, ou, 4 bytes
 	);
 	port(
 		clk, rst : in std_logic;
@@ -43,7 +43,10 @@ architecture comportamento of fetch is
 									  			entradaB => extendedInst,
 									  			saida => saidaSoma2);
 		
-		bitShiftInst <= shift_right(unsigned(saidaSoma2), 2);
+		shiftRight : entity work.bitShift generic map (dataWidth => dataWidth)
+										  port map(clock => clk,
+													 entrada => saidaSoma2,
+													 saida => bitShiftInst);
 													  
 		MUX  : entity work.muxGenerico2x1 generic map (larguraDados => dataWidth)
 										  port map (entradaA_MUX => proxInst,

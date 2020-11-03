@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Mon Oct 26 20:13:41 2020
+Analysis & Synthesis Status : Successful - Tue Nov  3 15:47:19 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : mips
 Top-level Entity Name : FluxoDados
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 6
-Total pins : 44
+Total registers : 32
+Total pins : 58
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

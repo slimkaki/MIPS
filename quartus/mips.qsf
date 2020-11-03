@@ -124,13 +124,6 @@ set_location_assignment PIN_AA14 -to SW[6]
 set_location_assignment PIN_AA13 -to SW[7]
 set_location_assignment PIN_AB13 -to SW[8]
 set_location_assignment PIN_AB12 -to SW[9]
-set_global_assignment -name VHDL_FILE bancoRegistradores.vhd
-set_global_assignment -name VHDL_FILE FluxoDados.vhd
-set_global_assignment -name VHDL_FILE ULA.vhd
-set_global_assignment -name VHDL_FILE ROMMIPS.vhd
-set_global_assignment -name VHDL_FILE registradorGenerico.vhd
-set_global_assignment -name VHDL_FILE fetch.vhd
-set_global_assignment -name VHDL_FILE somador.vhd
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1]
@@ -206,4 +199,16 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
 set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name VHDL_FILE bitShift.vhd
+set_global_assignment -name VHDL_FILE LogicAnd.vhd
+set_global_assignment -name VHDL_FILE extensorSinal.vhd
+set_global_assignment -name VHDL_FILE RAM.vhd
+set_global_assignment -name VHDL_FILE muxGenerico2x1.vhd
+set_global_assignment -name VHDL_FILE bancoRegistradores.vhd
+set_global_assignment -name VHDL_FILE FluxoDados.vhd
+set_global_assignment -name VHDL_FILE ULA.vhd
+set_global_assignment -name VHDL_FILE ROMMIPS.vhd
+set_global_assignment -name VHDL_FILE registradorGenerico.vhd
+set_global_assignment -name VHDL_FILE fetch.vhd
+set_global_assignment -name VHDL_FILE somador.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

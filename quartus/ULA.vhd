@@ -9,10 +9,11 @@ entity ULA is
     );
     port
     (
-      entradaA, entradaB:  in STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-      seletor:  in STD_LOGIC_VECTOR(2 downto 0);
-      saida:    out STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-      flagZero: out std_logic
+      entradaA, entradaB  :  in STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+
+      seletor    :  in STD_LOGIC_VECTOR(3 downto 0);
+      saida      :  out STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+      flagZero   :  out std_logic
     );
 end entity;
 

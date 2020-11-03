@@ -36,11 +36,39 @@
 					"strict" : false
 				},
 				{
+					"name" : "opCodeFunct[0]",
+					"strict" : false
+				},
+				{
+					"name" : "opCodeFunct[1]",
+					"strict" : false
+				},
+				{
+					"name" : "opCodeFunct[2]",
+					"strict" : false
+				},
+				{
+					"name" : "opCodeFunct[3]",
+					"strict" : false
+				},
+				{
+					"name" : "opCodeFunct[4]",
+					"strict" : false
+				},
+				{
+					"name" : "opCodeFunct[5]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
 					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "palavraControle[2]",
 					"strict" : false
 				}
 			]

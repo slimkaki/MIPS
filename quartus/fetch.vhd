@@ -10,7 +10,7 @@ entity fetch is
 	port(
 		clk, rst : in std_logic;
 		extendedInst : in std_logic_vector((dataWidth - 1) downto 0);
-		andBEQZero : in std_logic;
+		andBEQZero, muxJUMP : in std_logic;
 		instrucao : out std_logic_vector((dataWidth - 1) downto 0)
 	);
 end entity;
@@ -18,7 +18,9 @@ end entity;
 architecture comportamento of fetch is
 	signal pcOut, proxInst : std_logic_vector((dataWidth - 1) downto 0);
 	signal constanteSoma : std_logic_vector((dataWidth - 1) downto 0) := "00000000000000000000000000000100";
-	signal saidaSoma2, bitShiftInst, instrucFinal : std_logic_vector((dataWidth - 1) downto 0);
+	signal saidaSoma2, bitShiftInst2, instrucMux1, instrucFinal : std_logic_vector((dataWidth - 1) downto 0);
+	signal bitShiftInst1 : std_logic_vector(25 downto 0);
+	signal jumpCaseInstruct : std_logic_vector((dataWidth-1) downto 0);
 
 	begin
 	
@@ -28,10 +30,16 @@ architecture comportamento of fetch is
 												  ENABLE => '1',
 												  CLK => clk,
 												  RST => rst);
-
+		
+		-- colocar a ROM no fluxo de dados para poder se comunicar com o shiftRight1
 		ROM  : entity work.ROMMIPS port map (clk => clk,
 											 Endereco => pcOut,
-											 Dado => instrucao); 
+											 Dado => instrucao);
+		
+		shiftRight1 : entity work.bitShift generic map (dataWidth => 26)
+														port map (clock => clk,
+													 entrada => instrucao(25 downto 0),
+													 saida => bitShiftInst1);
 	
 		SOMA : entity work.somador generic map (larguraDados => dataWidth)
 								   port map (entradaA => constanteSoma,
@@ -43,15 +51,25 @@ architecture comportamento of fetch is
 									  			entradaB => extendedInst,
 									  			saida => saidaSoma2);
 		
-		shiftRight : entity work.bitShift generic map (dataWidth => dataWidth)
+		shiftRight2 : entity work.bitShift generic map (dataWidth => dataWidth)
 										  port map(clock => clk,
 													 entrada => saidaSoma2,
-													 saida => bitShiftInst);
+													 saida => bitShiftInst2);
 													  
-		MUX  : entity work.muxGenerico2x1 generic map (larguraDados => dataWidth)
+		MUX1  : entity work.muxGenerico2x1 generic map (larguraDados => dataWidth)
 										  port map (entradaA_MUX => proxInst,
-										  entradaB_MUX =>  bitShiftInst,
+										  entradaB_MUX =>  bitShiftInst2,
 										  seletor_MUX => andBEQZero,
-										  saida_MUX => instrucFinal);
+										  saida_MUX => instrucMux1);
+
+		jumpCaseInstruct(31 downto 28) <= proxInst(31 downto 28);
+		jumpCaseInstruct(25 downto 0) <= bitShiftInst2;
+		jumpCaseInstruct(27 downto 26) <= "00";
+
+		PROX_PC : entity work.muxGenerico2x1 generic map (larguraDados => dataWidth)
+											 port map (entradaA_MUX => instrucMux1,
+											 		   entradaB_MUX => jumpCaseInstruct,
+											 		   seletor_MUX => muxJUMP,
+											 		   saida_MUX => instrucFinal);
 		
 end architecture;

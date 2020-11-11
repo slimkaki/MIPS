@@ -1,5 +1,5 @@
 Archive Project report for mips
-Tue Nov  3 15:46:29 2020
+Wed Nov 11 15:07:56 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,9 +36,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Tue Nov  3 15:46:29 2020 ;
+; Archive Project Status ; Successful - Wed Nov 11 15:07:56 2020 ;
 ; Revision Name          ; mips                                  ;
-; Top-level Entity Name  ; FluxoDados                            ;
+; Top-level Entity Name  ; CPU                                   ;
 ; Family                 ; Cyclone V                             ;
 +------------------------+---------------------------------------+
 
@@ -54,15 +54,15 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory /home/rafaelalmada/Documents/MIPS/quartus/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive '/home/rafaelalmada/Documents/MIPS/quartus/entrega2.qar'
+Info: Generated archive '/home/rafaelalmada/Documents/MIPS/quartus/entrega3_ULA_UCULA.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'mips.archive.rpt'
 Info (23030): Evaluation of Tcl script /home/rafaelalmada/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 609 megabytes
-    Info: Processing ended: Tue Nov  3 15:46:29 2020
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 613 megabytes
+    Info: Processing ended: Wed Nov 11 15:07:56 2020
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 
@@ -74,18 +74,25 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; /home/rafaelalmada/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf ;
 ; bancoRegistradores.vhd                                                         ;
 ; bitShift.vhd                                                                   ;
+; constants.vhd                                                                  ;
+; CPU.vhd                                                                        ;
 ; extensorSinal.vhd                                                              ;
 ; fetch.vhd                                                                      ;
 ; FluxoDados.vhd                                                                 ;
 ; LogicAnd.vhd                                                                   ;
 ; mips.qpf                                                                       ;
 ; mips.qsf                                                                       ;
+; muxAllLogic2x1.vhd                                                             ;
 ; muxGenerico2x1.vhd                                                             ;
+; muxGenerico4x2.vhd                                                             ;
 ; RAM.vhd                                                                        ;
 ; registradorGenerico.vhd                                                        ;
 ; ROMMIPS.vhd                                                                    ;
 ; somador.vhd                                                                    ;
+; somadorULA.vhd                                                                 ;
 ; ULA.vhd                                                                        ;
+; UnidadeControle.vhd                                                            ;
+; UnidadeControleULA.vhd                                                         ;
 +--------------------------------------------------------------------------------+
 
 

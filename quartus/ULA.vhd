@@ -9,42 +9,55 @@ entity ULA is
     );
     port
     (
-      entradaA, entradaB  :  in STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+      entradaA, entradaB, vem_1  :  in STD_LOGIC;--_VECTOR((larguraDados-1) downto 0);
 
-      seletor    :  in STD_LOGIC_VECTOR(3 downto 0);
-      saida      :  out STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-      flagZero   :  out std_logic
+      seletor    :  in STD_LOGIC_VECTOR(2 downto 0);
+      saida, flagZero, vai_1      :  out STD_LOGIC--_VECTOR((larguraDados-1) downto 0);
     );
 end entity;
 
 architecture comportamento of ULA is
-  constant zero : std_logic_vector(larguraDados-1 downto 0) := (others => '0');
 
-   signal soma :      STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-   signal subtracao : STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-   signal op_and :    STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-   signal op_or :     STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-   signal op_xor :    STD_LOGIC_VECTOR((larguraDados-1) downto 0);
-   signal op_not :    STD_LOGIC_VECTOR((larguraDados-1) downto 0);
+    -- alias inverteA   :  std_logic is seletor(3);  
+    alias inverteB   :  std_logic is seletor(2);  
+    alias selMuxzao  :  std_logic_vector is seletor(1 downto 0);
+    
+    signal outputMuxzao : std_logic;--_vector((larguraDados-1) downto 0);
+    signal saidaA : std_logic;--_vector((larguraDados-1) downto 0);
+    signal saidaB : std_logic;--_vector((larguraDados-1) downto 0);
+
+    signal overflow, saidaSomador : std_logic;
 
     begin
-      soma      <= STD_LOGIC_VECTOR(unsigned(entradaA) + unsigned(entradaB));
-      subtracao <= STD_LOGIC_VECTOR(unsigned(entradaA) - unsigned(entradaB));
-      op_and    <= entradaA and entradaB;
-      op_or     <= entradaA or entradaB;
-      op_xor    <= entradaA xor entradaB;
-      op_not    <= not entradaA;
 
-      saida <= soma when (seletor = "000") else
-          subtracao when (seletor = "001") else
-          entradaA when  (seletor = "010") else
-          entradaB when  (seletor = "011") else
-          op_xor when    (seletor = "100") else
-          op_not when    (seletor = "101") else
-          op_and when    (seletor = "110") else
-          op_or when     (seletor = "111") else
-          entradaA;      -- outra opcao: saida = entradaA
+      muxInva : entity work.muxAllLogic2x1 port map (entradaA_MUX => entradaA,
+                                                     entradaB_MUX => (not entradaA),
+                                                     seletor_MUX => '0',
+                                                     saida_MUX => saidaA);
 
-      flagZero <= '1' when unsigned(saida) = unsigned(zero) else '0';
+      muxInvb : entity work.muxAllLogic2x1 port map (entradaA_MUX => entradaB,
+                                                     entradaB_MUX => (not entradaB),
+                                                     seletor_MUX => inverteB,
+                                                     saida_MUX => saidaB);
+
+      soma  : entity work.somadorULA port map(entradaA => saidaA,
+                                              entradaB => saidaB,
+                                              vem_1 => vem_1,
+                                              vai_1 => vai_1,
+                                              saida => saidaSomador);
+      
+                                              -- vem 1 = inverteB
+                                              -- vai 1 = ultimo bit 1 e 1 sobra 1
+      overflow <= (vai_1 xor vem_1);
+
+      Muxao : entity work.muxGenerico4x2 port map(entrada0 => (saidaA and saidaB),
+                                                  entrada1 => (saidaA or  saidaB),
+                                                  entrada2 => saidaSomador,
+                                                  entrada3 => overflow,
+                                                  seletor_MUX => selMuxzao,
+                                                  saida_MUX => outputMuxzao);
+
+      flagZero <= outputMuxzao nor outputMuxzao;
+      saida <= outputMuxzao;
 
 end architecture;

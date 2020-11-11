@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CEBA4F23C7
-set_global_assignment -name TOP_LEVEL_ENTITY FluxoDados
+set_global_assignment -name TOP_LEVEL_ENTITY CPU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:00:18  OCTOBER 23, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -124,6 +124,11 @@ set_location_assignment PIN_AA14 -to SW[6]
 set_location_assignment PIN_AA13 -to SW[7]
 set_location_assignment PIN_AB13 -to SW[8]
 set_location_assignment PIN_AB12 -to SW[9]
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK_50
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to HEX0[1]
@@ -194,11 +199,13 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[8]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SW[9]
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
-set_global_assignment -name VHDL_SHOW_LMF_MAPPING_MESSAGES OFF
+set_global_assignment -name VHDL_FILE UnidadeControleULA.vhd
+set_global_assignment -name VHDL_FILE somadorULA.vhd
+set_global_assignment -name VHDL_FILE muxGenerico4x2.vhd
+set_global_assignment -name VHDL_FILE muxAllLogic2x1.vhd
+set_global_assignment -name VHDL_FILE CPU.vhd
+set_global_assignment -name VHDL_FILE UnidadeControle.vhd
+set_global_assignment -name VHDL_FILE constants.vhd
 set_global_assignment -name VHDL_FILE bitShift.vhd
 set_global_assignment -name VHDL_FILE LogicAnd.vhd
 set_global_assignment -name VHDL_FILE extensorSinal.vhd

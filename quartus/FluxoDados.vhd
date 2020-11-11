@@ -9,7 +9,7 @@ entity FluxoDados is
     port(
         clk, rst        :  in std_logic;
         escritaC        :  in std_logic;
-        palavraControle :  in std_logic_vector(10 downto 0);
+        palavraControle :  in std_logic_vector(11 downto 0);
         instrucao       :  out std_logic_vector((instructWidth - 1) downto 0);
         opCodeFunct     :  out std_logic_vector(11 downto 0)
     );

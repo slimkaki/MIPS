@@ -14,7 +14,7 @@ entity CPU is
 end CPU; 
 
 architecture arch of CPU is
-    signal palavraControle : std_logic_vector(10 downto 0);
+    signal palavraControle : std_logic_vector(11 downto 0);
     signal instrucao       : std_logic_vector((instructWidth-1) downto 0);
     signal opCodeFunct     : std_logic_vector(11 downto 0);
 

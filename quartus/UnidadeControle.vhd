@@ -10,7 +10,7 @@ entity UnidadeControle is
   port (
     clk, rst          : in std_logic;
     opCodeFunct       : in std_logic_vector (11 downto 0);
-    palavraControle   : out std_logic_vector((controlWidth-1) downto 0)
+    palavraControle   : out std_logic_vector(11 downto 0)
   );
 end UnidadeControle; 
 

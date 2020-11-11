@@ -11,14 +11,14 @@ entity ULA is
     (
       entradaA, entradaB, vem_1  :  in STD_LOGIC;--_VECTOR((larguraDados-1) downto 0);
 
-      seletor    :  in STD_LOGIC_VECTOR(3 downto 0);
+      seletor    :  in STD_LOGIC_VECTOR(2 downto 0);
       saida, flagZero, vai_1      :  out STD_LOGIC--_VECTOR((larguraDados-1) downto 0);
     );
 end entity;
 
 architecture comportamento of ULA is
 
-    alias inverteA   :  std_logic is seletor(3);  
+    -- alias inverteA   :  std_logic is seletor(3);  
     alias inverteB   :  std_logic is seletor(2);  
     alias selMuxzao  :  std_logic_vector is seletor(1 downto 0);
     
@@ -32,7 +32,7 @@ architecture comportamento of ULA is
 
       muxInva : entity work.muxAllLogic2x1 port map (entradaA_MUX => entradaA,
                                                      entradaB_MUX => (not entradaA),
-                                                     seletor_MUX => inverteA,
+                                                     seletor_MUX => '0',
                                                      saida_MUX => saidaA);
 
       muxInvb : entity work.muxAllLogic2x1 port map (entradaA_MUX => entradaB,

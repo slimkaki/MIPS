@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips
-Tue Nov 10 19:54:00 2020
+Wed Nov 11 15:04:54 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,7 +10,133 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |CPU
+ 10. Parameter Settings for User Entity Instance: FluxoDados:FD
+ 11. Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction
+ 12. Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC
+ 13. Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|ROMMIPS:ROM
+ 14. Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|bitShift:shiftRightImedJump
+ 15. Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|somador:SOMA
+ 16. Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|bitShift:shiftRightImedExt
+ 17. Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|somador:SOMASIGEXT
+ 18. Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:MUX1
+ 19. Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:PROX_PC
+ 20. Parameter Settings for User Entity Instance: FluxoDados:FD|bancoRegistradores:BancoReg
+ 21. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit0
+ 22. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit0|somadorULA:soma
+ 23. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit1
+ 24. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit1|somadorULA:soma
+ 25. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit2
+ 26. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit2|somadorULA:soma
+ 27. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit3
+ 28. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit3|somadorULA:soma
+ 29. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit4
+ 30. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit4|somadorULA:soma
+ 31. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit5
+ 32. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit5|somadorULA:soma
+ 33. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit6
+ 34. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit6|somadorULA:soma
+ 35. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit7
+ 36. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit7|somadorULA:soma
+ 37. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit8
+ 38. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit8|somadorULA:soma
+ 39. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit9
+ 40. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit9|somadorULA:soma
+ 41. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit10
+ 42. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit10|somadorULA:soma
+ 43. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit11
+ 44. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit11|somadorULA:soma
+ 45. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit12
+ 46. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit12|somadorULA:soma
+ 47. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit13
+ 48. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit13|somadorULA:soma
+ 49. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit14
+ 50. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit14|somadorULA:soma
+ 51. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit15
+ 52. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit15|somadorULA:soma
+ 53. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit16
+ 54. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit16|somadorULA:soma
+ 55. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit17
+ 56. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit17|somadorULA:soma
+ 57. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit18
+ 58. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit18|somadorULA:soma
+ 59. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit19
+ 60. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit19|somadorULA:soma
+ 61. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit20
+ 62. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit20|somadorULA:soma
+ 63. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit21
+ 64. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit21|somadorULA:soma
+ 65. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit22
+ 66. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit22|somadorULA:soma
+ 67. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit23
+ 68. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit23|somadorULA:soma
+ 69. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit24
+ 70. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit24|somadorULA:soma
+ 71. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit25
+ 72. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit25|somadorULA:soma
+ 73. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit26
+ 74. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit26|somadorULA:soma
+ 75. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit27
+ 76. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit27|somadorULA:soma
+ 77. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit28
+ 78. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit28|somadorULA:soma
+ 79. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit29
+ 80. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit29|somadorULA:soma
+ 81. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit30
+ 82. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit30|somadorULA:soma
+ 83. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit31
+ 84. Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit31|somadorULA:soma
+ 85. Parameter Settings for User Entity Instance: FluxoDados:FD|extensorSinal:sigExt
+ 86. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:mux_RTRD
+ 87. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:mux_RTimed
+ 88. Parameter Settings for User Entity Instance: FluxoDados:FD|RAM:memRAM
+ 89. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:muxULAram
+ 90. Parameter Settings for User Entity Instance: UnidadeControle:UC
+ 91. Port Connectivity Checks: "FluxoDados:FD|muxGenerico2x1:mux_RTRD"
+ 92. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit31"
+ 93. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit30"
+ 94. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit29"
+ 95. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit28"
+ 96. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit27"
+ 97. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit26"
+ 98. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit25"
+ 99. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit24"
+100. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit23"
+101. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit22"
+102. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit21"
+103. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit20"
+104. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit19"
+105. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit18"
+106. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit17"
+107. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit16"
+108. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit15"
+109. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit14"
+110. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit13"
+111. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit12"
+112. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit11"
+113. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit10"
+114. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit9"
+115. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit8"
+116. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit7"
+117. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit6"
+118. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit5"
+119. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit4"
+120. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit3"
+121. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit2"
+122. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit1"
+123. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit0|muxAllLogic2x1:muxInva"
+124. Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit0"
+125. Port Connectivity Checks: "FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:PROX_PC"
+126. Port Connectivity Checks: "FluxoDados:FD|fetch:fetchInstruction|somador:SOMA"
+127. Port Connectivity Checks: "FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC"
+128. Port Connectivity Checks: "FluxoDados:FD"
+129. Post-Synthesis Netlist Statistics for Top Partition
+130. Elapsed Time Per Partition
+131. Analysis & Synthesis Messages
 
 
 
@@ -34,22 +160,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Nov 10 19:54:00 2020           ;
-; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name               ; mips                                        ;
-; Top-level Entity Name       ; CPU                                         ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Nov 11 15:04:54 2020       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; mips                                        ;
+; Top-level Entity Name           ; CPU                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 3                                           ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -156,16 +287,1297 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; UnidadeControleULA.vhd           ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd  ;         ;
+; somadorULA.vhd                   ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd          ;         ;
+; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd      ;         ;
+; muxAllLogic2x1.vhd               ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd      ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd                 ;         ;
+; UnidadeControle.vhd              ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd     ;         ;
+; constants.vhd                    ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/constants.vhd           ;         ;
+; bitShift.vhd                     ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd            ;         ;
+; LogicAnd.vhd                     ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd            ;         ;
+; extensorSinal.vhd                ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd       ;         ;
+; RAM.vhd                          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd                 ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd      ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd  ;         ;
+; FluxoDados.vhd                   ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd          ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd                 ;         ;
+; ROMMIPS.vhd                      ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd             ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd ;         ;
+; fetch.vhd                        ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd               ;         ;
+; somador.vhd                      ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/somador.vhd             ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 3     ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 3     ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+; |CPU                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 3    ; 0            ; |CPU                ; CPU         ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |CPU ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; instructWidth  ; 32    ; Signed Integer                             ;
+; controlWidth   ; 10    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; instructwidth  ; 32    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; datawidth      ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|ROMMIPS:ROM ;
++-----------------+-------+---------------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                                ;
++-----------------+-------+---------------------------------------------------------------------+
+; datawidth       ; 32    ; Signed Integer                                                      ;
+; addrwidth       ; 32    ; Signed Integer                                                      ;
+; memoryaddrwidth ; 6     ; Signed Integer                                                      ;
++-----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|bitShift:shiftRightImedJump ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------------+
+; datawidth      ; 26    ; Signed Integer                                                                       ;
+; shiftsize      ; 2     ; Signed Integer                                                                       ;
++----------------+-------+--------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|somador:SOMA ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|bitShift:shiftRightImedExt ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                ;
++----------------+-------+-------------------------------------------------------------------------------------+
+; datawidth      ; 32    ; Signed Integer                                                                      ;
+; shiftsize      ; 2     ; Signed Integer                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|somador:SOMASIGEXT ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:MUX1 ;
++----------------+-------+------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                         ;
++----------------+-------+------------------------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                               ;
++----------------+-------+------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:PROX_PC ;
++----------------+-------+---------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|bancoRegistradores:BancoReg ;
++---------------------+-------+----------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                     ;
++---------------------+-------+----------------------------------------------------------+
+; larguradados        ; 32    ; Signed Integer                                           ;
+; larguraendbancoregs ; 5     ; Signed Integer                                           ;
++---------------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit0 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit0|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit1 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit1|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit2 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit2|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit3 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit3|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit4 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit4|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit5 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit5|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit6 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit6|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit7 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit7|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit8 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit8|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit9 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit9|somadorULA:soma ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit10 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit10|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit11 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit11|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit12 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit12|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit13 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit13|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit14 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit14|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit15 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit15|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit16 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit16|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit17 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit17|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit18 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit18|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit19 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit19|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit20 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit20|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit21 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit21|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit22 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit22|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit23 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit23|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit24 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit24|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit25 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit25|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit26 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit26|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit27 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit27|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit28 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit28|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit29 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit29|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit30 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit30|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit31 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|ULA:ULA_bit31|somadorULA:soma ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|extensorSinal:sigExt ;
++--------------------+-------+----------------------------------------------------+
+; Parameter Name     ; Value ; Type                                               ;
++--------------------+-------+----------------------------------------------------+
+; larguradadoentrada ; 16    ; Signed Integer                                     ;
+; larguradadosaida   ; 32    ; Signed Integer                                     ;
++--------------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:mux_RTRD ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; larguradados   ; 5     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:mux_RTimed ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|RAM:memRAM ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; datawidth      ; 32    ; Signed Integer                               ;
+; addrwidth      ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:muxULAram ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UnidadeControle:UC ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; controlwidth   ; 10    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|muxGenerico2x1:mux_RTRD"                                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; saida_mux ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit31"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; vai_1    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit30"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit29"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit28"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit27"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit26"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit25"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit24"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit23"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit22"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit21"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit20"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit19"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit18"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit17"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit16"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit15"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit14"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit13"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit12"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit11"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit10"                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit9"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit8"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit7"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit6"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit5"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit4"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit3"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit2"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit1"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit0|muxAllLogic2x1:muxInva" ;
++-------------+-------+----------+----------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                      ;
++-------------+-------+----------+----------------------------------------------+
+; seletor_mux ; Input ; Info     ; Stuck at GND                                 ;
++-------------+-------+----------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|ULA:ULA_bit0"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; vem_1    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:PROX_PC" ;
++----------------------+-------+----------+-----------------------------------------------+
+; Port                 ; Type  ; Severity ; Details                                       ;
++----------------------+-------+----------+-----------------------------------------------+
+; entradab_mux[27..26] ; Input ; Info     ; Stuck at GND                                  ;
++----------------------+-------+----------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|fetch:fetchInstruction|somador:SOMA" ;
++-----------------+-------+----------+------------------------------------------+
+; Port            ; Type  ; Severity ; Details                                  ;
++-----------------+-------+----------+------------------------------------------+
+; entradaa[31..3] ; Input ; Info     ; Stuck at GND                             ;
+; entradaa[1..0]  ; Input ; Info     ; Stuck at GND                             ;
+; entradaa[2]     ; Input ; Info     ; Stuck at VCC                             ;
++-----------------+-------+----------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC" ;
++--------+-------+----------+-------------------------------------------------------------+
+; Port   ; Type  ; Severity ; Details                                                     ;
++--------+-------+----------+-------------------------------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                                                ;
++--------+-------+----------+-------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FluxoDados:FD"                                                                           ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; escritac  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; instrucao ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 3                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Nov 10 19:53:48 2020
+    Info: Processing started: Wed Nov 11 15:04:42 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file UnidadeControleULA.vhd
+    Info (12022): Found design unit 1: UnidadeControleULA-arch File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 14
+    Info (12023): Found entity 1: UnidadeControleULA File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file somadorULA.vhd
     Info (12022): Found design unit 1: somadorULA-comportamento File: /home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd Line: 18
     Info (12023): Found entity 1: somadorULA File: /home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd Line: 5
@@ -219,12 +1631,55 @@ Info (12021): Found 2 design units, including 1 entities, in source file fetch.v
 Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
     Info (12022): Found design unit 1: somador-comportamento File: /home/rafaelalmada/Documents/MIPS/quartus/somador.vhd Line: 17
     Info (12023): Found entity 1: somador File: /home/rafaelalmada/Documents/MIPS/quartus/somador.vhd Line: 5
-Error (10577): VHDL error at fetch.vhd(40): actual port "instrucao" of mode "out" cannot be associated with formal port "entrada" of mode "in" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 40
-Error (10600): VHDL error at fetch.vhd(40): can't read value of interface object "instrucao" of mode OUT File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 40
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 500 megabytes
-    Error: Processing ended: Tue Nov 10 19:54:00 2020
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:27
+Info (12127): Elaborating entity "CPU" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(18): object "instrucao" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 18
+Info (12128): Elaborating entity "FluxoDados" for hierarchy "FluxoDados:FD" File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 23
+Warning (10541): VHDL Signal Declaration warning at FluxoDados.vhd(21): used implicit default value for signal "flagZ" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 21
+Warning (10036): Verilog HDL or VHDL warning at FluxoDados.vhd(30): object "saida_MUXRd" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 30
+Warning (10036): Verilog HDL or VHDL warning at FluxoDados.vhd(42): object "flagZero_all" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 42
+Info (12128): Elaborating entity "fetch" for hierarchy "FluxoDados:FD|fetch:fetchInstruction" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 45
+Warning (10540): VHDL Signal Declaration warning at fetch.vhd(20): used explicit default value for signal "constanteSoma" because signal was never assigned a value File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 20
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 28
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "FluxoDados:FD|fetch:fetchInstruction|ROMMIPS:ROM" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 36
+Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(20): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd Line: 20
+Info (12128): Elaborating entity "bitShift" for hierarchy "FluxoDados:FD|fetch:fetchInstruction|bitShift:shiftRightImedJump" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 42
+Warning (10492): VHDL Process Statement warning at bitShift.vhd(21): signal "entrada" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd Line: 21
+Info (12128): Elaborating entity "somador" for hierarchy "FluxoDados:FD|fetch:fetchInstruction|somador:SOMA" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 47
+Info (12128): Elaborating entity "bitShift" for hierarchy "FluxoDados:FD|fetch:fetchInstruction|bitShift:shiftRightImedExt" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 52
+Warning (10492): VHDL Process Statement warning at bitShift.vhd(21): signal "entrada" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd Line: 21
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:MUX1" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 62
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "FluxoDados:FD|bancoRegistradores:BancoReg" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 60
+Info (12128): Elaborating entity "ULA" for hierarchy "FluxoDados:FD|ULA:ULA_bit0" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 74
+Info (12128): Elaborating entity "muxAllLogic2x1" for hierarchy "FluxoDados:FD|ULA:ULA_bit0|muxAllLogic2x1:muxInva" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 33
+Info (12128): Elaborating entity "somadorULA" for hierarchy "FluxoDados:FD|ULA:ULA_bit0|somadorULA:soma" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 43
+Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "FluxoDados:FD|ULA:ULA_bit0|muxGenerico4x2:Muxao" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 53
+Info (12128): Elaborating entity "extensorSinal" for hierarchy "FluxoDados:FD|extensorSinal:sigExt" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 330
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|muxGenerico2x1:mux_RTRD" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 335
+Info (12128): Elaborating entity "LogicAnd" for hierarchy "FluxoDados:FD|LogicAnd:LogicAND" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 348
+Info (12128): Elaborating entity "RAM" for hierarchy "FluxoDados:FD|RAM:memRAM" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 352
+Warning (10639): VHDL warning at RAM.vhd(23): constant value overflow File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 23
+Warning (10445): VHDL Subtype or Type Declaration warning at RAM.vhd(23): subtype or type has null range File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 23
+Info (12128): Elaborating entity "UnidadeControle" for hierarchy "UnidadeControle:UC" File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 31
+Warning (10620): VHDL warning at UnidadeControle.vhd(44): comparison between unequal length operands always returns FALSE File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 44
+Warning (10620): VHDL warning at UnidadeControle.vhd(56): comparison between unequal length operands always returns FALSE File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 56
+Info (12128): Elaborating entity "UnidadeControleULA" for hierarchy "UnidadeControle:UC|UnidadeControleULA:UC_ULA" File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 85
+Info (10041): Inferred latch for "Functcrtl[0]" at UnidadeControleULA.vhd(17) File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 17
+Info (10041): Inferred latch for "Functcrtl[1]" at UnidadeControleULA.vhd(17) File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 17
+Info (10041): Inferred latch for "Functcrtl[2]" at UnidadeControleULA.vhd(17) File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 17
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "saida" is stuck at VCC File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 12
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 11
+    Warning (15610): No output dependent on input pin "rst" File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 11
+Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 1 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 517 megabytes
+    Info: Processing ended: Wed Nov 11 15:04:54 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:23
 
 

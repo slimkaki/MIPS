@@ -9,7 +9,7 @@ entity FluxoDados is
     port(
         clk, rst        :  in std_logic;
         escritaC        :  in std_logic;
-        palavraControle :  in std_logic_vector(11 downto 0);
+        palavraControle :  in std_logic_vector(10 downto 0);
         instrucao       :  out std_logic_vector((instructWidth - 1) downto 0);
         opCodeFunct     :  out std_logic_vector(11 downto 0)
     );
@@ -29,15 +29,16 @@ architecture comportamento of FluxoDados is
     signal saida_MUXulaRAM : std_logic_vector((instructWidth-1) downto 0);
     signal saida_MUXRd : std_logic_vector(4 downto 0);
 
-    alias muxJUMP        :  std_logic is palavraControle(11);
-    alias muxRtRd        :  std_logic is palavraControle(10);  
-    alias habEscritaReg  :  std_logic is palavraControle(9);  
-    alias muxRtImed      :  std_logic is palavraControle(8);  
-    alias operacaoULA    :  std_logic_vector(3 downto 0) is palavraControle(7 downto 4);
-    alias muxULAmem      :  std_logic is palavraControle(3);  
-    alias BEQ            :  std_logic is palavraControle(2);  
-    alias habLeituraMEM  :  std_logic is palavraControle(1);  
-    alias habEscritaMEM  :  std_logic is palavraControle(0);
+    alias muxJUMP       : std_logic is palavraControle(10);
+    alias muxRtRd       : std_logic is palavraControle(9);
+    alias habEscritaReg : std_logic is palavraControle(8);
+    alias muxRtImed     : std_logic is palavraControle(7);
+    alias ULActrl         : std_logic_vector(2 downto 0) is palavraControle(6 downto 4);
+    alias muxULAMem     : std_logic is palavraControle(3);
+    alias BEQ           : std_logic is palavraControle(2);
+    alias habLeituraMEM : std_logic is palavraControle(1);
+    alias habEscritaMEM : std_logic is palavraControle(0);
+
     signal vai_1_all, flagZero_all : std_logic_vector((instructWidth-1) downto 0);  
 
     begin
@@ -67,12 +68,12 @@ architecture comportamento of FluxoDados is
 
         -- ULAmips : entity work.ULA port map (entradaA => outA,
         --                                     entradaB => saida_MUXimed,
-        --                                     seletor => operacaoULA,
+        --                                     seletor => ULActrl,
         --                                     saida => saidaULA,
         --                                     flagZero => flagZ);
         ULA_bit0   : entity work.ULA port map (entradaA => outA(0),
                                                entradaB => saida_MUXimed(0),
-                                               seletor => operacaoULA,
+                                               seletor => ULActrl,
                                                vem_1 => '0',
                                                saida => saidaULA(0),
                                                flagZero => flagZero_all(0),
@@ -80,7 +81,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit1   : entity work.ULA port map (entradaA => outA(1),
                                                 entradaB => saida_MUXimed(1),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(0),
                                                 vai_1 => vai_1_all(1),
                                                 saida => saidaULA(1),
@@ -88,7 +89,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit2   : entity work.ULA port map (entradaA => outA(2),
                                                 entradaB => saida_MUXimed(2),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(1),
                                                 vai_1 => vai_1_all(2),
                                                 saida => saidaULA(2),
@@ -96,7 +97,7 @@ architecture comportamento of FluxoDados is
                                                 
         ULA_bit3   : entity work.ULA port map (entradaA => outA(3),
                                                 entradaB => saida_MUXimed(3),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(2),
                                                 vai_1 => vai_1_all(3),
                                                 saida => saidaULA(3),
@@ -104,7 +105,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit4   : entity work.ULA port map (entradaA => outA(4),
                                                 entradaB => saida_MUXimed(4),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(3),
                                                 vai_1 => vai_1_all(4),
                                                 saida => saidaULA(4),
@@ -112,7 +113,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit5   : entity work.ULA port map (entradaA => outA(5),
                                                 entradaB => saida_MUXimed(5),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(4),
                                                 vai_1 => vai_1_all(5),
                                                 saida => saidaULA(5),
@@ -120,7 +121,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit6   : entity work.ULA port map (entradaA => outA(6),
                                                 entradaB => saida_MUXimed(6),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(5),
                                                 vai_1 => vai_1_all(6),
                                                 saida => saidaULA(6),
@@ -128,7 +129,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit7   : entity work.ULA port map (entradaA => outA(7),
                                                 entradaB => saida_MUXimed(7),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(6),
                                                 vai_1 => vai_1_all(7),
                                                 saida => saidaULA(7),
@@ -136,7 +137,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit8   : entity work.ULA port map (entradaA => outA(8),
                                                 entradaB => saida_MUXimed(8),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(7),
                                                 vai_1 => vai_1_all(8),
                                                 saida => saidaULA(8),
@@ -144,7 +145,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit9   : entity work.ULA port map (entradaA => outA(9),
                                                 entradaB => saida_MUXimed(9),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(8),
                                                 vai_1 => vai_1_all(9),
                                                 saida => saidaULA(9),
@@ -152,7 +153,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit10   : entity work.ULA port map (entradaA => outA(10),
                                                 entradaB => saida_MUXimed(10),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(9),
                                                 vai_1 => vai_1_all(10),
                                                 saida => saidaULA(10),
@@ -160,7 +161,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit11   : entity work.ULA port map (entradaA => outA(11),
                                                 entradaB => saida_MUXimed(11),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(10),
                                                 vai_1 => vai_1_all(11),
                                                 saida => saidaULA(11),
@@ -168,7 +169,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit12   : entity work.ULA port map (entradaA => outA(12),
                                                 entradaB => saida_MUXimed(12),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(11),
                                                 vai_1 => vai_1_all(12),
                                                 saida => saidaULA(12),
@@ -176,7 +177,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit13   : entity work.ULA port map (entradaA => outA(13),
                                                 entradaB => saida_MUXimed(13),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(12),
                                                 vai_1 => vai_1_all(13),
                                                 saida => saidaULA(13),
@@ -184,7 +185,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit14   : entity work.ULA port map (entradaA => outA(14),
                                                 entradaB => saida_MUXimed(14),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(13),
                                                 vai_1 => vai_1_all(14),
                                                 saida => saidaULA(14),
@@ -192,7 +193,7 @@ architecture comportamento of FluxoDados is
                                                 
         ULA_bit15   : entity work.ULA port map (entradaA => outA(15),
                                                 entradaB => saida_MUXimed(15),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(14),
                                                 vai_1 => vai_1_all(15),
                                                 saida => saidaULA(15),
@@ -200,7 +201,7 @@ architecture comportamento of FluxoDados is
                                                 
         ULA_bit16   : entity work.ULA port map (entradaA => outA(16),
                                                 entradaB => saida_MUXimed(16),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(15),
                                                 vai_1 => vai_1_all(16),
                                                 saida => saidaULA(16),
@@ -208,7 +209,7 @@ architecture comportamento of FluxoDados is
                                                 
         ULA_bit17   : entity work.ULA port map (entradaA => outA(17),
                                                 entradaB => saida_MUXimed(17),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(16),
                                                 vai_1 => vai_1_all(17),
                                                 saida => saidaULA(17),
@@ -216,7 +217,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit18   : entity work.ULA port map (entradaA => outA(18),
                                                 entradaB => saida_MUXimed(18),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(17),
                                                 vai_1 => vai_1_all(18),
                                                 saida => saidaULA(18),
@@ -224,7 +225,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit19   : entity work.ULA port map (entradaA => outA(19),
                                                 entradaB => saida_MUXimed(19),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(18),
                                                 vai_1 => vai_1_all(19),
                                                 saida => saidaULA(19),
@@ -232,7 +233,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit20   : entity work.ULA port map (entradaA => outA(20),
                                                 entradaB => saida_MUXimed(20),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(19),
                                                 vai_1 => vai_1_all(20),
                                                 saida => saidaULA(20),
@@ -240,7 +241,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit21   : entity work.ULA port map (entradaA => outA(21),
                                                 entradaB => saida_MUXimed(21),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(20),
                                                 vai_1 => vai_1_all(21),
                                                 saida => saidaULA(21),
@@ -248,7 +249,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit22   : entity work.ULA port map (entradaA => outA(22),
                                                 entradaB => saida_MUXimed(22),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(21),
                                                 vai_1 => vai_1_all(22),
                                                 saida => saidaULA(22),
@@ -256,7 +257,7 @@ architecture comportamento of FluxoDados is
                                                 
         ULA_bit23   : entity work.ULA port map (entradaA => outA(23),
                                                 entradaB => saida_MUXimed(23),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(22),
                                                 vai_1 => vai_1_all(23),
                                                 saida => saidaULA(23),
@@ -264,7 +265,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit24   : entity work.ULA port map (entradaA => outA(24),
                                                 entradaB => saida_MUXimed(24),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(23),
                                                 vai_1 => vai_1_all(24),
                                                 saida => saidaULA(24),
@@ -272,7 +273,7 @@ architecture comportamento of FluxoDados is
                                                 
         ULA_bit25   : entity work.ULA port map (entradaA => outA(25),
                                                 entradaB => saida_MUXimed(25),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(24),
                                                 vai_1 => vai_1_all(25),
                                                 saida => saidaULA(25),
@@ -280,7 +281,7 @@ architecture comportamento of FluxoDados is
                                                 
         ULA_bit26   : entity work.ULA port map (entradaA => outA(26),
                                                 entradaB => saida_MUXimed(26),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(25),
                                                 vai_1 => vai_1_all(26),
                                                 saida => saidaULA(26),
@@ -288,7 +289,7 @@ architecture comportamento of FluxoDados is
                                                 
         ULA_bit27   : entity work.ULA port map (entradaA => outA(27),
                                                 entradaB => saida_MUXimed(27),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(26),
                                                 vai_1 => vai_1_all(27),
                                                 saida => saidaULA(27),
@@ -296,7 +297,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit28   : entity work.ULA port map (entradaA => outA(28),
                                                 entradaB => saida_MUXimed(28),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(27),
                                                 vai_1 => vai_1_all(28),
                                                 saida => saidaULA(28),
@@ -304,7 +305,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit29   : entity work.ULA port map (entradaA => outA(29),
                                                 entradaB => saida_MUXimed(29),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(28),
                                                 vai_1 => vai_1_all(29),
                                                 saida => saidaULA(29),
@@ -312,7 +313,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit30   : entity work.ULA port map (entradaA => outA(30),
                                                 entradaB => saida_MUXimed(30),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(29),
                                                 vai_1 => vai_1_all(30),
                                                 saida => saidaULA(30),
@@ -320,7 +321,7 @@ architecture comportamento of FluxoDados is
 
         ULA_bit31   : entity work.ULA port map (entradaA => outA(31),
                                                 entradaB => saida_MUXimed(31),
-                                                seletor => operacaoULA,
+                                                seletor => ULActrl,
                                                 vem_1 => vai_1_all(30),
                                                 vai_1 => vai_1_all(31),
                                                 saida => saidaULA(31),
@@ -356,7 +357,7 @@ architecture comportamento of FluxoDados is
                                             dado_out => saidaRAM);
         
         muxULAram  : entity work.muxGenerico2x1 generic map (larguraDados => 32)
-																port map (entradaA_MUX  => saidaULA,
+												port map (entradaA_MUX  => saidaULA,
                                                           entradaB_MUX  => saidaRAM,
                                                           seletor_MUX   => muxULAmem,
                                                           saida_MUX     => saida_MUXulaRAM);

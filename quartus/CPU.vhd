@@ -5,11 +5,14 @@ library ieee ;
 entity CPU is
   generic (
     instructWidth : natural := 32;
-    controlWidth  : natural := 10
+    controlWidth  : natural := 11
   );
   port (
     clk, rst : in std_logic;
-	  saida : out std_logic
+	 instruc : out std_logic_vector((instructWidth-1) downto 0);
+   palavraControl: out std_logic_vector((controlWidth-1) downto 0);
+   saida_PC : out std_logic_vector((instructWidth-1) downto 0);
+	 saida : out std_logic
   );
 end CPU; 
 
@@ -26,7 +29,8 @@ begin
                                          escritaC => '1',
                                          palavraControle => palavraControle,
                                          instrucao => instrucao,
-                                         opCodeFunct => opCodeFunct);
+                                         opCodeFunct => opCodeFunct,
+                                         saida_PC => saida_PC);
 
     UC : entity work.UnidadeControle generic map(controlWidth => controlWidth)
                                      port map(clk => clk,
@@ -35,5 +39,7 @@ begin
                                               palavraControle => palavraControle);
                                               
 	saida <= '1'; -- Apenas para haver uma saida e o codigo compilar
+	instruc <= instrucao;
+	palavraControl <= palavraControle;
 
 end architecture ;

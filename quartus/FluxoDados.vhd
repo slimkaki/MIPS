@@ -11,7 +11,8 @@ entity FluxoDados is
         escritaC        :  in std_logic;
         palavraControle :  in std_logic_vector(10 downto 0);
         instrucao       :  out std_logic_vector((instructWidth - 1) downto 0);
-        opCodeFunct     :  out std_logic_vector(11 downto 0)
+        opCodeFunct     :  out std_logic_vector(11 downto 0);
+        saida_PC        :  out std_logic_vector(32-1 downto 0)
     );
 end entity;
 
@@ -48,7 +49,8 @@ architecture comportamento of FluxoDados is
                                                       extendedInst => saidaSigExt,
                                                       andBEQZero => andBEQZero,
                                                       muxJUMP =>  muxJUMP,
-                                                      instrucao => instrucao);
+                                                      instrucao => instrucao,
+                                                      saida_PC => saida_PC);
 
         opCodeFunct(11 downto 6) <= instrucao(31 downto 26);
         opCodeFunct(5 downto 0)  <= instrucao(5 downto 0);

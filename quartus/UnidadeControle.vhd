@@ -22,7 +22,7 @@ architecture arch of UnidadeControle is
     alias muxRtRd       : std_logic is palavraControle(9);
     alias habEscritaReg : std_logic is palavraControle(8);
     alias muxRtImed     : std_logic is palavraControle(7);
-    alias ULActrl         : std_logic_vector(2 downto 0) is palavraControle(6 downto 4);
+    alias ULActrl       : std_logic_vector(2 downto 0) is palavraControle(6 downto 4);
     alias muxULAMem     : std_logic is palavraControle(3);
     alias BEQ           : std_logic is palavraControle(2);
     alias habLeituraMEM : std_logic is palavraControle(1);
@@ -34,7 +34,7 @@ begin
 
   muxJUMP <= '1' WHEN (opCode = j_J(11 downto 6)) or 
                       (opCode = jal_J(11 downto 6)) or 
-                      (opCode = jr_R(11 downto 6)) ELSE '0';
+                      (opCodeFunct = jr_R) ELSE '0';
 
   muxRtRd <= '1' WHEN (opCode = "000000") ELSE '0';
               

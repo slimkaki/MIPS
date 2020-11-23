@@ -11,7 +11,8 @@ entity fetch is
 		clk, rst : in std_logic;
 		extendedInst : in std_logic_vector((dataWidth - 1) downto 0);
 		andBEQZero, muxJUMP : in std_logic;
-		instrucao : out std_logic_vector((dataWidth - 1) downto 0)
+		instrucao : out std_logic_vector((dataWidth - 1) downto 0);
+		saida_PC : out std_logic_vector((dataWidth - 1) downto 0)
 	);
 end entity;
 
@@ -38,6 +39,7 @@ architecture comportamento of fetch is
 											 Dado => instrucao);
 											 
 		barramentoInstrucao <= instrucao;
+		saida_PC <= pcOut;
 		
 		shiftRightImedJump : entity work.bitShift generic map (dataWidth => 26)
 														port map (clock => clk,
@@ -73,6 +75,7 @@ architecture comportamento of fetch is
 											 port map (entradaA_MUX => instrucMux1,
 											 		   entradaB_MUX => jumpCaseInstruct,
 											 		   seletor_MUX => muxJUMP,
-											 		   saida_MUX => instrucFinal);
+														saida_MUX => instrucFinal);
+													
 		
 end architecture;

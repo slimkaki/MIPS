@@ -5,19 +5,19 @@ library ieee ;
 entity CPU is
   generic (
     instructWidth : natural := 32;
-    controlWidth  : natural := 11
+    controlWidth  : natural := 15
   );
   port (
-    clk, rst : in std_logic;
+   clk, rst : in std_logic;
 	 instruc : out std_logic_vector((instructWidth-1) downto 0);
    palavraControl: out std_logic_vector((controlWidth-1) downto 0);
    saida_PC : out std_logic_vector((instructWidth-1) downto 0);
-	 saida : out std_logic
+	 saida, saidaMegaMux : out std_logic_vector(31 downto 0)
   );
 end CPU; 
 
 architecture arch of CPU is
-    signal palavraControle : std_logic_vector(10 downto 0);
+    signal palavraControle : std_logic_vector(14 downto 0);
     signal instrucao       : std_logic_vector((instructWidth-1) downto 0);
     signal opCodeFunct     : std_logic_vector(11 downto 0);
 
@@ -30,7 +30,9 @@ begin
                                          palavraControle => palavraControle,
                                          instrucao => instrucao,
                                          opCodeFunct => opCodeFunct,
-                                         saida_PC => saida_PC);
+                                         saida_PC => saida_PC,
+                                         mSaidaULA => saida,
+                                         saidaMegaMux => saidaMegaMux);
 
     UC : entity work.UnidadeControle generic map(controlWidth => controlWidth)
                                      port map(clk => clk,
@@ -38,7 +40,6 @@ begin
                                               opCodeFunct => opCodeFunct,
                                               palavraControle => palavraControle);
                                               
-	saida <= '1'; -- Apenas para haver uma saida e o codigo compilar
 	instruc <= instrucao;
 	palavraControl <= palavraControle;
 

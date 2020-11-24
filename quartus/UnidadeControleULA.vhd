@@ -6,19 +6,28 @@ use work.constants.all;
 entity UnidadeControleULA is
   port (
     ULAop  : in  std_logic_vector(1 downto 0);
-    funct  : in  std_logic_vector(5 downto 0);
+    opCodeFunct : in std_logic_vector(11 downto 0);
     ULActrl: out std_logic_vector(2 downto 0)
   );
 end UnidadeControleULA; 
 
 architecture arch of UnidadeControleULA is
+    alias opcode : std_logic_vector is opCodeFunct(11 downto 6);
+    alias funct  : std_logic_vector is opCodeFunct(5 downto 0);
     signal Functcrtl : std_logic_vector(2 downto 0);
 begin
-    Functcrtl <= "010" WHEN (funct = add_R(5 downto 0))or(funct = addu_R(5 downto 0)) ELSE
-                 "110" WHEN (funct = sub_R(5 downto 0))or(funct = subu_R(5 downto 0)) ELSE
-                 "111" WHEN (funct = slt_R(5 downto 0))or(funct = sltu_R(5 downto 0)) ELSE
-                 "000" WHEN (funct = and_R(5 downto 0)) ELSE
-                 "001" WHEN (funct = or_R(5 downto 0));
+    Functcrtl <= "010" WHEN (opcode = add_R(11 downto 6) and funct = add_R(5 downto 0)) or 
+                            (opcode = addu_R(11 downto 6) and funct = addu_R(5 downto 0)) or
+                            (opcode = addi_I(11 downto 6)) ELSE
+                 "110" WHEN (opcode = sub_R(11 downto 6) and funct = sub_R(5 downto 0)) or
+                            (opcode = subu_R(11 downto 6) and funct = subu_R(5 downto 0)) or
+                            (opcode = beq_I(11 downto 6)) or (opcode = bne_I(11 downto 6)) ELSE
+                 "111" WHEN (opcode = slt_r(11 downto 6) and funct = slt_R(5 downto 0)) or
+                            (opcode = sltu_R(11 downto 6) and funct = sltu_R(5 downto 0)) ELSE
+                 "000" WHEN (opcode = and_R(11 downto 6) and funct = and_R(5 downto 0)) or
+                            (opcode = andi_I(11 downto 6)) ELSE
+                 "001" WHEN (opcode = or_R(11 downto 6) and funct = or_R(5 downto 0)) or
+                            (opcode = ori_I(11 downto 6));
 
     ULActrl <= Functcrtl WHEN (ULAop = "10") ELSE 
                    "110" WHEN (ULAop = "01") ELSE 

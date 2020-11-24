@@ -5,12 +5,12 @@ use work.constants.all;
 
 entity UnidadeControle is
   generic ( 
-        controlWidth : natural := 11
+        controlWidth : natural := 15
     );
   port (
     clk, rst          : in std_logic;
     opCodeFunct       : in std_logic_vector (11 downto 0);
-    palavraControle   : out std_logic_vector(10 downto 0)
+    palavraControle   : out std_logic_vector(14 downto 0)
   );
 end UnidadeControle; 
 
@@ -18,12 +18,15 @@ architecture arch of UnidadeControle is
     alias opCode : std_logic_vector(5 downto 0) is opCodeFunct(11 downto 6);
     alias funct  : std_logic_vector(5 downto 0) is opCodeFunct(5 downto 0);
 
-    alias muxJUMP       : std_logic is palavraControle(10);
-    alias muxRtRd       : std_logic is palavraControle(9);
-    alias habEscritaReg : std_logic is palavraControle(8);
-    alias muxRtImed     : std_logic is palavraControle(7);
-    alias ULActrl       : std_logic_vector(2 downto 0) is palavraControle(6 downto 4);
-    alias muxULAMem     : std_logic is palavraControle(3);
+    alias BNE           : std_logic is palavraControle(14);
+    alias muxJR         : std_logic is palavraControle(13);
+    alias muxR31        : std_logic is palavraControle(12);
+    alias muxJUMP       : std_logic is palavraControle(11);
+    alias muxRtRd       : std_logic is palavraControle(10);
+    alias habEscritaReg : std_logic is palavraControle(9);
+    alias muxRtImed     : std_logic is palavraControle(8);
+    alias ULActrl         : std_logic_vector(2 downto 0) is palavraControle(7 downto 5);
+    alias muxULAMem     : std_logic_vector(1 downto 0) is palavraControle(4 downto 3);
     alias BEQ           : std_logic is palavraControle(2);
     alias habLeituraMEM : std_logic is palavraControle(1);
     alias habEscritaMEM : std_logic is palavraControle(0);
@@ -32,13 +35,18 @@ architecture arch of UnidadeControle is
 
 begin
 
-  muxJUMP <= '1' WHEN (opCode = j_J(11 downto 6)) or 
-                      (opCode = jal_J(11 downto 6)) or 
-                      (opCodeFunct = jr_R) ELSE '0';
+  BNE <= '1' when (opCode = bne_I (11 downto 6)) else '0';
 
-  muxRtRd <= '1' WHEN (opCode = "000000") ELSE '0';
+  muxJR <= '1' when (opCode = jr_R (11 downto 6) and funct = jr_R (5 downto 0)) else '0';
+
+  muxR31 <= '1' when (opcode = jal_J (11 downto 6)) else '0';
+
+  muxJUMP <= '1' when (opCode = j_J(11 downto 6)) or 
+                      (opCode = jal_J(11 downto 6)) else '0';
+
+  muxRtRd <= '1' when (opCode = "000000") else '0';
               
-  habEscritaReg <= '1' WHEN (opCode = "000000") or 
+  habEscritaReg <= '1' when (opCode = "000000" and funct /= jr_R(5 downto 0)) or 
                             (opCode = addi_I(11 downto 6)) or
                             (opCode = addiu_I(11 downto 6)) or
                             (opCode = andi_I(11 downto 0)) or
@@ -49,41 +57,43 @@ begin
                             (opCode = lw_I(11 downto 6)) or
                             (opCode = ori_I(11 downto 6)) or
                             (opCode = slti_I(11 downto 6)) or
-                            (opCode = sltiu_I(11 downto 6)) ELSE '0';
+                            (opCode = sltiu_I(11 downto 6)) else '0';
 
-  muxRtImed <= '1' WHEN (opCode = addi_I(11 downto 6)) or
+  muxRtImed <= '1' when (opCode = addi_I(11 downto 6)) or
                         (opCode = addiu_I(11 downto 6)) or
                         (opCode = andi_I(11 downto 0)) or
                         (opCode = lui_I(11 downto 6)) or
                         (opCode = ori_I(11 downto 6)) or
                         (opCode = slti_I(11 downto 6)) or
-                        (opCode = sltiu_I(11 downto 6)) ELSE '0';
+                        (opCode = sltiu_I(11 downto 6)) else '0';
 
 
-  muxULAMem <= '1' WHEN (opCode = ll_I(11 downto 6)) or
-                        (opCode = lbu_I(11 downto 6)) or
-                        (opCode = lhu_I(11 downto 6)) or
-                        (opCode = lw_I(11 downto 6)) ELSE '0';
+  muxULAMem <= "11" when (opcode = jal_J(11 downto 6)) else
+               "10" when (opCode = lui_I(11 downto 6)) else
+               "01" when (opCode = ll_I(11 downto 6)) or
+                         (opCode = lbu_I(11 downto 6)) or
+                         (opCode = lhu_I(11 downto 6)) or
+                         (opCode = lw_I(11 downto 6)) else "00";
 
-  BEQ <= '1' WHEN (opCode = beq_I(11 downto 6)) or
-                  (opCode = bne_I(11 downto 6)) ELSE '0';  -- ????
+  BEQ <= '1' when (opCode = beq_I(11 downto 6)) or
+                  (opCode = bne_I(11 downto 6)) else '0';
 
-  habLeituraMEM <= '1' WHEN (opCode = ll_I(11 downto 6)) or
+  habLeituraMEM <= '1' when (opCode = ll_I(11 downto 6)) or
                             (opCode = lbu_I(11 downto 6)) or
                             (opCode = lhu_I(11 downto 6)) or
-                            (opCode = lw_I(11 downto 6)) ELSE '0';
+                            (opCode = lw_I(11 downto 6)) else '0';
 
-  habEscritaMEM <= '1' WHEN (opCode = sb_I(11 downto 6)) or
+  habEscritaMEM <= '1' when (opCode = sb_I(11 downto 6)) or
                             (opCode = sc_I(11 downto 6)) or
                             (opCode = sh_I(11 downto 6)) or
-                            (opCode = sw_I(11 downto 6)) ELSE '0';
+                            (opCode = sw_I(11 downto 6)) else '0';
   
-  ULAop <= "00"  WHEN (opCode = lw_I(11 downto 6)) or (opCode = sw_I(11 downto 6)) ELSE
-           "01"  WHEN (opCode = beq_I(11 downto 6)) ELSE
+  ULAop <= "00"  when (opCode = lw_I(11 downto 6)) or (opCode = sw_I(11 downto 6)) else
+           "01"  when (opCode = beq_I(11 downto 6)) or (opCode = bne_I(11 downto 6)) else
            "10";
   
   UC_ULA : entity work.UnidadeControleULA port map (ULAop => ULAop,
-                                                    funct => funct,
+                                                    opCodeFunct => opCodeFunct,
                                                     ULActrl => ULActrl);
 
 

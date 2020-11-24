@@ -9,10 +9,11 @@ entity FluxoDados is
     port(
         clk, rst        :  in std_logic;
         escritaC        :  in std_logic;
-        palavraControle :  in std_logic_vector(10 downto 0);
+        palavraControle :  in std_logic_vector(14 downto 0);
         instrucao       :  out std_logic_vector((instructWidth - 1) downto 0);
         opCodeFunct     :  out std_logic_vector(11 downto 0);
-        saida_PC        :  out std_logic_vector(32-1 downto 0)
+        saida_PC        :  out std_logic_vector(31 downto 0);
+        mSaidaULA, saidaMegaMux : out std_logic_vector(31 downto 0)
     );
 end entity;
 
@@ -23,19 +24,24 @@ architecture comportamento of FluxoDados is
     signal saidaULA : std_logic_vector((instructWidth - 1) downto 0);
     signal extendInstruc : std_logic_vector(15 downto 0);
     signal saidaSigExt : std_logic_vector((instructWidth - 1) downto 0);
-    signal andBEQZero : std_logic;
+    signal andBEQZero, andBNEZero : std_logic;
     signal saida_MUXimed : std_logic_vector((instructWidth-1) downto 0);
     signal saidaRAM : std_logic_vector((instructWidth-1) downto 0);
     --signal saida_MUXimed : std_logic_vector((instructWidth-1) downto 0);
     signal saida_MUXulaRAM : std_logic_vector((instructWidth-1) downto 0);
     signal saida_MUXRd : std_logic_vector(4 downto 0);
+    signal pc_in : std_logic_vector(instructWidth-1 downto 0);
+    signal saidaR31 : std_logic_vector(4 downto 0);
 
-    alias muxJUMP       : std_logic is palavraControle(10);
-    alias muxRtRd       : std_logic is palavraControle(9);
-    alias habEscritaReg : std_logic is palavraControle(8);
-    alias muxRtImed     : std_logic is palavraControle(7);
-    alias ULActrl         : std_logic_vector(2 downto 0) is palavraControle(6 downto 4);
-    alias muxULAMem     : std_logic is palavraControle(3);
+    alias BNE           : std_logic is palavraControle(14);
+    alias muxJR         : std_logic is palavraControle(13);
+    alias muxR31        : std_logic is palavraControle(12);
+    alias muxJUMP       : std_logic is palavraControle(11);
+    alias muxRtRd       : std_logic is palavraControle(10);
+    alias habEscritaReg : std_logic is palavraControle(9);
+    alias muxRtImed     : std_logic is palavraControle(8);
+    alias ULActrl         : std_logic_vector(2 downto 0) is palavraControle(7 downto 5);
+    alias muxULAMem     : std_logic_vector(1 downto 0) is palavraControle(4 downto 3);
     alias BEQ           : std_logic is palavraControle(2);
     alias habLeituraMEM : std_logic is palavraControle(1);
     alias habEscritaMEM : std_logic is palavraControle(0);
@@ -49,8 +55,12 @@ architecture comportamento of FluxoDados is
                                                       extendedInst => saidaSigExt,
                                                       andBEQZero => andBEQZero,
                                                       muxJUMP =>  muxJUMP,
+                                                      bne => andBNEZero,
+                                                      jr => muxJR,
+                                                      reg_jr => outA,
                                                       instrucao => instrucao,
-                                                      saida_PC => saida_PC);
+                                                      saida_PC => saida_PC,
+                                                      pc_in => pc_in);
 
         opCodeFunct(11 downto 6) <= instrucao(31 downto 26);
         opCodeFunct(5 downto 0)  <= instrucao(5 downto 0);
@@ -328,6 +338,8 @@ architecture comportamento of FluxoDados is
                                                 vai_1 => vai_1_all(31),
                                                 saida => saidaULA(31),
                                                 flagZero => flagZero_all(31));
+
+        mSaidaULA <= saidaULA;
                                                 
         sigExt : entity work.extensorSinal generic map (larguraDadoEntrada => 16, 
                                                         larguraDadoSaida   => instructWidth)
@@ -340,6 +352,12 @@ architecture comportamento of FluxoDados is
                                                         seletor_MUX   => muxRtRd,
                                                         saida_MUX     => saida_MUXRd);
 
+        mux_R31 : entity work.muxGenerico2x1 generic map (larguraDados => 5)
+                                                 port map(entradaA_MUX  => saida_MUXRd,
+                                                          entradaB_MUX  => std_logic_vector(TO_UNSIGNED(31, 5)),
+                                                          seletor_MUX   => muxR31,
+                                                          saida_MUX     => saidaR31);
+
         mux_RTimed  : entity work.muxGenerico2x1 generic map (larguraDados => 32)
 																port map (entradaA_MUX  => outB,
                                                           entradaB_MUX  => saidaSigExt,
@@ -351,6 +369,10 @@ architecture comportamento of FluxoDados is
                                                  BEQ    => BEQ,
                                                  andOUT => andBEQZero);
 
+        LogicAND2 : entity work.LogicAnd port map(flagZ  => not flagZ,
+                                                 BEQ    => BNE,
+                                                 andOUT => andBNEZero);
+
         memRAM   : entity work.RAM port map(addr     => saidaULA,
                                             wr       => habEscritaMEM, 
                                             re       => habLeituraMEM,
@@ -358,12 +380,13 @@ architecture comportamento of FluxoDados is
                                             dado_in  => outB,
                                             dado_out => saidaRAM);
         
-        muxULAram  : entity work.muxGenerico2x1 generic map (larguraDados => 32)
-												port map (entradaA_MUX  => saidaULA,
-                                                          entradaB_MUX  => saidaRAM,
-                                                          seletor_MUX   => muxULAmem,
-                                                          saida_MUX     => saida_MUXulaRAM);
-        
-                                            
-                                            
+        muxULAram  : entity work.muxGenerico4x2_32 port map (entrada0 => saidaULA,
+                                                          entrada1 => saidaRAM,
+                                                          entrada2 => extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16)),
+                                                          entrada3 => pc_in,
+                                                          seletor_MUX => muxULAmem,
+                                                          saida_MUX => saida_MUXulaRAM);
+
+        saidaMegaMux <= saida_MUXulaRAM;
+                                                     
 end architecture;

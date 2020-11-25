@@ -31,6 +31,6 @@ begin
 
     ULActrl <= Functcrtl WHEN (ULAop = "10") ELSE 
                    "110" WHEN (ULAop = "01") ELSE 
-                   "010";
+                   "010" WHEN (ULAop = "00");
 
 end architecture;

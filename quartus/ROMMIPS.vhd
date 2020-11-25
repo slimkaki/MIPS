@@ -20,7 +20,7 @@ architecture assincrona OF ROMMIPS IS
   signal memROM: blocoMemoria;
   attribute ram_init_file : string;
   attribute ram_init_file of memROM:
-  signal is "ROMcontentA.mif";
+  signal is "ROMcontentLUI.mif";
 
 -- Utiliza uma quantidade menor de endereços locais:
    signal EnderecoLocal : std_logic_vector(memoryAddrWidth-1 downto 0);

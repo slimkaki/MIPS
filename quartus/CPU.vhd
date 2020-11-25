@@ -12,7 +12,7 @@ entity CPU is
 	 instruc : out std_logic_vector((instructWidth-1) downto 0);
    palavraControl: out std_logic_vector((controlWidth-1) downto 0);
    saida_PC : out std_logic_vector((instructWidth-1) downto 0);
-	 saida, saidaMegaMux : out std_logic_vector(31 downto 0)
+   saida, saidaMegaMux : out std_logic_vector(31 downto 0)
   );
 end CPU; 
 

@@ -10,9 +10,11 @@ entity TopLevel is
     SW : in std_logic_vector(9 downto 0);
     KEY : in std_logic_vector(3 downto 0);
     LEDR : out std_logic_vector(9 downto 0);
-    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
-	 controlWord : out std_logic_vector((controlWidth-1) downto 0);
-	 instruc : out std_logic_vector((larguraDados-1) downto 0)
+    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
+	--  controlWord : out std_logic_vector((controlWidth-1) downto 0);
+  --  instruc : out std_logic_vector((larguraDados-1) downto 0);
+  --  saidaULA : out std_logic_vector(31 downto 0);
+  --  PC_OUT, PC_INN : out std_logic_vector(31 downto 0)
   );
 end TopLevel; 
 
@@ -26,8 +28,9 @@ architecture arch of TopLevel is
     signal meu_clock : std_logic;
 
 begin
-	 instruc <= instruct;
-	 controlWord <= palavraControle;
+--	 instruc <= instruct;
+--   controlWord <= palavraControle;
+--   saidaULA <= mux_data_write;
     processador : entity work.CPU generic map(instructWidth => larguraDados,
                                               controlWidth => controlWidth)
                                   port map (clk => meu_clock,

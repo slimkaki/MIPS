@@ -59,8 +59,7 @@ architecture comportamento of FluxoDados is
                                                       jr => muxJR,
                                                       reg_jr => outA,
                                                       instrucao => instrucao,
-                                                      saida_PC => saida_PC,
-                                                      pc_in => pc_in);
+                                                      saida_PC => saida_PC);
 
         opCodeFunct(11 downto 6) <= instrucao(31 downto 26);
         opCodeFunct(5 downto 0)  <= instrucao(5 downto 0);

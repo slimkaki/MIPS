@@ -13,8 +13,7 @@ entity fetch is
 		andBEQZero, muxJUMP, bne, jr : in std_logic;
 		reg_jr : in std_logic_vector((dataWidth-1) downto 0);
 		instrucao : out std_logic_vector((dataWidth - 1) downto 0);
-		saida_PC : out std_logic_vector((dataWidth - 1) downto 0);
-		pc_in : out std_logic_vector((dataWidth-1) downto 0)
+		saida_PC : out std_logic_vector((dataWidth - 1) downto 0)
 	);
 end entity;
 
@@ -43,7 +42,7 @@ architecture comportamento of fetch is
 											 
 		barramentoInstrucao <= instrucao;
 		saida_PC <= pcOut;
-		pc_in <= instrucFinal;
+		-- pc_in <= instrucFinal;
 		
 		shiftRightImedJump : entity work.bitShift generic map (dataWidth => 26)
 														port map (clock => clk,

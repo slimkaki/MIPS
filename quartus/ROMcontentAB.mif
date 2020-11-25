@@ -30,7 +30,7 @@ CONTENT BEGIN
 
     0    :   AC090008; --sw $t1 8($zero)     (m(8) := 0x0000000A)
     1    :   8C080008; --lw $t0 8($zero)     ($t0 := 0x0000000A)
-    2    :   012A4022; --sub $t0 $t1 $t2     ($t0 := 0xFFFFFFFF)
+    2    :   012A4022; --sub $t0 $t1 $t2     ($t0 := 0xFFFFFFFF) 
     3    :   012A4024; --and $t0 $t1 $t2     ($t0 := 0x0000000A)
     4    :   012A4025; --or $t0 $t1 $t2      ($t0 := 0x0000000B)
     5    :   3C08FFFF; --lui $t0 0xFFFF      ($t0 := 0xFFFF0000)

@@ -25,7 +25,7 @@ architecture arch of UnidadeControle is
     alias muxRtRd       : std_logic is palavraControle(10);
     alias habEscritaReg : std_logic is palavraControle(9);
     alias muxRtImed     : std_logic is palavraControle(8);
-    alias ULActrl         : std_logic_vector(2 downto 0) is palavraControle(7 downto 5);
+    alias ULActrl       : std_logic_vector(2 downto 0) is palavraControle(7 downto 5);
     alias muxULAMem     : std_logic_vector(1 downto 0) is palavraControle(4 downto 3);
     alias BEQ           : std_logic is palavraControle(2);
     alias habLeituraMEM : std_logic is palavraControle(1);

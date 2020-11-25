@@ -73,7 +73,7 @@ architecture comportamento of FluxoDados is
                                                             enderecoB => endB,
                                                             enderecoC => endC,
                                                             dadoEscritaC => saida_MUXulaRAM,
-                                                            escreveC => escritaC,
+                                                            escreveC => habEscritaReg,--escritaC,
                                                             saidaA => outA,
                                                             saidaB => outB);
 
@@ -383,7 +383,7 @@ architecture comportamento of FluxoDados is
                                                           entrada1 => saidaRAM,
                                                           entrada2 => extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16)),
                                                           entrada3 => pc_in,
-                                                          seletor_MUX => muxULAmem,
+                                                          seletor_MUX => muxULAMem,
                                                           saida_MUX => saida_MUXulaRAM);
 
         saidaMegaMux <= saida_MUXulaRAM;

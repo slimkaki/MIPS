@@ -46,7 +46,7 @@ begin
                                                saida => meu_clock);
 
     MUX : entity work.muxGenerico4x2_32 port map(entrada0 => saida_PC,
-                                              entrada1 => saida,
+                                              entrada1 => saida,          -- saida ula
                                               entrada2 => mux_data_write,
                                               entrada3 => mux_data_write,
                                               seletor_MUX => SW(1 downto 0),
@@ -59,4 +59,5 @@ begin
     showHEX4 : entity work.conversorHex7Segmentos port map (dadoHex => data(19 downto 16), saida7seg => HEX4);
     showHEX5 : entity work.conversorHex7Segmentos port map (dadoHex => data(23 downto 20), saida7seg => HEX5);
 
+    LEDR <= palavraControle(9 downto 0);
 end architecture;

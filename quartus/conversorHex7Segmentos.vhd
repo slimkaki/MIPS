@@ -38,6 +38,12 @@ ARCHITECTURE comportamento OF conversorHex7Segmentos IS
                      "1111000" WHEN dadoHex = "0111" ELSE ---7
                      "0000000" WHEN dadoHex = "1000" ELSE ---8
                      "0010000" WHEN dadoHex = "1001" ELSE ---9
+                     "0001000" when dadoHex="1010" else ---A
+                     "0000011" when dadoHex="1011" else ---B
+                     "1000110" when dadoHex="1100" else ---C
+                     "0100001" when dadoHex="1101" else ---D
+                     "0000110" when dadoHex="1110" else ---E
+                     "0001110" when dadoHex="1111" else ---F
                      "1111111";
 
         saida7seg <= preOutput;

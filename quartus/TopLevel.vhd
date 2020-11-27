@@ -59,5 +59,5 @@ begin
     showHEX4 : entity work.conversorHex7Segmentos port map (dadoHex => data(19 downto 16), saida7seg => HEX4);
     showHEX5 : entity work.conversorHex7Segmentos port map (dadoHex => data(23 downto 20), saida7seg => HEX5);
 
-    LEDR <= palavraControle(9 downto 0);
+    LEDR(7 downto 0) <= data(31 downto 24);--palavraControle(9 downto 0);
 end architecture;

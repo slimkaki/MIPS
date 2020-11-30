@@ -84,8 +84,8 @@ architecture comportamento of fetch is
 		
 
 		jumpCaseInstruct(31 downto 28) <= proxInst(31 downto 28);
-		jumpCaseInstruct(25 downto 0) <= bitShiftInst1(25 downto 0);
-		jumpCaseInstruct(27 downto 26) <= "00";
+		jumpCaseInstruct(27 downto 2) <= bitShiftInst1(25 downto 0);
+		jumpCaseInstruct(1 downto 0) <= "00";
 
 		PROX_PC : entity work.muxGenerico2x1 generic map (larguraDados => dataWidth)
 											 port map (entradaA_MUX => saidaBNE,

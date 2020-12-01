@@ -1,5 +1,5 @@
 Flow report for mips
-Tue Dec  1 16:20:17 2020
+Tue Dec  1 16:24:11 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Dec  1 16:20:17 2020       ;
+; Flow Status                     ; Successful - Tue Dec  1 16:24:11 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mips                                        ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -109,7 +109,9 @@ https://fpgasoftware.intel.com/eula.
 ; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 517 MB              ; 00:00:38                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 695 MB              ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 705 MB              ; 00:00:01                           ;
-; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:40                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 697 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 704 MB              ; 00:00:01                           ;
+; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -121,6 +123,8 @@ https://fpgasoftware.intel.com/eula.
 ; Analysis & Synthesis ; ubuntu           ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
 ; EDA Netlist Writer   ; ubuntu           ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
 ; EDA Netlist Writer   ; ubuntu           ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
+; EDA Netlist Writer   ; ubuntu           ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
+; EDA Netlist Writer   ; ubuntu           ; Ubuntu 18.04.5 ; 18         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -128,6 +132,8 @@ https://fpgasoftware.intel.com/eula.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source=/home/rafaelalmada/Documents/MIPS/quartus/Waveform4.vwf --testbench_file=/home/rafaelalmada/Documents/MIPS/quartus/simulation/qsim/Waveform4.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/rafaelalmada/Documents/MIPS/quartus/simulation/qsim/ mips -c mips
 quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off mips -c mips --vector_source=/home/rafaelalmada/Documents/MIPS/quartus/Waveform4.vwf --testbench_file=/home/rafaelalmada/Documents/MIPS/quartus/simulation/qsim/Waveform4.vwf.vht
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=/home/rafaelalmada/Documents/MIPS/quartus/simulation/qsim/ mips -c mips
 

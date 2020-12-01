@@ -393,8 +393,8 @@ architecture comportamento of FluxoDados is
 		 
 		 saida_lui <= extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16));
 		 
-		 saida_ext <= saida_lui WHEN instrucao(31 downto 26) = "001111"; --ELSE
-							-- outA and sigExtZero WHEN instrucao(31 downto 26) = "001100";
+		 saida_ext <= saida_lui WHEN instrucao(31 downto 26) = "001111" ELSE
+							sigExtZero WHEN instrucao(31 downto 26) = "001100";
 			
         saidaULA_final <= result_slt WHEN instrucao(5 downto 0) = "101010"
 								  ELSE saida_lui WHEN instrucao(31 downto 26) = "001111"
@@ -407,6 +407,11 @@ architecture comportamento of FluxoDados is
                                                         larguraDadoSaida   => instructWidth)
                                            port map (estendeSinal_IN  => extendInstruc,
                                                      estendeSinal_OUT => saidaSigExt);
+																	  
+			ZeroSigExt :  entity work.extensorSinal generic map (larguraDadoEntrada => 16, 
+                                                        larguraDadoSaida   => instructWidth)
+                                           port map (estendeSinal_IN  => extendInstruc,
+                                                     estendeSinal_OUT => sigExtZero);
 
 		mux_RTRD  : entity work.muxGenerico2x1 generic map (larguraDados => 5)
 											   port map (entradaA_MUX  => endB,

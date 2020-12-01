@@ -3,7 +3,7 @@ $comment
 		vcd file mips.msim.vcd -direction
 $end
 $date
-	Tue Dec  1 16:20:20 2020
+	Tue Dec  1 16:24:14 2020
 $end
 $version
 	ModelSim Version 2020.1

@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
--- DATE "12/01/2020 16:20:17"
+-- DATE "12/01/2020 16:24:11"
 
 -- 
 -- Device: Altera 5CEBA4F23C7 Package FBGA484

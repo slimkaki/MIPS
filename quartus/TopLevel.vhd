@@ -13,7 +13,7 @@ entity TopLevel is
     HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
 	 saida_PC : out std_logic_vector((larguraDados-1) downto 0);
 	 saida : out std_logic_vector(31 downto 0);
-	 inA, inB, inB_inv : out std_logic_vector(31 downto 0)
+	 inA, inB, inB_inv, saidaMegaMux : out std_logic_vector(31 downto 0) 
 	--  controlWord : out std_logic_vector((controlWidth-1) downto 0);
   --  instruc : out std_logic_vector((larguraDados-1) downto 0);
   --  saidaULA : out std_logic_vector(31 downto 0);
@@ -42,7 +42,7 @@ begin
                                             palavraControl => palavraControle,
                                             saida_PC => saida_PC,
                                             saida => saida,
-                                            saidaMegaMux => mux_data_write,
+                                            saidaMegaMux => saidaMegaMux,
 														  inA => inA,
 														  inB => inB,
 														  inB_inv => inB_inv);
@@ -53,8 +53,8 @@ begin
 
 --    MUX : entity work.muxGenerico4x2_32 port map(entrada0 => saida_PC,
 --                                              entrada1 => saida,          -- saida ula
---                                              entrada2 => mux_data_write,
---                                              entrada3 => mux_data_write,
+--                                              entrada2 => inA,
+--                                              entrada3 => inB,
 --                                              seletor_MUX => SW(1 downto 0),
 --                                              saida_MUX => data);
 

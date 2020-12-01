@@ -33,7 +33,7 @@ architecture comportamento of FluxoDados is
     signal saida_MUXRd : std_logic_vector(4 downto 0);
     signal pc_in : std_logic_vector(instructWidth-1 downto 0);
     signal saidaR31 : std_logic_vector(4 downto 0);
-	 signal saidaULA_final : std_logic_vector(31 downto 0);
+	 signal saidaULA_final, saida_lui : std_logic_vector(31 downto 0);
 
     alias BNE           : std_logic is palavraControle(14);
     alias muxJR         : std_logic is palavraControle(13);
@@ -390,9 +390,12 @@ architecture comportamento of FluxoDados is
                                                 entradaB_inv => entradaB_ULA_inv(31));
 																
 		 flagZ <= '1' when unsigned(saidaULA) = unsigned(zero) else '0';
+		 
+		 saida_lui <= extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16));
 			
         saidaULA_final <= result_slt WHEN instrucao(5 downto 0) = "101010"
-							ELSE saidaULA;
+								  ELSE saida_lui WHEN instrucao(31 downto 26) = "001111"
+								  ELSE saidaULA;
 							
 			mSaidaULA <= saidaULA_final;
                                                 
@@ -437,7 +440,7 @@ architecture comportamento of FluxoDados is
         
         muxULAram  : entity work.muxGenerico4x2_32 port map (entrada0 => saidaULA_final,
                                                           entrada1 => saidaRAM,
-                                                          entrada2 => extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16)),
+                                                          entrada2 => saida_lui,
                                                           entrada3 => pc_in,
                                                           seletor_MUX => muxULAMem,
                                                           saida_MUX => saida_MUXulaRAM);

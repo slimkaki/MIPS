@@ -26,7 +26,6 @@ begin
     FD : entity work.FluxoDados generic map(instructWidth => instructWidth)
                                 port map(clk => clk,
                                          rst => rst,
-                                         escritaC => '1',
                                          palavraControle => palavraControle,
                                          instrucao => instrucao,
                                          opCodeFunct => opCodeFunct,

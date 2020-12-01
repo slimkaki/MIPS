@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips
-Tue Dec  1 15:24:49 2020
+Tue Dec  1 16:20:04 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -172,7 +172,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Dec  1 15:24:49 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec  1 16:20:04 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mips                                        ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -2695,7 +2695,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -2705,7 +2705,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Dec  1 15:24:37 2020
+    Info: Processing started: Tue Dec  1 16:19:43 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2795,6 +2795,7 @@ Info (12128): Elaborating entity "CPU" for hierarchy "CPU:processador" File: /ho
 Info (12128): Elaborating entity "FluxoDados" for hierarchy "CPU:processador|FluxoDados:FD" File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 26
 Warning (10541): VHDL Signal Declaration warning at FluxoDados.vhd(34): used implicit default value for signal "pc_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 34
 Warning (10036): Verilog HDL or VHDL warning at FluxoDados.vhd(35): object "saidaR31" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 35
+Warning (10036): Verilog HDL or VHDL warning at FluxoDados.vhd(36): object "saida_ext" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 36
 Warning (10036): Verilog HDL or VHDL warning at FluxoDados.vhd(51): object "flagZero_all" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 51
 Info (12128): Elaborating entity "fetch" for hierarchy "CPU:processador|FluxoDados:FD|fetch:fetchInstruction" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 57
 Warning (10540): VHDL Signal Declaration warning at fetch.vhd(22): used explicit default value for signal "constanteSoma" because signal was never assigned a value File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 22
@@ -2813,13 +2814,13 @@ Warning (10541): VHDL Signal Declaration warning at ULA.vhd(16): used implicit d
 Info (12128): Elaborating entity "muxAllLogic2x1" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxAllLogic2x1:muxInva" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 36
 Info (12128): Elaborating entity "somadorULA" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0|somadorULA:soma" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 48
 Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxGenerico4x2:Muxao" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 60
-Info (12128): Elaborating entity "extensorSinal" for hierarchy "CPU:processador|FluxoDados:FD|extensorSinal:sigExt" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 402
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:processador|FluxoDados:FD|muxGenerico2x1:mux_RTRD" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 407
-Info (12128): Elaborating entity "LogicAnd" for hierarchy "CPU:processador|FluxoDados:FD|LogicAnd:LogicAND" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 426
-Info (12128): Elaborating entity "RAM" for hierarchy "CPU:processador|FluxoDados:FD|RAM:memRAM" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 434
+Info (12128): Elaborating entity "extensorSinal" for hierarchy "CPU:processador|FluxoDados:FD|extensorSinal:sigExt" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 406
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:processador|FluxoDados:FD|muxGenerico2x1:mux_RTRD" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 411
+Info (12128): Elaborating entity "LogicAnd" for hierarchy "CPU:processador|FluxoDados:FD|LogicAnd:LogicAND" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 430
+Info (12128): Elaborating entity "RAM" for hierarchy "CPU:processador|FluxoDados:FD|RAM:memRAM" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 438
 Warning (10639): VHDL warning at RAM.vhd(23): constant value overflow File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 23
 Warning (10445): VHDL Subtype or Type Declaration warning at RAM.vhd(23): subtype or type has null range File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 23
-Info (12128): Elaborating entity "muxGenerico4x2_32" for hierarchy "CPU:processador|FluxoDados:FD|muxGenerico4x2_32:muxULAram" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 441
+Info (12128): Elaborating entity "muxGenerico4x2_32" for hierarchy "CPU:processador|FluxoDados:FD|muxGenerico4x2_32:muxULAram" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 447
 Info (12128): Elaborating entity "UnidadeControle" for hierarchy "CPU:processador|UnidadeControle:UC" File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 39
 Warning (10620): VHDL warning at UnidadeControle.vhd(52): comparison between unequal length operands always returns FALSE File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 52
 Warning (10620): VHDL warning at UnidadeControle.vhd(65): comparison between unequal length operands always returns FALSE File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 65
@@ -2948,10 +2949,10 @@ Info (21057): Implemented 1218 device resources after synthesis - the final reso
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 244 output pins
     Info (21061): Implemented 959 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 130 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 131 warnings
     Info: Peak virtual memory: 519 megabytes
-    Info: Processing ended: Tue Dec  1 15:24:49 2020
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Processing ended: Tue Dec  1 16:20:04 2020
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:39
 
 

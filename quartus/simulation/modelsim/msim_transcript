@@ -1,0 +1,258 @@
+# do mips_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying /home/rafaelalmada/intelFPGA_lite/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:57 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity somadorULA
+# -- Compiling architecture comportamento of somadorULA
+# End time: 18:03:57 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:57 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity muxGenerico4x2
+# -- Compiling architecture comportamento of muxGenerico4x2
+# End time: 18:03:57 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:57 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity muxAllLogic2x1
+# -- Compiling architecture comportamento of muxAllLogic2x1
+# End time: 18:03:57 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/constants.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:57 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/constants.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package constants
+# End time: 18:03:57 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:57 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bitShift
+# -- Compiling architecture arch of bitShift
+# End time: 18:03:57 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:57 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LogicAnd
+# -- Compiling architecture arch of LogicAnd
+# End time: 18:03:57 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:57 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity extensorSinal
+# -- Compiling architecture comportamento of extensorSinal
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RAM
+# -- Compiling architecture rtl of RAM
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity muxGenerico2x1
+# -- Compiling architecture comportamento of muxGenerico2x1
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity bancoRegistradores
+# -- Compiling architecture comportamento of bancoRegistradores
+# ** Warning: /home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd(36): (vcom-1236) Shared variables must be of a protected type.
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ROMMIPS
+# -- Compiling architecture assincrona of ROMMIPS
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registradorGenerico
+# -- Compiling architecture comportamento of registradorGenerico
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/somador.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/somador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity somador
+# -- Compiling architecture comportamento of somador
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package constants
+# -- Compiling entity UnidadeControleULA
+# -- Compiling architecture arch of UnidadeControleULA
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity ULA
+# -- Compiling architecture comportamento of ULA
+# -- Loading entity muxAllLogic2x1
+# -- Loading entity somadorULA
+# -- Loading entity muxGenerico4x2
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity fetch
+# -- Compiling architecture comportamento of fetch
+# -- Loading entity registradorGenerico
+# -- Loading entity ROMMIPS
+# -- Loading entity bitShift
+# -- Loading entity somador
+# -- Loading entity muxGenerico2x1
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package constants
+# -- Compiling entity UnidadeControle
+# -- Compiling architecture arch of UnidadeControle
+# ** Warning: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd(44): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 6 is not equal to right length 12).
+# ** Warning: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd(56): (vcom-1083) Implicit array operator "=" always returns FALSE (left length 6 is not equal to right length 12).
+# -- Loading entity UnidadeControleULA
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FluxoDados
+# -- Compiling architecture comportamento of FluxoDados
+# -- Loading entity fetch
+# -- Loading entity bancoRegistradores
+# -- Loading entity ULA
+# -- Loading entity extensorSinal
+# -- Loading entity muxGenerico2x1
+# -- Loading entity LogicAnd
+# -- Loading entity RAM
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {/home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:58 on Nov 20,2020
+# vcom -reportprogress 300 -2008 -work work /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CPU
+# -- Compiling architecture arch of CPU
+# -- Loading entity FluxoDados
+# -- Loading package constants
+# -- Loading entity UnidadeControle
+# End time: 18:03:58 on Nov 20,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 

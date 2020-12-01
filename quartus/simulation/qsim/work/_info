@@ -1,0 +1,203 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/rafaelalmada/Documents/MIPS/quartus/simulation/qsim
+Ecpu
+Z1 w1606236855
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 38
+R0
+Z11 8mips.vho
+Z12 Fmips.vho
+l0
+Z13 L39 1
+V2T0GP7o3kNGkFLK_]6ZB=1
+!s100 zSjhnXmD9Ih9b4a5g;QbM3
+Z14 OV;C;2020.1;71
+32
+Z15 !s110 1606236857
+!i10b 1
+Z16 !s108 1606236857.000000
+Z17 !s90 -work|work|mips.vho|
+Z18 !s107 mips.vho|
+!i113 1
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 3 cpu 0 22 2T0GP7o3kNGkFLK_]6ZB=1
+!i122 38
+l334
+L50 3643
+V_Bnh>6mJe=GTRgoHRO4^`0
+!s100 E]Um4F51EL2W:bg2h2YRK3
+R14
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R19
+R20
+Ecpu_vhd_vec_tst
+Z21 w1606236852
+R8
+R9
+!i122 39
+R0
+Z22 8Waveform2.vwf.vht
+Z23 FWaveform2.vwf.vht
+l0
+Z24 L32 1
+VWH5;nYiB6@7gZK<F=?2KH2
+!s100 MT_2[ECbSh>ONUcARUP8c0
+R14
+32
+Z25 !s110 1606236858
+!i10b 1
+Z26 !s108 1606236858.000000
+Z27 !s90 -work|work|Waveform2.vwf.vht|
+Z28 !s107 Waveform2.vwf.vht|
+!i113 1
+R19
+R20
+Acpu_arch
+R8
+R9
+DEx4 work 15 cpu_vhd_vec_tst 0 22 WH5;nYiB6@7gZK<F=?2KH2
+!i122 39
+l53
+L34 50
+Vc=8RoPM>ISPeczeTKi1IR2
+!s100 HACEFaZcJcglgO[_Y@WdS3
+R14
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R19
+R20
+Etoplevel
+Z29 w1606850417
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+!i122 122
+R0
+R11
+R12
+l0
+R13
+VY<f=KlzZVa3WBdSb:O1Mk2
+!s100 cEE7zDOIm7Ld`ZQ;bl^GJ0
+R14
+32
+Z30 !s110 1606850419
+!i10b 1
+Z31 !s108 1606850419.000000
+R17
+R18
+!i113 1
+R19
+R20
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 8 toplevel 0 22 Y<f=KlzZVa3WBdSb:O1Mk2
+!i122 122
+l2231
+L60 24471
+Vd`nA4b8A04aaM?Jhz]UG22
+!s100 ;Uc?>T0<Fh@aleQG@`ehm1
+R14
+32
+R30
+!i10b 1
+R31
+R17
+R18
+!i113 1
+R19
+R20
+Etoplevel_vhd_vec_tst
+Z32 w1606850415
+R8
+R9
+!i122 123
+R0
+Z33 8Waveform4.vwf.vht
+Z34 FWaveform4.vwf.vht
+l0
+R24
+Vi`cW82E4ohG=CFFdJ4Rgz3
+!s100 HOYZb^>X>O4gVXH@FzMRJ1
+R14
+32
+Z35 !s110 1606850420
+!i10b 1
+R31
+Z36 !s90 -work|work|Waveform4.vwf.vht|
+Z37 !s107 Waveform4.vwf.vht|
+!i113 1
+R19
+R20
+Atoplevel_arch
+R8
+R9
+Z38 DEx4 work 20 toplevel_vhd_vec_tst 0 22 i`cW82E4ohG=CFFdJ4Rgz3
+!i122 123
+l73
+Z39 L34 73
+Z40 V860YoOXRi>D=K>2O7XkkP3
+Z41 !s100 DgNWV8k^:eaT6ISND2N:22
+R14
+32
+R35
+!i10b 1
+R31
+R36
+R37
+!i113 1
+R19
+R20

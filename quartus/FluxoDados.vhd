@@ -24,7 +24,7 @@ architecture comportamento of FluxoDados is
     signal flagZ : std_logic;
     signal saidaULA : std_logic_vector((instructWidth - 1) downto 0);
     signal extendInstruc : std_logic_vector(15 downto 0);
-    signal saidaSigExt : std_logic_vector((instructWidth - 1) downto 0);
+    signal saidaSigExt, sigExtZero : std_logic_vector((instructWidth - 1) downto 0);
     signal andBEQZero, andBNEZero : std_logic;
     signal saida_MUXimed : std_logic_vector((instructWidth-1) downto 0);
     signal saidaRAM : std_logic_vector((instructWidth-1) downto 0);
@@ -33,7 +33,7 @@ architecture comportamento of FluxoDados is
     signal saida_MUXRd : std_logic_vector(4 downto 0);
     signal pc_in : std_logic_vector(instructWidth-1 downto 0);
     signal saidaR31 : std_logic_vector(4 downto 0);
-	 signal saidaULA_final, saida_lui : std_logic_vector(31 downto 0);
+	 signal saidaULA_final, saida_lui, saida_ext : std_logic_vector(31 downto 0);
 
     alias BNE           : std_logic is palavraControle(14);
     alias muxJR         : std_logic is palavraControle(13);
@@ -68,9 +68,9 @@ architecture comportamento of FluxoDados is
 
         opCodeFunct(11 downto 6) <= instrucao(31 downto 26);
         opCodeFunct(5 downto 0)  <= instrucao(5 downto 0);
-        endA                     <= instrucao(25 downto 21);
-        endB                     <= instrucao(20 downto 16);
-        endC                     <= instrucao(15 downto 11);
+        endA                     <= instrucao(25 downto 21); -- rs
+        endB                     <= instrucao(20 downto 16); -- rt
+        endC                     <= instrucao(15 downto 11); -- rd
         extendInstruc            <= instrucao(15 downto 0);
 
         BancoReg : entity work.bancoRegistradores port map (clk => clk,
@@ -392,12 +392,16 @@ architecture comportamento of FluxoDados is
 		 flagZ <= '1' when unsigned(saidaULA) = unsigned(zero) else '0';
 		 
 		 saida_lui <= extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16));
+		 
+		 saida_ext <= saida_lui WHEN instrucao(31 downto 26) = "001111"; --ELSE
+							-- outA and sigExtZero WHEN instrucao(31 downto 26) = "001100";
 			
         saidaULA_final <= result_slt WHEN instrucao(5 downto 0) = "101010"
 								  ELSE saida_lui WHEN instrucao(31 downto 26) = "001111"
 								  ELSE saidaULA;
 							
 			mSaidaULA <= saidaULA_final;
+			
                                                 
         sigExt : entity work.extensorSinal generic map (larguraDadoEntrada => 16, 
                                                         larguraDadoSaida   => instructWidth)
@@ -437,6 +441,8 @@ architecture comportamento of FluxoDados is
                                             clk      => clk,
                                             dado_in  => outB,
                                             dado_out => saidaRAM);
+														  
+			
         
         muxULAram  : entity work.muxGenerico4x2_32 port map (entrada0 => saidaULA_final,
                                                           entrada1 => saidaRAM,

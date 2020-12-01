@@ -1,0 +1,821 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/rafaelalmada/Documents/MIPS/quartus/simulation/modelsim
+Ebancoregistradores
+Z1 w1605118627
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 9
+R0
+Z5 8/home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd
+Z6 F/home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd
+l0
+L7 1
+VfV=0@RHnYen2IWm^`oKSO3
+!s100 4B?bEf5OW2f?4K01@_Ck52
+Z7 OV;C;2020.1;71
+33
+Z8 !s110 1605906238
+!i10b 1
+Z9 !s108 1605906238.000000
+Z10 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd|
+Z11 !s107 /home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd|
+!i113 1
+Z12 o-2008 -work work
+Z13 tExplicit 1 CvgOpt 0
+Acomportamento
+R2
+R3
+R4
+Z14 DEx4 work 18 bancoregistradores 0 22 fV=0@RHnYen2IWm^`oKSO3
+!i122 9
+l38
+L30 33
+VR84<mE^^AoAfEN3Z2IBe01
+!s100 >GH7abYQ2N2NocHbOoJQP0
+R7
+33
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ebitshift
+R1
+R2
+R3
+R4
+!i122 4
+R0
+Z15 8/home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd
+Z16 F/home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd
+l0
+L5 1
+V8>k>2XDMkW6ooHd_WfX?`1
+!s100 b;M0ZT:m2HZ`BQD14bRn]3
+R7
+33
+Z17 !s110 1605906237
+!i10b 1
+Z18 !s108 1605906237.000000
+Z19 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd|
+Z20 !s107 /home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+Z21 DEx4 work 8 bitshift 0 22 8>k>2XDMkW6ooHd_WfX?`1
+!i122 4
+l18
+L14 10
+VToQlICFEU21jc?RP>UDO21
+!s100 AHfB:b=7FMof6cI`WSGSD1
+R7
+33
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R12
+R13
+Pconstants
+R2
+R3
+R4
+!i122 3
+R1
+R0
+8/home/rafaelalmada/Documents/MIPS/quartus/constants.vhd
+F/home/rafaelalmada/Documents/MIPS/quartus/constants.vhd
+l0
+L5 1
+V_EjdS2NkZhMDejJW5T3D;1
+!s100 gUOR3DTe3P_Z0BAf_k3lg1
+R7
+33
+R17
+!i10b 1
+R18
+!s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/constants.vhd|
+!s107 /home/rafaelalmada/Documents/MIPS/quartus/constants.vhd|
+!i113 1
+R12
+R13
+Ecpu
+R1
+R2
+R3
+R4
+!i122 18
+R0
+Z22 8/home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd
+Z23 F/home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd
+l0
+L5 1
+VDmhmFB;>T[VF1X^P_;?@c0
+!s100 [YRjT;NBoz^eikQZbbE>83
+R7
+33
+R8
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd|
+!s107 /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd|
+!i113 1
+R12
+R13
+Aarch
+Z25 DPx4 work 9 constants 0 22 _EjdS2NkZhMDejJW5T3D;1
+Z26 DEx4 work 15 unidadecontrole 0 22 3<e1do1jnK28QMUCM>jIl1
+Z27 DEx4 work 10 fluxodados 0 22 EaPj?4GRNIWf@[@APFSFh1
+R2
+R3
+R4
+DEx4 work 3 cpu 0 22 DmhmFB;>T[VF1X^P_;?@c0
+!i122 18
+l21
+L16 24
+VYo9P[GiCm^bbX@OBRJ;fI3
+!s100 LAAgNXaLc1QmQA<A21gBS1
+R7
+33
+R8
+!i10b 1
+R9
+R24
+Z28 !s107 /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd|
+!i113 1
+R12
+R13
+Eextensorsinal
+R1
+R3
+R4
+!i122 6
+R0
+Z29 8/home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd
+Z30 F/home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd
+l0
+L4 1
+V?814WJJR00A>oi?fiOAhR0
+!s100 XEW?z;A_W4boh53J9^IKJ3
+R7
+33
+R8
+!i10b 1
+R18
+Z31 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd|
+Z32 !s107 /home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+R3
+R4
+Z33 DEx4 work 13 extensorsinal 0 22 ?814WJJR00A>oi?fiOAhR0
+!i122 6
+l20
+L19 11
+V@I;B1=l<3k@lG81ij6RC@2
+!s100 SIgDRA_MBAGAHYgKL94FM1
+R7
+33
+R8
+!i10b 1
+R18
+R31
+R32
+!i113 1
+R12
+R13
+Efetch
+R1
+R2
+R3
+R4
+!i122 15
+R0
+Z34 8/home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd
+Z35 F/home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd
+l0
+L5 1
+VF]V1fK78D`1]KfU8YIz_M0
+!s100 5<[DKK]91RZ<2IA;O3od52
+R7
+33
+R8
+!i10b 1
+R9
+Z36 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd|
+Z37 !s107 /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+Z38 DEx4 work 14 muxgenerico2x1 0 22 gC^5g_8ifO`fl[[[kL1K`3
+Z39 DEx4 work 7 somador 0 22 ?=]BBmE@eWl6H36lN_7WS2
+R21
+Z40 DEx4 work 7 rommips 0 22 Fb3mBbnEVAMbnlE7Id=Q=3
+Z41 DEx4 work 19 registradorgenerico 0 22 ZVE6X8a@mFg3OIaE;e39<0
+R2
+R3
+R4
+Z42 DEx4 work 5 fetch 0 22 F]V1fK78D`1]KfU8YIz_M0
+!i122 15
+l26
+L18 61
+VIh[VlDXE74FKj@Mn;^glV3
+!s100 mSfBkdXeNncz<^X:d:h^J1
+R7
+33
+R8
+!i10b 1
+R9
+R36
+R37
+!i113 1
+R12
+R13
+Efluxodados
+R1
+R2
+R3
+R4
+!i122 17
+R0
+Z43 8/home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd
+Z44 F/home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd
+l0
+L5 1
+VEaPj?4GRNIWf@[@APFSFh1
+!s100 eQZRn;7=[HK[nz2lHe6G<3
+R7
+33
+R8
+!i10b 1
+R9
+Z45 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd|
+Z46 !s107 /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+Z47 DEx4 work 3 ram 0 22 BliANfBLOnc2i1D>E_7Vf3
+Z48 DEx4 work 8 logicand 0 22 mA_NSmRBa6JP8WQlZblco0
+R38
+R33
+Z49 DEx4 work 3 ula 0 22 7CIBc7a<WLf0P2_f8oA>M0
+R14
+R42
+R2
+R3
+R4
+R27
+!i122 17
+l44
+L18 350
+VT`Aon?f>Q3I1hAUiUck=F0
+!s100 5b8eE;3LV;JG=MJijQF@<0
+R7
+33
+R8
+!i10b 1
+R9
+R45
+R46
+!i113 1
+R12
+R13
+Elogicand
+R1
+R2
+R3
+R4
+!i122 5
+R0
+Z50 8/home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd
+Z51 F/home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd
+l0
+L5 1
+VmA_NSmRBa6JP8WQlZblco0
+!s100 @Li0=Y76BFfo1DJgmL2D70
+R7
+33
+R17
+!i10b 1
+R18
+Z52 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd|
+Z53 !s107 /home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd|
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+R48
+!i122 5
+l15
+L13 6
+V`L8fVkW9kc_DhU:_aZ^7T3
+!s100 6ICEPZ@Hh7T@hQ920X4:k3
+R7
+33
+R17
+!i10b 1
+R18
+R52
+R53
+!i113 1
+R12
+R13
+Emuxalllogic2x1
+R1
+R3
+R4
+!i122 2
+R0
+Z54 8/home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd
+Z55 F/home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd
+l0
+L4 1
+VMUR4`LN4fSS>dKj:RiIkg2
+!s100 5bE658=D;]N]n_9g^V]3J3
+R7
+33
+R17
+!i10b 1
+R18
+Z56 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd|
+Z57 !s107 /home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+R3
+R4
+Z58 DEx4 work 14 muxalllogic2x1 0 22 MUR4`LN4fSS>dKj:RiIkg2
+!i122 2
+l14
+L13 4
+V`T7haW^h=o7@=@cS:i;0O1
+!s100 d@[9a=m4h?IIl^0OF4TbD3
+R7
+33
+R17
+!i10b 1
+R18
+R56
+R57
+!i113 1
+R12
+R13
+Emuxgenerico2x1
+R1
+R3
+R4
+!i122 8
+R0
+Z59 8/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd
+Z60 F/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd
+l0
+L4 1
+VgC^5g_8ifO`fl[[[kL1K`3
+!s100 ;zMihQOzRiAMZOMO=7]<I2
+R7
+33
+R8
+!i10b 1
+R9
+Z61 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd|
+Z62 !s107 /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+R3
+R4
+R38
+!i122 8
+l15
+L14 4
+VjdF`<99O_keZEiC3z9ee43
+!s100 o4>?ol65E@7T8D;XjQohT1
+R7
+33
+R8
+!i10b 1
+R9
+R61
+R62
+!i113 1
+R12
+R13
+Emuxgenerico4x2
+R1
+R3
+R4
+!i122 1
+R0
+Z63 8/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd
+Z64 F/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd
+l0
+L4 1
+VLcVaHU3^Uo2I?2LYDL@TG0
+!s100 =gY2`RmXSDihXOj>;K;@?1
+R7
+33
+R17
+!i10b 1
+R18
+Z65 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd|
+Z66 !s107 /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+R3
+R4
+Z67 DEx4 work 14 muxgenerico4x2 0 22 LcVaHU3^Uo2I?2LYDL@TG0
+!i122 1
+l14
+L13 8
+V=c@jfeE3l3H`a09ED9lTK0
+!s100 KN_Zm=TFBAX1RbY:VGklX3
+R7
+33
+R17
+!i10b 1
+R18
+R65
+R66
+!i113 1
+R12
+R13
+Eram
+R1
+R2
+R3
+R4
+!i122 7
+R0
+Z68 8/home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd
+Z69 F/home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd
+l0
+L5 1
+VBliANfBLOnc2i1D>E_7Vf3
+!s100 d;`gS`8zTGo7a;53?j1an2
+R7
+33
+R8
+!i10b 1
+R9
+Z70 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd|
+Z71 !s107 /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd|
+!i113 1
+R12
+R13
+Artl
+R2
+R3
+R4
+R47
+!i122 7
+l27
+L20 20
+Vl;Ji0:9[198EmXN^^ff6L3
+!s100 N0ASVUo6G;[P<95=8=DE^3
+R7
+33
+R8
+!i10b 1
+R9
+R70
+R71
+!i113 1
+R12
+R13
+Eregistradorgenerico
+R1
+R3
+R4
+!i122 11
+R0
+Z72 8/home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd
+Z73 F/home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd
+l0
+L4 1
+VZVE6X8a@mFg3OIaE;e39<0
+!s100 c:Ja7R2kS6anE9]_Kj>nV0
+R7
+33
+R8
+!i10b 1
+R9
+Z74 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd|
+Z75 !s107 /home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+R3
+R4
+R41
+!i122 11
+l17
+L16 23
+VliPSQFfZK8>V6HV`WORX=3
+!s100 oPOIha<3S:BfQoYlBjieJ3
+R7
+33
+R8
+!i10b 1
+R9
+R74
+R75
+!i113 1
+R12
+R13
+Erommips
+R1
+R2
+R3
+R4
+!i122 10
+R0
+Z76 8/home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd
+Z77 F/home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd
+l0
+L5 1
+VFb3mBbnEVAMbnlE7Id=Q=3
+!s100 NjS1NdQkhj8XT>MIjIHW70
+R7
+33
+R8
+!i10b 1
+R9
+Z78 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd|
+Z79 !s107 /home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd|
+!i113 1
+R12
+R13
+Aassincrona
+R2
+R3
+R4
+R40
+!i122 10
+l28
+L17 15
+V3<bnBQUL^j<T`_hUXE55^0
+!s100 UCZSLL?SIz:9XK]@hSH763
+R7
+33
+R8
+!i10b 1
+R9
+R78
+R79
+!i113 1
+R12
+R13
+Esomador
+R1
+R2
+R3
+R4
+!i122 12
+R0
+Z80 8/home/rafaelalmada/Documents/MIPS/quartus/somador.vhd
+Z81 F/home/rafaelalmada/Documents/MIPS/quartus/somador.vhd
+l0
+L5 1
+V?=]BBmE@eWl6H36lN_7WS2
+!s100 =e;93RNnTC6eS:>OZ?P9k2
+R7
+33
+R8
+!i10b 1
+R9
+Z82 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/somador.vhd|
+Z83 !s107 /home/rafaelalmada/Documents/MIPS/quartus/somador.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+R2
+R3
+R4
+R39
+!i122 12
+l18
+L17 4
+V8OJ8iafc:=j^M3W_1z_b@0
+!s100 1Boa^EPi48O571UN66Oc<1
+R7
+33
+R8
+!i10b 1
+R9
+R82
+R83
+!i113 1
+R12
+R13
+Esomadorula
+R1
+R2
+R3
+R4
+!i122 0
+R0
+Z84 8/home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd
+Z85 F/home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd
+l0
+L5 1
+VYI=f259E^g;h_3WYZRl5^3
+!s100 Nc;N9SZ8HOLdFAjhnT=gc0
+R7
+33
+R17
+!i10b 1
+R18
+Z86 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd|
+Z87 !s107 /home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+R2
+R3
+R4
+Z88 DEx4 work 10 somadorula 0 22 YI=f259E^g;h_3WYZRl5^3
+!i122 0
+l20
+L18 13
+Vnb=CkB6m;fSL:mVaE_GJj3
+!s100 l_W13EWK1i2oGdBnADic72
+R7
+33
+R17
+!i10b 1
+R18
+R86
+R87
+!i113 1
+R12
+R13
+Eula
+R1
+R2
+R3
+R4
+!i122 14
+R0
+Z89 8/home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd
+Z90 F/home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd
+l0
+L5 1
+V7CIBc7a<WLf0P2_f8oA>M0
+!s100 ^mc@n5PdE[A@d=`kk7:890
+R7
+33
+R8
+!i10b 1
+R9
+Z91 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd|
+Z92 !s107 /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd|
+!i113 1
+R12
+R13
+Acomportamento
+R67
+R88
+R58
+R2
+R3
+R4
+R49
+!i122 14
+l31
+L19 45
+Vd8aGg]7zE`7<ZUV>XMM9[1
+!s100 ^;>F=l:e8QSP<QdhB>O160
+R7
+33
+R8
+!i10b 1
+R9
+R91
+R92
+!i113 1
+R12
+R13
+Eunidadecontrole
+R1
+R25
+R2
+R3
+R4
+!i122 16
+R0
+Z93 8/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd
+Z94 F/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd
+l0
+L6 1
+V3<e1do1jnK28QMUCM>jIl1
+!s100 FnUnWd;9Xbgh_E0RZHdNL2
+R7
+33
+R8
+!i10b 1
+R9
+Z95 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd|
+Z96 !s107 /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd|
+!i113 1
+R12
+R13
+Aarch
+Z97 DEx4 work 18 unidadecontroleula 0 22 LLI`Omz<VQZeE@`fe=UXb2
+R25
+R2
+R3
+R4
+R26
+!i122 16
+l33
+L17 74
+VY2^IkVTFcP=<F24TBBUXG3
+!s100 FI[_]mJ:=g0f<_8<Z>l@T3
+R7
+33
+R8
+!i10b 1
+R9
+R95
+R96
+!i113 1
+R12
+R13
+Eunidadecontroleula
+R1
+R25
+R2
+R3
+R4
+!i122 13
+R0
+Z98 8/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd
+Z99 F/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd
+l0
+L6 1
+VLLI`Omz<VQZeE@`fe=UXb2
+!s100 iz6=1NR^9j4MOZfXCX_bH0
+R7
+33
+R8
+!i10b 1
+R9
+Z100 !s90 -reportprogress|300|-2008|-work|work|/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd|
+Z101 !s107 /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd|
+!i113 1
+R12
+R13
+Aarch
+R25
+R2
+R3
+R4
+R97
+!i122 13
+l16
+L14 14
+VckJBSJd7=CeVNjdebENF?0
+!s100 =YaF8hae6FRmG?W5;1gNR0
+R7
+33
+R8
+!i10b 1
+R9
+R100
+R101
+!i113 1
+R12
+R13

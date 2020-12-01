@@ -18,7 +18,8 @@ end entity;
 
 architecture comportamento of extensorSinal is
 begin
-    process (estendeSinal_IN) is
+--	 estendeSinal_OUT <= estendeSinal_IN & (larguraDadoSaida-1 downto larguraDadoEntrada => '0');
+process (estendeSinal_IN) is
     begin
             if (estendeSinal_IN(larguraDadoEntrada-1) = '1') then
                 estendeSinal_OUT <= (larguraDadoSaida-1 downto larguraDadoEntrada => '1') & estendeSinal_IN;

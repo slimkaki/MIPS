@@ -18,6 +18,6 @@ signal shift1 : std_logic_vector((dataWidth - 1) downto 0);
 begin
     process(clock) is
     begin
-        saida <= std_logic_vector(shift_right(unsigned(entrada), shiftSize));
+        saida <= std_logic_vector(shift_left(unsigned(entrada), shiftSize));
     end process;
 end architecture;

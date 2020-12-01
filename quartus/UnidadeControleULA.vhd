@@ -22,7 +22,7 @@ begin
                  "110" WHEN (opcode = sub_R(11 downto 6) and funct = sub_R(5 downto 0)) or
                             (opcode = subu_R(11 downto 6) and funct = subu_R(5 downto 0)) or
                             (opcode = beq_I(11 downto 6)) or (opcode = bne_I(11 downto 6)) ELSE
-                 "111" WHEN (opcode = slt_r(11 downto 6) and funct = slt_R(5 downto 0)) or
+                 "110" WHEN (opcode = slt_r(11 downto 6) and funct = slt_R(5 downto 0)) or
                             (opcode = sltu_R(11 downto 6) and funct = sltu_R(5 downto 0)) ELSE
                  "000" WHEN (opcode = and_R(11 downto 6) and funct = and_R(5 downto 0)) or
                             (opcode = andi_I(11 downto 6)) ELSE

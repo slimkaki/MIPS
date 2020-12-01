@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips
-Tue Dec  1 11:43:20 2020
+Tue Dec  1 13:31:30 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -172,14 +172,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Dec  1 11:43:20 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec  1 13:31:30 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mips                                        ;
 ; Top-level Entity Name           ; TopLevel                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 161                                         ;
-; Total pins                      ; 67                                          ;
+; Total registers                 ; 160                                         ;
+; Total pins                      ; 227                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -299,187 +299,177 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
-; muxGenerico4x2_32.vhd            ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2_32.vhd      ;         ;
-; conversorHex7Segmentos.vhd       ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/conversorHex7Segmentos.vhd ;         ;
-; UnidadeControleULA.vhd           ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd     ;         ;
-; somadorULA.vhd                   ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd             ;         ;
-; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd         ;         ;
-; muxAllLogic2x1.vhd               ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd         ;         ;
-; CPU.vhd                          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd                    ;         ;
-; UnidadeControle.vhd              ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd        ;         ;
-; constants.vhd                    ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/constants.vhd              ;         ;
-; bitShift.vhd                     ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd               ;         ;
-; LogicAnd.vhd                     ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd               ;         ;
-; extensorSinal.vhd                ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd          ;         ;
-; RAM.vhd                          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd                    ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd         ;         ;
-; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd     ;         ;
-; FluxoDados.vhd                   ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd             ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd                    ;         ;
-; ROMMIPS.vhd                      ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd                ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd    ;         ;
-; fetch.vhd                        ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd                  ;         ;
-; somador.vhd                      ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/somador.vhd                ;         ;
-; edgeDetector.vhd                 ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/edgeDetector.vhd           ;         ;
-; TopLevel.vhd                     ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd               ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; muxGenerico4x2_32.vhd            ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2_32.vhd   ;         ;
+; UnidadeControleULA.vhd           ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd  ;         ;
+; somadorULA.vhd                   ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd          ;         ;
+; muxGenerico4x2.vhd               ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd      ;         ;
+; muxAllLogic2x1.vhd               ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd      ;         ;
+; CPU.vhd                          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd                 ;         ;
+; UnidadeControle.vhd              ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd     ;         ;
+; constants.vhd                    ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/constants.vhd           ;         ;
+; bitShift.vhd                     ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd            ;         ;
+; LogicAnd.vhd                     ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd            ;         ;
+; extensorSinal.vhd                ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd       ;         ;
+; RAM.vhd                          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd                 ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd      ;         ;
+; bancoRegistradores.vhd           ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd  ;         ;
+; FluxoDados.vhd                   ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd          ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd                 ;         ;
+; ROMMIPS.vhd                      ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd             ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd ;         ;
+; fetch.vhd                        ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd               ;         ;
+; somador.vhd                      ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/somador.vhd             ;         ;
+; TopLevel.vhd                     ; yes             ; User VHDL File  ; /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd            ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                            ;
-+---------------------------------------------+--------------------------+
-; Resource                                    ; Usage                    ;
-+---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 316                      ;
-;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 506                      ;
-;     -- 7 input functions                    ; 1                        ;
-;     -- 6 input functions                    ; 116                      ;
-;     -- 5 input functions                    ; 85                       ;
-;     -- 4 input functions                    ; 82                       ;
-;     -- <=3 input functions                  ; 222                      ;
-;                                             ;                          ;
-; Dedicated logic registers                   ; 161                      ;
-;                                             ;                          ;
-; I/O pins                                    ; 67                       ;
-;                                             ;                          ;
-; Total DSP Blocks                            ; 0                        ;
-;                                             ;                          ;
-; Maximum fan-out node                        ; edgeDetector:edges|saida ;
-; Maximum fan-out                             ; 160                      ;
-; Total fan-out                               ; 2602                     ;
-; Average fan-out                             ; 3.25                     ;
-+---------------------------------------------+--------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 337         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 534         ;
+;     -- 7 input functions                    ; 1           ;
+;     -- 6 input functions                    ; 130         ;
+;     -- 5 input functions                    ; 77          ;
+;     -- 4 input functions                    ; 101         ;
+;     -- <=3 input functions                  ; 225         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 160         ;
+;                                             ;             ;
+; I/O pins                                    ; 227         ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 160         ;
+; Total fan-out                               ; 3049        ;
+; Average fan-out                             ; 2.66        ;
++---------------------------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------+------------------------+--------------+
-; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Entity Name            ; Library Name ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------+------------------------+--------------+
-; |TopLevel                              ; 506 (0)             ; 161 (0)                   ; 0                 ; 0          ; 67   ; 0            ; |TopLevel                                                                             ; TopLevel               ; work         ;
-;    |CPU:processador|                   ; 411 (0)             ; 160 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador                                                             ; CPU                    ; work         ;
-;       |FluxoDados:FD|                  ; 387 (0)             ; 160 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD                                               ; FluxoDados             ; work         ;
-;          |RAM:memRAM|                  ; 2 (2)               ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|RAM:memRAM                                    ; RAM                    ; work         ;
-;          |ULA:ULA_bit0|                ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit0                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;          |ULA:ULA_bit10|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit10                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit10|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit10|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit11|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit11                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit11|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit11|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit12|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit12                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit12|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit12|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit13|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit13                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit13|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit13|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit14|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit14                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit14|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit14|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit15|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit15                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit15|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit15|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit16|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit16                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit16|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit16|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit17|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit17                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit17|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit17|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit18|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit18                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit18|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit18|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit19|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit19                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit19|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit19|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit1|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit1                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit1|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit1|somadorULA:soma                  ; somadorULA             ; work         ;
-;          |ULA:ULA_bit20|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit20                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit20|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit20|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit21|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit21                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit21|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit21|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit22|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit22                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit22|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit22|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit23|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit23                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit23|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit23|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit24|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit24                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit24|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit24|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit25|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit25                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit25|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit25|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit26|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit27|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit27                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit27|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit27|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit28|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit28                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit28|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit28|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit29|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit29                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit29|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit29|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit2|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit2                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit2|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit2|somadorULA:soma                  ; somadorULA             ; work         ;
-;          |ULA:ULA_bit30|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit30                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit30|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit30|somadorULA:soma                 ; somadorULA             ; work         ;
-;          |ULA:ULA_bit31|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit31                                 ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit31|muxGenerico4x2:Muxao            ; muxGenerico4x2         ; work         ;
-;          |ULA:ULA_bit3|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3|somadorULA:soma                  ; somadorULA             ; work         ;
-;          |ULA:ULA_bit4|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit4                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit4|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit4|somadorULA:soma                  ; somadorULA             ; work         ;
-;          |ULA:ULA_bit5|                ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit5                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit5|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit5|somadorULA:soma                  ; somadorULA             ; work         ;
-;          |ULA:ULA_bit6|                ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit6                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit6|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit6|somadorULA:soma                  ; somadorULA             ; work         ;
-;          |ULA:ULA_bit7|                ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit7                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit7|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit7|somadorULA:soma                  ; somadorULA             ; work         ;
-;          |ULA:ULA_bit8|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit8                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit8|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit8|somadorULA:soma                  ; somadorULA             ; work         ;
-;          |ULA:ULA_bit9|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit9                                  ; ULA                    ; work         ;
-;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit9|muxGenerico4x2:Muxao             ; muxGenerico4x2         ; work         ;
-;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit9|somadorULA:soma                  ; somadorULA             ; work         ;
-;          |bancoRegistradores:BancoReg| ; 98 (98)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|bancoRegistradores:BancoReg                   ; bancoRegistradores     ; work         ;
-;          |fetch:fetchInstruction|      ; 79 (0)              ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction                        ; fetch                  ; work         ;
-;             |ROMMIPS:ROM|              ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|ROMMIPS:ROM            ; ROMMIPS                ; work         ;
-;             |muxGenerico2x1:PROX_PC|   ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:PROX_PC ; muxGenerico2x1         ; work         ;
-;             |registradorGenerico:PC|   ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC ; registradorGenerico    ; work         ;
-;             |somador:SOMASIGEXT|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|somador:SOMASIGEXT     ; somador                ; work         ;
-;             |somador:SOMA|             ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|somador:SOMA           ; somador                ; work         ;
-;          |muxGenerico4x2_32:muxULAram| ; 75 (75)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|muxGenerico4x2_32:muxULAram                   ; muxGenerico4x2_32      ; work         ;
-;          |somador:soma1inv|            ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|somador:soma1inv                              ; somador                ; work         ;
-;       |UnidadeControle:UC|             ; 24 (10)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|UnidadeControle:UC                                          ; UnidadeControle        ; work         ;
-;          |UnidadeControleULA:UC_ULA|   ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|UnidadeControle:UC|UnidadeControleULA:UC_ULA                ; UnidadeControleULA     ; work         ;
-;    |conversorHex7Segmentos:showHEX0|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|conversorHex7Segmentos:showHEX0                                             ; conversorHex7Segmentos ; work         ;
-;    |conversorHex7Segmentos:showHEX1|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|conversorHex7Segmentos:showHEX1                                             ; conversorHex7Segmentos ; work         ;
-;    |conversorHex7Segmentos:showHEX2|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|conversorHex7Segmentos:showHEX2                                             ; conversorHex7Segmentos ; work         ;
-;    |conversorHex7Segmentos:showHEX3|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|conversorHex7Segmentos:showHEX3                                             ; conversorHex7Segmentos ; work         ;
-;    |conversorHex7Segmentos:showHEX4|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|conversorHex7Segmentos:showHEX4                                             ; conversorHex7Segmentos ; work         ;
-;    |conversorHex7Segmentos:showHEX5|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|conversorHex7Segmentos:showHEX5                                             ; conversorHex7Segmentos ; work         ;
-;    |edgeDetector:edges|                ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|edgeDetector:edges                                                          ; edgeDetector           ; work         ;
-;    |muxGenerico4x2_32:MUX|             ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|muxGenerico4x2_32:MUX                                                       ; muxGenerico4x2_32      ; work         ;
-+----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------+------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                          ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                   ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------+---------------------+--------------+
+; |TopLevel                              ; 534 (0)             ; 160 (0)                   ; 0                 ; 0          ; 227  ; 0            ; |TopLevel                                                                             ; TopLevel            ; work         ;
+;    |CPU:processador|                   ; 534 (0)             ; 160 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador                                                             ; CPU                 ; work         ;
+;       |FluxoDados:FD|                  ; 514 (37)            ; 160 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD                                               ; FluxoDados          ; work         ;
+;          |LogicAnd:LogicAND|           ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|LogicAnd:LogicAND                             ; LogicAnd            ; work         ;
+;          |RAM:memRAM|                  ; 2 (2)               ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|RAM:memRAM                                    ; RAM                 ; work         ;
+;          |ULA:ULA_bit0|                ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit0                                  ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxGenerico4x2:Muxao             ; muxGenerico4x2      ; work         ;
+;          |ULA:ULA_bit10|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit10                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit10|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit10|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit11|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit11                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit11|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit11|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit12|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit12                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit12|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit12|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit13|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit13                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit13|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit13|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit14|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit14                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit14|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit14|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit15|               ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit15                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit15|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit15|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit16|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit16                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit16|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit16|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit17|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit17                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit17|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit17|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit18|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit18                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit18|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit18|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit19|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit19                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit19|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit19|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit1|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit1                                  ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit1|muxGenerico4x2:Muxao             ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit1|somadorULA:soma                  ; somadorULA          ; work         ;
+;          |ULA:ULA_bit20|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit20                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit20|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit20|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit21|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit21                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit21|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit21|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit22|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit22                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit22|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit22|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit23|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit23                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit23|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit23|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit24|               ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit24                                 ; ULA                 ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit24|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit25|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit25                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit25|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit25|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit26|               ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit27|               ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit27                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit27|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit27|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit28|               ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit28                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit28|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit28|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit29|               ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit29                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit29|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit29|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit2|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit2                                  ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit2|muxGenerico4x2:Muxao             ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit2|somadorULA:soma                  ; somadorULA          ; work         ;
+;          |ULA:ULA_bit30|               ; 7 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit30                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit30|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit30|somadorULA:soma                 ; somadorULA          ; work         ;
+;          |ULA:ULA_bit31|               ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit31                                 ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit31|muxGenerico4x2:Muxao            ; muxGenerico4x2      ; work         ;
+;          |ULA:ULA_bit3|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3                                  ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3|muxGenerico4x2:Muxao             ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3|somadorULA:soma                  ; somadorULA          ; work         ;
+;          |ULA:ULA_bit4|                ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit4                                  ; ULA                 ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit4|somadorULA:soma                  ; somadorULA          ; work         ;
+;          |ULA:ULA_bit5|                ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit5                                  ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit5|muxGenerico4x2:Muxao             ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit5|somadorULA:soma                  ; somadorULA          ; work         ;
+;          |ULA:ULA_bit6|                ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit6                                  ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit6|muxGenerico4x2:Muxao             ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit6|somadorULA:soma                  ; somadorULA          ; work         ;
+;          |ULA:ULA_bit7|                ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit7                                  ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit7|muxGenerico4x2:Muxao             ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit7|somadorULA:soma                  ; somadorULA          ; work         ;
+;          |ULA:ULA_bit8|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit8                                  ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit8|muxGenerico4x2:Muxao             ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit8|somadorULA:soma                  ; somadorULA          ; work         ;
+;          |ULA:ULA_bit9|                ; 2 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit9                                  ; ULA                 ; work         ;
+;             |muxGenerico4x2:Muxao|     ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit9|muxGenerico4x2:Muxao             ; muxGenerico4x2      ; work         ;
+;             |somadorULA:soma|          ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit9|somadorULA:soma                  ; somadorULA          ; work         ;
+;          |bancoRegistradores:BancoReg| ; 99 (99)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|bancoRegistradores:BancoReg                   ; bancoRegistradores  ; work         ;
+;          |fetch:fetchInstruction|      ; 120 (0)             ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction                        ; fetch               ; work         ;
+;             |ROMMIPS:ROM|              ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|ROMMIPS:ROM            ; ROMMIPS             ; work         ;
+;             |muxGenerico2x1:PROX_PC|   ; 43 (43)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:PROX_PC ; muxGenerico2x1      ; work         ;
+;             |registradorGenerico:PC|   ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC ; registradorGenerico ; work         ;
+;             |somador:SOMASIGEXT|       ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|somador:SOMASIGEXT     ; somador             ; work         ;
+;             |somador:SOMA|             ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|somador:SOMA           ; somador             ; work         ;
+;          |muxGenerico2x1:mux_RTimed|   ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|muxGenerico2x1:mux_RTimed                     ; muxGenerico2x1      ; work         ;
+;          |muxGenerico4x2_32:muxULAram| ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|muxGenerico4x2_32:muxULAram                   ; muxGenerico4x2_32   ; work         ;
+;          |somador:soma1inv|            ; 63 (63)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|somador:soma1inv                              ; somador             ; work         ;
+;       |UnidadeControle:UC|             ; 20 (7)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|UnidadeControle:UC                                          ; UnidadeControle     ; work         ;
+;          |UnidadeControleULA:UC_ULA|   ; 13 (13)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|UnidadeControle:UC|UnidadeControleULA:UC_ULA                ; UnidadeControleULA  ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1470,7 +1460,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 161   ;
+; Total registers                              ; 160   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 32    ;
@@ -1485,13 +1475,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC|DOUT[20] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC|DOUT[0]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC|DOUT[22] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC|DOUT[31] ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC|DOUT[8]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC|DOUT[0]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC|DOUT[27] ;
-; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3|muxGenerico4x2:Muxao|saida_MUX            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |TopLevel|muxGenerico4x2_32:MUX|saida_MUX[28]                                                  ;
+; 4:1                ; 20 bits   ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC|DOUT[12] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC|DOUT[3]  ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26|muxGenerico4x2:Muxao|saida_MUX           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 
 
@@ -2388,7 +2377,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
-; vai_1    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; flagzero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -2728,6 +2716,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; instruc        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; palavracontrol ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saidamegamux   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
@@ -2736,29 +2725,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 161                         ;
+; arriav_ff             ; 160                         ;
 ;     CLR               ; 30                          ;
 ;     ENA               ; 128                         ;
 ;     ENA CLR           ; 2                           ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 507                         ;
-;     arith             ; 64                          ;
+; arriav_lcell_comb     ; 535                         ;
+;     arith             ; 123                         ;
 ;         1 data inputs ; 30                          ;
-;         4 data inputs ; 34                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 65                          ;
+;         5 data inputs ; 1                           ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 442                         ;
+;     normal            ; 411                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 120                         ;
-;         3 data inputs ; 71                          ;
-;         4 data inputs ; 48                          ;
-;         5 data inputs ; 85                          ;
-;         6 data inputs ; 116                         ;
-; boundary_port         ; 67                          ;
+;         2 data inputs ; 105                         ;
+;         3 data inputs ; 63                          ;
+;         4 data inputs ; 36                          ;
+;         5 data inputs ; 76                          ;
+;         6 data inputs ; 130                         ;
+; boundary_port         ; 227                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 17.50                       ;
-; Average LUT depth     ; 9.25                        ;
+; Max LUT depth         ; 20.20                       ;
+; Average LUT depth     ; 11.89                       ;
 +-----------------------+-----------------------------+
 
 
@@ -2767,7 +2757,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -2777,7 +2767,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Dec  1 11:42:50 2020
+    Info: Processing started: Tue Dec  1 13:31:04 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2851,19 +2841,25 @@ Info (12021): Found 2 design units, including 1 entities, in source file edgeDet
     Info (12022): Found design unit 1: edgeDetector-comportamento File: /home/rafaelalmada/Documents/MIPS/quartus/edgeDetector.vhd Line: 10
     Info (12023): Found entity 1: edgeDetector File: /home/rafaelalmada/Documents/MIPS/quartus/edgeDetector.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file TopLevel.vhd
-    Info (12022): Found design unit 1: TopLevel-arch File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 21
+    Info (12022): Found design unit 1: TopLevel-arch File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 24
     Info (12023): Found entity 1: TopLevel File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 5
 Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(22): object "instruct" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 22
-Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(23): object "palavraControle" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 23
-Warning (10873): Using initial value X (don't care) for net "LEDR[9..8]" at TopLevel.vhd(12) File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:processador" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 34
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(12): used implicit default value for signal "LEDR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(13): used implicit default value for signal "HEX0" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(13): used implicit default value for signal "HEX1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(13): used implicit default value for signal "HEX2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(13): used implicit default value for signal "HEX3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(13): used implicit default value for signal "HEX4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+Warning (10541): VHDL Signal Declaration warning at TopLevel.vhd(13): used implicit default value for signal "HEX5" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(25): object "instruct" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 25
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(26): object "palavraControle" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 26
+Warning (10036): Verilog HDL or VHDL warning at TopLevel.vhd(27): object "mux_data_write" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 27
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:processador" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 37
 Info (12128): Elaborating entity "FluxoDados" for hierarchy "CPU:processador|FluxoDados:FD" File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 26
-Warning (10541): VHDL Signal Declaration warning at FluxoDados.vhd(23): used implicit default value for signal "flagZ" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 23
-Warning (10541): VHDL Signal Declaration warning at FluxoDados.vhd(33): used implicit default value for signal "pc_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 33
-Warning (10036): Verilog HDL or VHDL warning at FluxoDados.vhd(34): object "saidaR31" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 34
-Warning (10036): Verilog HDL or VHDL warning at FluxoDados.vhd(49): object "flagZero_all" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 49
-Info (12128): Elaborating entity "fetch" for hierarchy "CPU:processador|FluxoDados:FD|fetch:fetchInstruction" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 53
+Warning (10541): VHDL Signal Declaration warning at FluxoDados.vhd(34): used implicit default value for signal "pc_in" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 34
+Warning (10036): Verilog HDL or VHDL warning at FluxoDados.vhd(35): object "saidaR31" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 35
+Warning (10036): Verilog HDL or VHDL warning at FluxoDados.vhd(51): object "flagZero_all" assigned a value but never read File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 51
+Info (12128): Elaborating entity "fetch" for hierarchy "CPU:processador|FluxoDados:FD|fetch:fetchInstruction" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 57
 Warning (10540): VHDL Signal Declaration warning at fetch.vhd(22): used explicit default value for signal "constanteSoma" because signal was never assigned a value File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 22
 Info (12128): Elaborating entity "registradorGenerico" for hierarchy "CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 31
 Info (12128): Elaborating entity "ROMMIPS" for hierarchy "CPU:processador|FluxoDados:FD|fetch:fetchInstruction|ROMMIPS:ROM" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 39
@@ -2874,30 +2870,29 @@ Info (12128): Elaborating entity "somador" for hierarchy "CPU:processador|FluxoD
 Info (12128): Elaborating entity "bitShift" for hierarchy "CPU:processador|FluxoDados:FD|fetch:fetchInstruction|bitShift:shiftRightImedExt" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 57
 Warning (10492): VHDL Process Statement warning at bitShift.vhd(21): signal "entrada" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: /home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd Line: 21
 Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:processador|FluxoDados:FD|fetch:fetchInstruction|muxGenerico2x1:MUXBEQ" File: /home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd Line: 67
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "CPU:processador|FluxoDados:FD|bancoRegistradores:BancoReg" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 72
-Info (12128): Elaborating entity "ULA" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 92
-Info (12128): Elaborating entity "muxAllLogic2x1" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxAllLogic2x1:muxInva" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 35
-Info (12128): Elaborating entity "somadorULA" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0|somadorULA:soma" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 47
-Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxGenerico4x2:Muxao" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 57
-Info (12128): Elaborating entity "extensorSinal" for hierarchy "CPU:processador|FluxoDados:FD|extensorSinal:sigExt" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 382
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:processador|FluxoDados:FD|muxGenerico2x1:mux_RTRD" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 387
-Info (12128): Elaborating entity "LogicAnd" for hierarchy "CPU:processador|FluxoDados:FD|LogicAnd:LogicAND" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 406
-Info (12128): Elaborating entity "RAM" for hierarchy "CPU:processador|FluxoDados:FD|RAM:memRAM" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 414
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "CPU:processador|FluxoDados:FD|bancoRegistradores:BancoReg" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 76
+Info (12128): Elaborating entity "ULA" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 104
+Warning (10541): VHDL Signal Declaration warning at ULA.vhd(16): used implicit default value for signal "flagZero" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 16
+Info (12128): Elaborating entity "muxAllLogic2x1" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxAllLogic2x1:muxInva" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 36
+Info (12128): Elaborating entity "somadorULA" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0|somadorULA:soma" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 48
+Info (12128): Elaborating entity "muxGenerico4x2" for hierarchy "CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxGenerico4x2:Muxao" File: /home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd Line: 60
+Info (12128): Elaborating entity "extensorSinal" for hierarchy "CPU:processador|FluxoDados:FD|extensorSinal:sigExt" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 399
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "CPU:processador|FluxoDados:FD|muxGenerico2x1:mux_RTRD" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 404
+Info (12128): Elaborating entity "LogicAnd" for hierarchy "CPU:processador|FluxoDados:FD|LogicAnd:LogicAND" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 423
+Info (12128): Elaborating entity "RAM" for hierarchy "CPU:processador|FluxoDados:FD|RAM:memRAM" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 431
 Warning (10639): VHDL warning at RAM.vhd(23): constant value overflow File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 23
 Warning (10445): VHDL Subtype or Type Declaration warning at RAM.vhd(23): subtype or type has null range File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 23
-Info (12128): Elaborating entity "muxGenerico4x2_32" for hierarchy "CPU:processador|FluxoDados:FD|muxGenerico4x2_32:muxULAram" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 421
-Info (12128): Elaborating entity "UnidadeControle" for hierarchy "CPU:processador|UnidadeControle:UC" File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 36
+Info (12128): Elaborating entity "muxGenerico4x2_32" for hierarchy "CPU:processador|FluxoDados:FD|muxGenerico4x2_32:muxULAram" File: /home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd Line: 438
+Info (12128): Elaborating entity "UnidadeControle" for hierarchy "CPU:processador|UnidadeControle:UC" File: /home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd Line: 39
 Warning (10620): VHDL warning at UnidadeControle.vhd(52): comparison between unequal length operands always returns FALSE File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 52
-Warning (10620): VHDL warning at UnidadeControle.vhd(64): comparison between unequal length operands always returns FALSE File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 64
-Info (12128): Elaborating entity "UnidadeControleULA" for hierarchy "CPU:processador|UnidadeControle:UC|UnidadeControleULA:UC_ULA" File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 95
+Warning (10620): VHDL warning at UnidadeControle.vhd(65): comparison between unequal length operands always returns FALSE File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 65
+Info (12128): Elaborating entity "UnidadeControleULA" for hierarchy "CPU:processador|UnidadeControle:UC|UnidadeControleULA:UC_ULA" File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd Line: 98
 Info (10041): Inferred latch for "ULActrl[0]" at UnidadeControleULA.vhd(32) File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 32
 Info (10041): Inferred latch for "ULActrl[1]" at UnidadeControleULA.vhd(32) File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 32
 Info (10041): Inferred latch for "ULActrl[2]" at UnidadeControleULA.vhd(32) File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 32
 Info (10041): Inferred latch for "Functcrtl[0]" at UnidadeControleULA.vhd(19) File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 19
 Info (10041): Inferred latch for "Functcrtl[1]" at UnidadeControleULA.vhd(19) File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 19
 Info (10041): Inferred latch for "Functcrtl[2]" at UnidadeControleULA.vhd(19) File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 19
-Info (12128): Elaborating entity "edgeDetector" for hierarchy "edgeDetector:edges" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 44
-Info (12128): Elaborating entity "conversorHex7Segmentos" for hierarchy "conversorHex7Segmentos:showHEX0" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 55
 Info (276014): Found 3 instances of uninferred RAM logic
     Info (276007): RAM logic "CPU:processador|FluxoDados:FD|RAM:memRAM|ram" is uninferred due to asynchronous read logic File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 26
     Info (276007): RAM logic "CPU:processador|FluxoDados:FD|bancoRegistradores:BancoReg|registrador" is uninferred due to asynchronous read logic File: /home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd Line: 63
@@ -2937,17 +2932,69 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "CPU:processador|FluxoDados:FD|RAM:memRAM|dado_out[29]" feeding internal logic into a wire File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 16
     Warning (13049): Converted tri-state buffer "CPU:processador|FluxoDados:FD|RAM:memRAM|dado_out[30]" feeding internal logic into a wire File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 16
     Warning (13049): Converted tri-state buffer "CPU:processador|FluxoDados:FD|RAM:memRAM|dado_out[31]" feeding internal logic into a wire File: /home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd Line: 16
+Warning (14026): LATCH primitive "CPU:processador|UnidadeControle:UC|UnidadeControleULA:UC_ULA|ULActrl[2]" is permanently enabled File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 32
 Warning (14026): LATCH primitive "CPU:processador|UnidadeControle:UC|UnidadeControleULA:UC_ULA|ULActrl[1]" is permanently enabled File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 32
 Warning (14026): LATCH primitive "CPU:processador|UnidadeControle:UC|UnidadeControleULA:UC_ULA|ULActrl[0]" is permanently enabled File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 32
-Warning (14026): LATCH primitive "CPU:processador|UnidadeControle:UC|UnidadeControleULA:UC_ULA|ULActrl[2]" is permanently enabled File: /home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd Line: 32
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
     Warning (13410): Pin "LEDR[8]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
     Warning (13410): Pin "LEDR[9]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 12
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 13
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 768 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
+Warning (21074): Design contains 13 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 10
+    Warning (15610): No output dependent on input pin "SW[1]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 10
     Warning (15610): No output dependent on input pin "SW[2]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 10
     Warning (15610): No output dependent on input pin "SW[3]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 10
     Warning (15610): No output dependent on input pin "SW[4]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 10
@@ -2956,16 +3003,17 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[7]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 10
     Warning (15610): No output dependent on input pin "SW[8]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 10
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[0]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 11
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 11
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 11
-Info (21057): Implemented 701 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 889 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
-    Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 634 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 524 megabytes
-    Info: Processing ended: Tue Dec  1 11:43:20 2020
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:53
+    Info (21059): Implemented 212 output pins
+    Info (21061): Implemented 662 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 129 warnings
+    Info: Peak virtual memory: 521 megabytes
+    Info: Processing ended: Tue Dec  1 13:31:30 2020
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:50
 
 

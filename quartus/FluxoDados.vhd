@@ -13,11 +13,12 @@ entity FluxoDados is
         instrucao       :  out std_logic_vector((instructWidth - 1) downto 0);
         opCodeFunct     :  out std_logic_vector(11 downto 0);
         saida_PC        :  out std_logic_vector(31 downto 0);
-        mSaidaULA, saidaMegaMux : out std_logic_vector(31 downto 0)
+        mSaidaULA, saidaMegaMux, inA, inB, inB_inv : out std_logic_vector(31 downto 0)
     );
 end entity;
 
 architecture comportamento of FluxoDados is
+	constant zero : std_logic_vector(31 downto 0) := (others => '0');
     signal endA, endB, endC : std_logic_vector(4 downto 0);
     signal outA, outB : std_logic_vector((instructWidth - 1) downto 0);
     signal flagZ : std_logic;
@@ -32,6 +33,7 @@ architecture comportamento of FluxoDados is
     signal saida_MUXRd : std_logic_vector(4 downto 0);
     signal pc_in : std_logic_vector(instructWidth-1 downto 0);
     signal saidaR31 : std_logic_vector(4 downto 0);
+	 signal saidaULA_final : std_logic_vector(31 downto 0);
 
     alias BNE           : std_logic is palavraControle(14);
     alias muxJR         : std_logic is palavraControle(13);
@@ -48,6 +50,8 @@ architecture comportamento of FluxoDados is
 
     signal vai_1_all, flagZero_all : std_logic_vector((instructWidth-1) downto 0);  
     signal entradaB_ULA_inv : std_logic_vector(31 downto 0);
+	 signal overflow_slt : std_logic;
+	 signal result_slt : std_logic_vector(31 downto 0);
 
     begin
         fetchInstruction : entity work.fetch generic map (dataWidth => instructWidth)
@@ -88,6 +92,14 @@ architecture comportamento of FluxoDados is
                                        port map(entradaA => (not saida_MUXimed),
                                                 entradaB => "00000000000000000000000000000001",
                                                 saida => entradaB_ULA_inv);
+																
+		  overflow_slt <= vai_1_all(30) xor vai_1_all(31);
+		  result_slt <= "0000000000000000000000000000000" & (saidaULA(31) xor overflow_slt);
+		  
+		  inA <= outA;
+		  inB <= saida_MUXimed;
+		  inB_inv <= entradaB_ULA_inv;
+		  
 
         ULA_bit0   : entity work.ULA port map (entradaA => outA(0),
                                                entradaB => saida_MUXimed(0),
@@ -376,8 +388,13 @@ architecture comportamento of FluxoDados is
                                                 saida => saidaULA(31),
                                                 flagZero => flagZero_all(31),
                                                 entradaB_inv => entradaB_ULA_inv(31));
-
-        mSaidaULA <= saidaULA;
+																
+		 flagZ <= '1' when unsigned(saidaULA) = unsigned(zero) else '0';
+			
+        saidaULA_final <= result_slt WHEN instrucao(5 downto 0) = "101010"
+							ELSE saidaULA;
+							
+			mSaidaULA <= saidaULA_final;
                                                 
         sigExt : entity work.extensorSinal generic map (larguraDadoEntrada => 16, 
                                                         larguraDadoSaida   => instructWidth)
@@ -411,14 +428,14 @@ architecture comportamento of FluxoDados is
                                                  BEQ    => BNE,
                                                  andOUT => andBNEZero);
 
-        memRAM   : entity work.RAM port map(addr     => saidaULA,
+        memRAM   : entity work.RAM port map(addr     => saidaULA_final,
                                             wr       => habEscritaMEM, 
                                             re       => habLeituraMEM,
                                             clk      => clk,
                                             dado_in  => outB,
                                             dado_out => saidaRAM);
         
-        muxULAram  : entity work.muxGenerico4x2_32 port map (entrada0 => saidaULA,
+        muxULAram  : entity work.muxGenerico4x2_32 port map (entrada0 => saidaULA_final,
                                                           entrada1 => saidaRAM,
                                                           entrada2 => extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16)),
                                                           entrada3 => pc_in,

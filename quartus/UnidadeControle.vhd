@@ -56,6 +56,7 @@ begin
                             (opCode = lui_I(11 downto 6)) or
                             (opCode = lw_I(11 downto 6)) or
                             (opCode = ori_I(11 downto 6)) or
+									 (opCode = slt_R(11 downto 6)) or
                             (opCode = slti_I(11 downto 6)) or
                             (opCode = sltiu_I(11 downto 6)) else '0';
 
@@ -65,7 +66,9 @@ begin
                         (opCode = lui_I(11 downto 6)) or
                         (opCode = ori_I(11 downto 6)) or
                         (opCode = slti_I(11 downto 6)) or
-                        (opCode = sltiu_I(11 downto 6)) else '0';
+                        (opCode = sltiu_I(11 downto 6)) or
+								(opCode = sw_I(11 downto 6)) or
+								(opCode = lw_I(11 downto 6)) else '0';
 
 
   muxULAMem <= "11" when (opcode = jal_J(11 downto 6)) else

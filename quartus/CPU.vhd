@@ -12,7 +12,7 @@ entity CPU is
 	 instruc : out std_logic_vector((instructWidth-1) downto 0);
    palavraControl: out std_logic_vector((controlWidth-1) downto 0);
    saida_PC : out std_logic_vector((instructWidth-1) downto 0);
-   saida, saidaMegaMux : out std_logic_vector(31 downto 0)
+   saida, saidaMegaMux, inA, inB, inB_inv : out std_logic_vector(31 downto 0)
   );
 end CPU; 
 
@@ -31,7 +31,10 @@ begin
                                          opCodeFunct => opCodeFunct,
                                          saida_PC => saida_PC,
                                          mSaidaULA => saida,
-                                         saidaMegaMux => saidaMegaMux);
+                                         saidaMegaMux => saidaMegaMux,
+													  inA => inA,
+													  inB => inB,
+													  inB_inv => inB_inv);
 
     UC : entity work.UnidadeControle generic map(controlWidth => controlWidth)
                                      port map(clk => clk,

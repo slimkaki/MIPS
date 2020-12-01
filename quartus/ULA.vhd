@@ -30,6 +30,7 @@ architecture comportamento of ULA is
 
     signal overflow, saidaSomador : std_logic;
 
+
     begin
 
       muxInva : entity work.muxAllLogic2x1 port map (entradaA_MUX => entradaA,
@@ -53,6 +54,8 @@ architecture comportamento of ULA is
                                               -- vem 1 = inverteB
                                               -- vai 1 = ultimo bit 1 e 1 sobra 1
       overflow <= (vai_1 xor vem_1);
+		
+		
 
       Muxao : entity work.muxGenerico4x2 port map(entrada0 => (saidaA and saidaB),
                                                   entrada1 => (saidaA or  saidaB),
@@ -61,7 +64,6 @@ architecture comportamento of ULA is
                                                   seletor_MUX => selMuxzao,
                                                   saida_MUX => outputMuxzao);
 
-      flagZero <= outputMuxzao nor outputMuxzao;
       saida <= outputMuxzao;
 
 end architecture;

@@ -10,7 +10,7 @@ entity UnidadeControle is
   port (
     clk, rst          : in std_logic;
     opCodeFunct       : in std_logic_vector (11 downto 0);
-    palavraControle   : out std_logic_vector(14 downto 0)
+    palavraControle   : out std_logic_vector(15 downto 0)
   );
 end UnidadeControle; 
 
@@ -18,10 +18,10 @@ architecture arch of UnidadeControle is
     alias opCode : std_logic_vector(5 downto 0) is opCodeFunct(11 downto 6);
     alias funct  : std_logic_vector(5 downto 0) is opCodeFunct(5 downto 0);
 
-    alias BNE           : std_logic is palavraControle(14);
-    alias muxJR         : std_logic is palavraControle(13);
-    alias muxR31        : std_logic is palavraControle(12);
-    alias muxJUMP       : std_logic is palavraControle(11);
+    alias BNE           : std_logic is palavraControle(15);
+    alias muxJR         : std_logic is palavraControle(14);
+    alias muxR31        : std_logic is palavraControle(13);
+    alias muxJUMP       : std_logic_vector is palavraControle(12 downto 11);
     alias muxRtRd       : std_logic is palavraControle(10);
     alias habEscritaReg : std_logic is palavraControle(9);
     alias muxRtImed     : std_logic is palavraControle(8);
@@ -41,15 +41,18 @@ begin
 
   muxR31 <= '1' when (opcode = jal_J (11 downto 6)) else '0';
 
-  muxJUMP <= '1' when (opCode = j_J(11 downto 6)) or 
-                      (opCode = jal_J(11 downto 6)) else '0';
+  muxJUMP <= "11"  when (opCode = j_J(11 downto 6)) or 
+                      (opCode = jal_J(11 downto 6)) else
+				 "10" when (opCode = bne_I(11 downto 6)) else
+				 "01" when (opCode = jr_R (11 downto 6) and funct = jr_R (5 downto 0)) else
+				 "00";
 
   muxRtRd <= '1' when (opCode = "000000") else '0';
               
   habEscritaReg <= '1' when (opCode = "000000" and funct /= jr_R(5 downto 0)) or 
                             (opCode = addi_I(11 downto 6)) or
                             (opCode = addiu_I(11 downto 6)) or
-                            (opCode = andi_I(11 downto 0)) or
+                            (opCode = andi_I(11 downto 6)) or
                             (opCode = lbu_I(11 downto 6)) or
                             (opCode = lhu_I(11 downto 6)) or
                             (opCode = ll_I(11 downto 6)) or
@@ -58,11 +61,12 @@ begin
                             (opCode = ori_I(11 downto 6)) or
 									 (opCode = slt_R(11 downto 6)) or
                             (opCode = slti_I(11 downto 6)) or
-                            (opCode = sltiu_I(11 downto 6)) else '0';
+                            (opCode = sltiu_I(11 downto 6)) or
+									 (opcode = jal_J (11 downto 6)) else '0';
 
   muxRtImed <= '1' when (opCode = addi_I(11 downto 6)) or
                         (opCode = addiu_I(11 downto 6)) or
-                        (opCode = andi_I(11 downto 0)) or
+                        (opCode = andi_I(11 downto 6)) or
                         (opCode = lui_I(11 downto 6)) or
                         (opCode = ori_I(11 downto 6)) or
                         (opCode = slti_I(11 downto 6)) or
@@ -78,8 +82,7 @@ begin
                          (opCode = lhu_I(11 downto 6)) or
                          (opCode = lw_I(11 downto 6)) else "00";
 
-  BEQ <= '1' when (opCode = beq_I(11 downto 6)) or
-                  (opCode = bne_I(11 downto 6)) else '0';
+  BEQ <= '1' when (opCode = beq_I(11 downto 6));
 
   habLeituraMEM <= '1' when (opCode = ll_I(11 downto 6)) or
                             (opCode = lbu_I(11 downto 6)) or

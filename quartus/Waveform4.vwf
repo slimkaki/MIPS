@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -2066,6 +2068,196 @@ SIGNAL("saidaMegaMux[0]")
 	PARENT = "saidaMegaMux";
 }
 
+SIGNAL("habEscritaReg")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("end_A")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 5;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("end_A[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_A";
+}
+
+SIGNAL("end_A[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_A";
+}
+
+SIGNAL("end_A[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_A";
+}
+
+SIGNAL("end_A[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_A";
+}
+
+SIGNAL("end_A[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_A";
+}
+
+SIGNAL("end_B")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 5;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("end_B[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_B";
+}
+
+SIGNAL("end_B[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_B";
+}
+
+SIGNAL("end_B[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_B";
+}
+
+SIGNAL("end_B[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_B";
+}
+
+SIGNAL("end_B[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_B";
+}
+
+SIGNAL("end_C")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 5;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("end_C[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_C";
+}
+
+SIGNAL("end_C[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_C";
+}
+
+SIGNAL("end_C[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_C";
+}
+
+SIGNAL("end_C[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_C";
+}
+
+SIGNAL("end_C[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "end_C";
+}
+
 TRANSITION_LIST("clock")
 {
 	NODE
@@ -3808,6 +4000,150 @@ TRANSITION_LIST("saidaMegaMux[0]")
 	}
 }
 
+TRANSITION_LIST("habEscritaReg")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_A[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_A[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_A[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_A[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_A[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_B[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_B[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_B[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_B[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_B[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_C[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_C[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_C[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_C[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("end_C[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "clock";
@@ -5471,7 +5807,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 166;
 	TREE_LEVEL = 0;
 	CHILDREN = 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198;
@@ -5481,7 +5817,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[31]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 167;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5491,7 +5827,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[30]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 168;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5501,7 +5837,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[29]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 169;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5511,7 +5847,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[28]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 170;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5521,7 +5857,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[27]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 171;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5531,7 +5867,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[26]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 172;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5541,7 +5877,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[25]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 173;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5551,7 +5887,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[24]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 174;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5561,7 +5897,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[23]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 175;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5571,7 +5907,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[22]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 176;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5581,7 +5917,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[21]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 177;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5591,7 +5927,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[20]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 178;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5601,7 +5937,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[19]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 179;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5611,7 +5947,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[18]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 180;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5621,7 +5957,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[17]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 181;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5631,7 +5967,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[16]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 182;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5641,7 +5977,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[15]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 183;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5651,7 +5987,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[14]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 184;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5661,7 +5997,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[13]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 185;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5671,7 +6007,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[12]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 186;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5681,7 +6017,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[11]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 187;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5691,7 +6027,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[10]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 188;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5701,7 +6037,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[9]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 189;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5711,7 +6047,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[8]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 190;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5721,7 +6057,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 191;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5731,7 +6067,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 192;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5741,7 +6077,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 193;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5751,7 +6087,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 194;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5761,7 +6097,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 195;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5771,7 +6107,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 196;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5781,7 +6117,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 197;
 	TREE_LEVEL = 1;
 	PARENT = 166;
@@ -5791,10 +6127,199 @@ DISPLAY_LINE
 {
 	CHANNEL = "saidaMegaMux[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Hexadecimal;
 	TREE_INDEX = 198;
 	TREE_LEVEL = 1;
 	PARENT = 166;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "habEscritaReg";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 199;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_A";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 200;
+	TREE_LEVEL = 0;
+	CHILDREN = 201, 202, 203, 204, 205;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_A[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 201;
+	TREE_LEVEL = 1;
+	PARENT = 200;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_A[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 202;
+	TREE_LEVEL = 1;
+	PARENT = 200;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_A[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 203;
+	TREE_LEVEL = 1;
+	PARENT = 200;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_A[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 204;
+	TREE_LEVEL = 1;
+	PARENT = 200;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_A[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 205;
+	TREE_LEVEL = 1;
+	PARENT = 200;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_B";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 206;
+	TREE_LEVEL = 0;
+	CHILDREN = 207, 208, 209, 210, 211;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_B[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 207;
+	TREE_LEVEL = 1;
+	PARENT = 206;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_B[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 208;
+	TREE_LEVEL = 1;
+	PARENT = 206;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_B[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 209;
+	TREE_LEVEL = 1;
+	PARENT = 206;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_B[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 210;
+	TREE_LEVEL = 1;
+	PARENT = 206;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_B[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 211;
+	TREE_LEVEL = 1;
+	PARENT = 206;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_C";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 212;
+	TREE_LEVEL = 0;
+	CHILDREN = 213, 214, 215, 216, 217;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_C[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 213;
+	TREE_LEVEL = 1;
+	PARENT = 212;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_C[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 214;
+	TREE_LEVEL = 1;
+	PARENT = 212;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_C[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 215;
+	TREE_LEVEL = 1;
+	PARENT = 212;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_C[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 216;
+	TREE_LEVEL = 1;
+	PARENT = 212;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "end_C[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 217;
+	TREE_LEVEL = 1;
+	PARENT = 212;
 }
 
 TIME_BAR

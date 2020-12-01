@@ -10,7 +10,8 @@ entity fetch is
 	port(
 		clk, rst : in std_logic;
 		extendedInst : in std_logic_vector((dataWidth - 1) downto 0);
-		andBEQZero, muxJUMP, bne, jr : in std_logic;
+		andBEQZero, bne, jr : in std_logic;
+		muxJUMP : in std_logic_vector(1 downto 0);
 		reg_jr : in std_logic_vector((dataWidth-1) downto 0);
 		instrucao : out std_logic_vector((dataWidth - 1) downto 0);
 		saida_PC : out std_logic_vector((dataWidth - 1) downto 0)
@@ -20,7 +21,7 @@ end entity;
 architecture comportamento of fetch is
 	signal pcOut, proxInst : std_logic_vector((dataWidth - 1) downto 0);
 	signal constanteSoma : std_logic_vector((dataWidth - 1) downto 0) := "00000000000000000000000000000100";
-	signal saidaSoma2, bitShift3, instrucMuxBEQ, instrucFinal : std_logic_vector((dataWidth - 1) downto 0);
+	signal saidaSoma2, bitShift3, instrucMuxBEQ, instrucFinal, preInstruc, jumpAddr : std_logic_vector((dataWidth - 1) downto 0);
 	signal bitShiftInst1 : std_logic_vector(25 downto 0);
 	signal jumpCaseInstruct : std_logic_vector((dataWidth-1) downto 0);
 	signal barramentoInstrucao : std_logic_vector((dataWidth-1) downto 0);
@@ -71,25 +72,26 @@ architecture comportamento of fetch is
 										  			saida_MUX => instrucMuxBEQ);
 
 		MUXJR  : entity work.muxGenerico2x1 generic map (larguraDados => dataWidth)
-											port map (entradaA_MUX => instrucMuxBEQ,
+											port map (entradaA_MUX => proxInst,
 													  entradaB_MUX => reg_jr,
 													  seletor_MUX => jr,
 													  saida_MUX => saidaJR);
 
 		MUXBNE : entity work.muxGenerico2x1 generic map (larguraDados => dataWidth)
-											port map (entradaA_MUX => saidaJR,
+											port map (entradaA_MUX => proxInst,
 													  entradaB_MUX => saidaSoma2,
 													  seletor_MUX => bne,
 													  saida_MUX => saidaBNE);
 		
-
 		jumpCaseInstruct(31 downto 28) <= proxInst(31 downto 28);
-		jumpCaseInstruct(27 downto 2) <= bitShiftInst1(25 downto 0);
+		jumpCaseInstruct(27 downto 2) <= instrucao(25 downto 0);
 		jumpCaseInstruct(1 downto 0) <= "00";
 
-		PROX_PC : entity work.muxGenerico2x1 generic map (larguraDados => dataWidth)
-											 port map (entradaA_MUX => saidaBNE,
-											 		   entradaB_MUX => jumpCaseInstruct,
+		PROX_PC : entity work.muxGenerico4x2_32
+											 port map (entrada0 => instrucMuxBEQ,
+											 		   entrada1 => saidaJR,
+														entrada2 => saidaBNE,
+														entrada3 => jumpCaseInstruct,
 											 		   seletor_MUX => muxJUMP,
 														saida_MUX => instrucFinal);
 													

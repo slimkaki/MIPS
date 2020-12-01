@@ -772,6 +772,66 @@
 					"strict" : false
 				},
 				{
+					"name" : "habEscritaReg",
+					"strict" : false
+				},
+				{
+					"name" : "end_A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "end_A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "end_A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "end_A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "end_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "end_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "end_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "end_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_C[0]",
+					"strict" : false
+				},
+				{
+					"name" : "end_C[1]",
+					"strict" : false
+				},
+				{
+					"name" : "end_C[2]",
+					"strict" : false
+				},
+				{
+					"name" : "end_C[3]",
+					"strict" : false
+				},
+				{
+					"name" : "end_C[4]",
+					"strict" : false
+				},
+				{
 					"name" : "clock",
 					"strict" : false
 				},

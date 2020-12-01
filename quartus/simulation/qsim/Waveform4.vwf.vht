@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "12/01/2020 16:24:08"
+-- Generated on "12/01/2020 19:53:07"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          TopLevel
 -- 
@@ -35,6 +35,10 @@ ARCHITECTURE TopLevel_arch OF TopLevel_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL clock : STD_LOGIC;
+SIGNAL end_A : STD_LOGIC_VECTOR(4 DOWNTO 0);
+SIGNAL end_B : STD_LOGIC_VECTOR(4 DOWNTO 0);
+SIGNAL end_C : STD_LOGIC_VECTOR(4 DOWNTO 0);
+SIGNAL habEscritaReg : STD_LOGIC;
 SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
@@ -53,6 +57,10 @@ SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 COMPONENT TopLevel
 	PORT (
 	clock : IN STD_LOGIC;
+	end_A : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+	end_B : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+	end_C : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+	habEscritaReg : OUT STD_LOGIC;
 	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
@@ -75,6 +83,10 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	clock => clock,
+	end_A => end_A,
+	end_B => end_B,
+	end_C => end_C,
+	habEscritaReg => habEscritaReg,
 	HEX0 => HEX0,
 	HEX1 => HEX1,
 	HEX2 => HEX2,

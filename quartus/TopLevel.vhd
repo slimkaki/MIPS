@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity TopLevel is
   generic (larguraDados : natural := 32;
-           controlWidth : natural := 15);
+           controlWidth : natural := 16);
   port (
     clock : in std_logic;
     SW : in std_logic_vector(9 downto 0);
@@ -13,7 +13,9 @@ entity TopLevel is
     HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
 	 saida_PC : out std_logic_vector((larguraDados-1) downto 0);
 	 saida : out std_logic_vector(31 downto 0);
-	 inA, inB, inB_inv, saidaMegaMux : out std_logic_vector(31 downto 0) 
+	 inA, inB, inB_inv, saidaMegaMux : out std_logic_vector(31 downto 0);
+	 habEscritaReg : out std_logic;
+	 end_A, end_B, end_C : out std_logic_vector(4 downto 0)
 	--  controlWord : out std_logic_vector((controlWidth-1) downto 0);
   --  instruc : out std_logic_vector((larguraDados-1) downto 0);
   --  saidaULA : out std_logic_vector(31 downto 0);
@@ -45,7 +47,9 @@ begin
                                             saidaMegaMux => saidaMegaMux,
 														  inA => inA,
 														  inB => inB,
-														  inB_inv => inB_inv);
+														  inB_inv => inB_inv,
+														  habEscritaReg => habEscritaReg,
+														  end_A =>end_A, end_B => end_B, end_C => end_C);
 	
 --    edges : entity work.edgeDetector port map (clk => clock,
 --                                               entrada => not KEY(0),

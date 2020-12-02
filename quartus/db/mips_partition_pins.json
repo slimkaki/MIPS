@@ -792,10 +792,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "end_A[4]",
-					"strict" : false
-				},
-				{
 					"name" : "end_B[0]",
 					"strict" : false
 				},

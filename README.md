@@ -21,7 +21,7 @@ ___
 *OBS: O desenho da arquitetura pode ser visto com melhor qualidade no arquivo MIPS_architecture.pdf*
 
 **Mais informações do projeto no arquivo:**
-https://github.com/slimkaki/MIPS/DOCS_MIPS.pdf
+https://github.com/slimkaki/MIPS/blob/main/DOCS_MIPS.pdf
 
 **Interação com o usuário:**
 ![Top Level](https://github.com/slimkaki/MIPS/blob/main/fpga_mips.png)

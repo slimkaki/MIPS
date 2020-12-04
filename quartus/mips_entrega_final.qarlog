@@ -1,0 +1,45 @@
+Quartus Prime Archive log --	/home/rafaelalmada/Documents/MIPS/quartus/mips_entrega_final.qarlog
+
+Archive:	/home/rafaelalmada/Documents/MIPS/quartus/mips_entrega_final.qar
+Date:		Fri Dec  4 13:44:01 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+/home/rafaelalmada/Documents/MIPS/quartus/CPU.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/FluxoDados.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/LogicAnd.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/RAM.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/ROMMIPS.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/ULA.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControle.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/UnidadeControleULA.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/Waveform.vwf
+/home/rafaelalmada/Documents/MIPS/quartus/Waveform1.vwf
+/home/rafaelalmada/Documents/MIPS/quartus/Waveform2.vwf
+/home/rafaelalmada/Documents/MIPS/quartus/Waveform3.vwf
+/home/rafaelalmada/Documents/MIPS/quartus/Waveform4.vwf
+/home/rafaelalmada/Documents/MIPS/quartus/bancoRegistradores.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/bitShift.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/constants.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/conversorHex7Segmentos.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/db/mips.cmp.rdb
+/home/rafaelalmada/Documents/MIPS/quartus/edgeDetector.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/extensorSinal.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/fetch.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/mips.qpf
+/home/rafaelalmada/Documents/MIPS/quartus/mips.qsf
+/home/rafaelalmada/Documents/MIPS/quartus/muxAllLogic2x1.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico2x1.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/muxGenerico4x2_32.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/output_files/Waveform.vwf
+/home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/registradorGenerico_WRITE.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/somador.vhd
+/home/rafaelalmada/Documents/MIPS/quartus/somadorULA.vhd
+/home/rafaelalmada/intelFPGA_lite/20.1/quartus/linux64/assignment_defaults.qdf
+	======= Total: 34 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

@@ -36,26 +36,14 @@ function initMemory
         return memoria_t is variable tmp : memoria_t := (others => (others => '0'));
   begin
  -- Valores iniciais no banco de registradores:
-      -- $zero (#0) := 0x00
-      -- $t0   (#8) := 0x00
-      -- $t1   (#9) := 0x0A
-      -- $t2  (#10) := 0x0B
-      -- $t3  (#11) := 0x0C
-      -- $t4  (#12) := 0x0D
-      -- $t5  (#13) := 0x16
         -- Inicializa os endereços:
-        --tmp(0) := x"AAAAAAAA";  -- Nao deve ter efeito.
-        tmp(0) := x"00000000";
-        -- tmp(1) := x"000000FF";
-        -- tmp(2) := x"000000FE";
-        -- tmp(3) := x"000000FD";
-        -- tmp(4) := 32x"FC";
-        tmp(8) := x"00000000";
-        tmp(9) := x"0000000A";
-        tmp(10):= x"0000000B";
-        tmp(11):= x"0000000C";
-        tmp(12):= x"0000000D";
-        tmp(13):= x"00000016";
+        tmp(0) := x"00000000"; -- $zero (#0) := 0x00
+        tmp(8) := x"00000000"; -- $t0   (#8) := 0x00
+        tmp(9) := x"0000000A"; -- $t1   (#9) := 0x0A
+        tmp(10):= x"0000000B"; -- $t2  (#10) := 0x0B
+        tmp(11):= x"0000000C"; -- $t3  (#11) := 0x0C
+        tmp(12):= x"0000000D"; -- $t4  (#12) := 0x0D
+        tmp(13):= x"00000016"; -- $t5  (#13) := 0x16
         return tmp;
     end initMemory;
 

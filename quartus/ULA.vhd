@@ -9,11 +9,11 @@ entity ULA is
     );
     port
     (
-      entradaA, entradaB  :  in STD_LOGIC;--_VECTOR((larguraDados-1) downto 0);
+      entradaA, entradaB  :  in STD_LOGIC;
       seletor    :  in STD_LOGIC_VECTOR(2 downto 0);
       vem_1 : in std_logic;
       vai_1 : out std_logic;
-      saida, flagZero :  out STD_LOGIC;--_VECTOR((larguraDados-1) downto 0);
+      saida :  out STD_LOGIC;
       entradaB_inv : in std_logic
     );
 end entity;
@@ -24,9 +24,9 @@ architecture comportamento of ULA is
     alias inverteB   :  std_logic is seletor(2);  
     alias selMuxzao  :  std_logic_vector is seletor(1 downto 0);
     
-    signal outputMuxzao : std_logic;--_vector((larguraDados-1) downto 0);
-    signal saidaA : std_logic;--_vector((larguraDados-1) downto 0);
-    signal saidaB : std_logic;--_vector((larguraDados-1) downto 0);
+    signal outputMuxzao : std_logic;
+    signal saidaA : std_logic;
+    signal saidaB : std_logic;
 
     signal overflow, saidaSomador : std_logic;
 
@@ -51,8 +51,6 @@ architecture comportamento of ULA is
                                               vai_1 => vai_1,
                                               saida => saidaSomador);
       
-                                              -- vem 1 = inverteB
-                                              -- vai 1 = ultimo bit 1 e 1 sobra 1
       overflow <= (vai_1 xor vem_1);
 		
 		

@@ -10,64 +10,51 @@ entity TopLevel is
     SW : in std_logic_vector(9 downto 0);
     KEY : in std_logic_vector(3 downto 0);
     LEDR : out std_logic_vector(9 downto 0);
-    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0);
-	 saida_PC : out std_logic_vector((larguraDados-1) downto 0);
-	 saida : out std_logic_vector(31 downto 0);
-	 inA, inB, inB_inv, saidaMegaMux : out std_logic_vector(31 downto 0);
-	 habEscritaReg : out std_logic;
-	 end_A, end_B, end_C : out std_logic_vector(4 downto 0)
-	--  controlWord : out std_logic_vector((controlWidth-1) downto 0);
-  --  instruc : out std_logic_vector((larguraDados-1) downto 0);
-  --  saidaULA : out std_logic_vector(31 downto 0);
-  --  PC_OUT, PC_INN : out std_logic_vector(31 downto 0)
+    HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
   );
 end TopLevel; 
 
 architecture arch of TopLevel is
-    signal instruct, data : std_logic_vector((larguraDados-1) downto 0);
+    signal data : std_logic_vector((larguraDados-1) downto 0);
     signal palavraControle : std_logic_vector((controlWidth-1) downto 0);
     signal mux_data_write : std_logic_vector(31 downto 0);
     signal habEscritaMEM, habLeituraMEM : std_logic;
     signal seg7Input0, seg7Input1, seg7Input2, seg7Input3, seg7Input4, seg7Input5 : std_logic_vector(3 downto 0);
     signal habilitaHEX : std_logic_vector(5 downto 0);
     signal meu_clock : std_logic;
+	 signal saida_PC, saida, saidaMegaMux : std_logic_vector((larguraDados-1) downto 0);
 
 begin
---	 instruc <= instruct;
---   controlWord <= palavraControle;
---   saidaULA <= mux_data_write;
+	 -- Chamando o processador como um todo
     processador : entity work.CPU generic map(instructWidth => larguraDados,
                                               controlWidth => controlWidth)
-                                  port map (clk => clock,
+                                  port map (clk => meu_clock,
                                             rst => not KEY(1),
-                                            instruc => instruct,
-                                            palavraControl => palavraControle,
                                             saida_PC => saida_PC,
                                             saida => saida,
-                                            saidaMegaMux => saidaMegaMux,
-														  inA => inA,
-														  inB => inB,
-														  inB_inv => inB_inv,
-														  habEscritaReg => habEscritaReg,
-														  end_A =>end_A, end_B => end_B, end_C => end_C);
+                                            saidaMegaMux => saidaMegaMux);
 	
---    edges : entity work.edgeDetector port map (clk => clock,
---                                               entrada => not KEY(0),
---                                               saida => meu_clock);
+	 -- Transformando o sinal do botao em Clock
+    edges : entity work.edgeDetector port map (clk => clock,
+                                               entrada => not KEY(0),
+                                               saida => meu_clock);
+	 -- MUX para selecao da saida nos HEX
+    MUX : entity work.muxGenerico4x2_32 port map(entrada0 => saida_PC,
+                                              entrada1 => saida,          -- saida ula
+                                              entrada2 => saidaMegaMux,
+                                              entrada3 => saidaMegaMux,
+                                              seletor_MUX => SW(1 downto 0),
+                                              saida_MUX => data);
 
---    MUX : entity work.muxGenerico4x2_32 port map(entrada0 => saida_PC,
---                                              entrada1 => saida,          -- saida ula
---                                              entrada2 => inA,
---                                              entrada3 => inB,
---                                              seletor_MUX => SW(1 downto 0),
---                                              saida_MUX => data);
-
---    showHEX0 : entity work.conversorHex7Segmentos port map (dadoHex => data(3 downto 0), saida7seg => HEX0);
---    showHEX1 : entity work.conversorHex7Segmentos port map (dadoHex => data(7 downto 4), saida7seg => HEX1);
---    showHEX2 : entity work.conversorHex7Segmentos port map (dadoHex => data(11 downto 8), saida7seg => HEX2);
---    showHEX3 : entity work.conversorHex7Segmentos port map (dadoHex => data(15 downto 12), saida7seg => HEX3);
---    showHEX4 : entity work.conversorHex7Segmentos port map (dadoHex => data(19 downto 16), saida7seg => HEX4);
---    showHEX5 : entity work.conversorHex7Segmentos port map (dadoHex => data(23 downto 20), saida7seg => HEX5);
-
---    LEDR(7 downto 0) <= data(31 downto 24);--palavraControle(9 downto 0);
+    -- Colocando os dados nos HEX
+    showHEX0 : entity work.conversorHex7Segmentos port map (dadoHex => data(3 downto 0), saida7seg => HEX0);
+    showHEX1 : entity work.conversorHex7Segmentos port map (dadoHex => data(7 downto 4), saida7seg => HEX1);
+    showHEX2 : entity work.conversorHex7Segmentos port map (dadoHex => data(11 downto 8), saida7seg => HEX2);
+    showHEX3 : entity work.conversorHex7Segmentos port map (dadoHex => data(15 downto 12), saida7seg => HEX3);
+    showHEX4 : entity work.conversorHex7Segmentos port map (dadoHex => data(19 downto 16), saida7seg => HEX4);
+    showHEX5 : entity work.conversorHex7Segmentos port map (dadoHex => data(23 downto 20), saida7seg => HEX5);
+	 
+	 -- Colocando os dados nos LEDs
+	 LEDR(9 downto 8) <= "00";
+    LEDR(7 downto 0) <= data(31 downto 24);
 end architecture;

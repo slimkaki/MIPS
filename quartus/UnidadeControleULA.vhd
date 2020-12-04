@@ -16,6 +16,15 @@ architecture arch of UnidadeControleULA is
     alias funct  : std_logic_vector is opCodeFunct(5 downto 0);
     signal Functcrtl : std_logic_vector(2 downto 0);
 begin
+    -- Operacoes a serem realizadas
+	 -- Primeiro bit reservado para inversao do B
+	 -- Segundo e terceiro bit funcionam em conjunto para selecionar a saida da ULA
+	 -- saidas da ULA:
+	 --       - 00: AND
+	 --       - 01: OR
+	 --       - 10: SOMA/SUBTRACAO
+	 --       - 11: SLT
+	 
     Functcrtl <= "010" WHEN (opcode = add_R(11 downto 6) and funct = add_R(5 downto 0)) or 
                             (opcode = addu_R(11 downto 6) and funct = addu_R(5 downto 0)) or
                             (opcode = addi_I(11 downto 6)) ELSE

@@ -25,7 +25,6 @@ architecture comportamento of ULA is
     alias selMuxzao  :  std_logic_vector is seletor(1 downto 0);
     
     signal outputMuxzao : std_logic;
-    signal saidaA : std_logic;
     signal saidaB : std_logic;
 
     signal overflow, saidaSomador : std_logic;
@@ -33,10 +32,6 @@ architecture comportamento of ULA is
 
     begin
 
-      muxInva : entity work.muxAllLogic2x1 port map (entradaA_MUX => entradaA,
-                                                     entradaB_MUX => (not entradaA),
-                                                     seletor_MUX => '0',
-                                                     saida_MUX => saidaA);
 
       muxInvb : entity work.muxAllLogic2x1 port map (entradaA_MUX => entradaB,
                                                      entradaB_MUX => entradaB_inv,
@@ -45,7 +40,7 @@ architecture comportamento of ULA is
 
                             
 
-      soma  : entity work.somadorULA port map(entradaA => saidaA,
+      soma  : entity work.somadorULA port map(entradaA => entradaA,
                                               entradaB => saidaB,
                                               vem_1 => vem_1,
                                               vai_1 => vai_1,
@@ -55,8 +50,8 @@ architecture comportamento of ULA is
 		
 		
 
-      Muxao : entity work.muxGenerico4x2 port map(entrada0 => (saidaA and saidaB),
-                                                  entrada1 => (saidaA or  saidaB),
+      Muxao : entity work.muxGenerico4x2 port map(entrada0 => (entradaA and saidaB),
+                                                  entrada1 => (entradaA or  saidaB),
                                                   entrada2 => saidaSomador,
                                                   entrada3 => overflow,
                                                   seletor_MUX => selMuxzao,

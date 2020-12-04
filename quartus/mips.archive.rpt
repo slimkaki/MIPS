@@ -1,5 +1,5 @@
 Archive Project report for mips
-Fri Nov 20 19:47:39 2020
+Fri Dec  4 13:44:01 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -36,9 +36,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Fri Nov 20 19:47:39 2020 ;
+; Archive Project Status ; Successful - Fri Dec  4 13:44:01 2020 ;
 ; Revision Name          ; mips                                  ;
-; Top-level Entity Name  ; CPU                                   ;
+; Top-level Entity Name  ; TopLevel                              ;
 ; Family                 ; Cyclone V                             ;
 +------------------------+---------------------------------------+
 
@@ -54,14 +54,14 @@ Info: Archive will store files relative to the closest common parent directory
 Info (13213): Using common directory /home/rafaelalmada/Documents/MIPS/quartus/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive '/home/rafaelalmada/Documents/MIPS/quartus/mips_ciclo_unico.qar'
+Info: Generated archive '/home/rafaelalmada/Documents/MIPS/quartus/mips_entrega_final.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'mips.archive.rpt'
 Info (23030): Evaluation of Tcl script /home/rafaelalmada/intelFPGA_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 611 megabytes
-    Info: Processing ended: Fri Nov 20 19:47:39 2020
+    Info: Peak virtual memory: 612 megabytes
+    Info: Processing ended: Fri Dec  4 13:44:01 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -75,7 +75,10 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; bancoRegistradores.vhd                                                         ;
 ; bitShift.vhd                                                                   ;
 ; constants.vhd                                                                  ;
+; conversorHex7Segmentos.vhd                                                     ;
 ; CPU.vhd                                                                        ;
+; db/mips.cmp.rdb                                                                ;
+; edgeDetector.vhd                                                               ;
 ; extensorSinal.vhd                                                              ;
 ; fetch.vhd                                                                      ;
 ; FluxoDados.vhd                                                                 ;
@@ -85,16 +88,23 @@ Info: Quartus Prime Shell was successful. 0 errors, 1 warning
 ; muxAllLogic2x1.vhd                                                             ;
 ; muxGenerico2x1.vhd                                                             ;
 ; muxGenerico4x2.vhd                                                             ;
+; muxGenerico4x2_32.vhd                                                          ;
+; output_files/Waveform.vwf                                                      ;
 ; RAM.vhd                                                                        ;
 ; registradorGenerico.vhd                                                        ;
+; registradorGenerico_WRITE.vhd                                                  ;
 ; ROMMIPS.vhd                                                                    ;
 ; somador.vhd                                                                    ;
 ; somadorULA.vhd                                                                 ;
+; TopLevel.vhd                                                                   ;
 ; ULA.vhd                                                                        ;
 ; UnidadeControle.vhd                                                            ;
 ; UnidadeControleULA.vhd                                                         ;
 ; Waveform.vwf                                                                   ;
 ; Waveform1.vwf                                                                  ;
+; Waveform2.vwf                                                                  ;
+; Waveform3.vwf                                                                  ;
+; Waveform4.vwf                                                                  ;
 +--------------------------------------------------------------------------------+
 
 

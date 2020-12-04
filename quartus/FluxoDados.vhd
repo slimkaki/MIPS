@@ -374,11 +374,14 @@ architecture comportamento of FluxoDados is
 		 saida_lui <= extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16));
 		 
 		 -- sinal que garante que o resultado do LUI sera salvo no banc de registradores
+		 -- recebe saida_lui quando a instrucao for lui
 		 saida_ext <= saida_lui WHEN instrucao(31 downto 26) = "001111" ELSE
 							saidaSigExt;
 		 
 		 -- saida da ULA adicionando o caso SLT e o caso LUI
-       saidaULA_final <= result_slt WHEN instrucao(5 downto 0) = "101010" or instrucao(31 downto 26) = "001010"
+		 -- recebe result_slt quando a instrucao for SLT ou SLTI
+		 -- recebe saida_lui quando a instrucao for lui
+       saidaULA_final <= result_slt WHEN (instrucao(31 downto 26) = "000000" and instrucao(5 downto 0) = "101010") or instrucao(31 downto 26) = "001010"
 								  ELSE saida_lui WHEN instrucao(31 downto 26) = "001111"
 								  ELSE saidaULA;
 								  

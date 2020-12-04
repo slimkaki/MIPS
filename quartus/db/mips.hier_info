@@ -1920,8 +1920,9 @@ saida[31] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit0
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -1931,13 +1932,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit0|muxAllLogic2x1:muxInvb
@@ -1970,8 +1964,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit1
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -1981,13 +1976,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit1|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit1|muxAllLogic2x1:muxInvb
@@ -2020,8 +2008,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit2
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2031,13 +2020,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit2|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit2|muxAllLogic2x1:muxInvb
@@ -2070,8 +2052,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2081,13 +2064,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit3|muxAllLogic2x1:muxInvb
@@ -2120,8 +2096,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit4
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2131,13 +2108,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit4|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit4|muxAllLogic2x1:muxInvb
@@ -2170,8 +2140,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit5
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2181,13 +2152,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit5|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit5|muxAllLogic2x1:muxInvb
@@ -2220,8 +2184,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit6
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2231,13 +2196,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit6|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit6|muxAllLogic2x1:muxInvb
@@ -2270,8 +2228,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit7
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2281,13 +2240,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit7|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit7|muxAllLogic2x1:muxInvb
@@ -2320,8 +2272,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit8
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2331,13 +2284,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit8|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit8|muxAllLogic2x1:muxInvb
@@ -2370,8 +2316,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit9
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2381,13 +2328,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit9|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit9|muxAllLogic2x1:muxInvb
@@ -2420,8 +2360,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit10
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2431,13 +2372,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit10|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit10|muxAllLogic2x1:muxInvb
@@ -2470,8 +2404,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit11
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2481,13 +2416,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit11|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit11|muxAllLogic2x1:muxInvb
@@ -2520,8 +2448,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit12
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2531,13 +2460,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit12|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit12|muxAllLogic2x1:muxInvb
@@ -2570,8 +2492,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit13
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2581,13 +2504,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit13|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit13|muxAllLogic2x1:muxInvb
@@ -2620,8 +2536,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit14
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2631,13 +2548,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit14|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit14|muxAllLogic2x1:muxInvb
@@ -2670,8 +2580,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit15
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2681,13 +2592,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit15|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit15|muxAllLogic2x1:muxInvb
@@ -2720,8 +2624,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit16
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2731,13 +2636,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit16|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit16|muxAllLogic2x1:muxInvb
@@ -2770,8 +2668,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit17
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2781,13 +2680,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit17|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit17|muxAllLogic2x1:muxInvb
@@ -2820,8 +2712,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit18
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2831,13 +2724,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit18|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit18|muxAllLogic2x1:muxInvb
@@ -2870,8 +2756,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit19
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2881,13 +2768,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit19|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit19|muxAllLogic2x1:muxInvb
@@ -2920,8 +2800,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit20
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2931,13 +2812,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit20|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit20|muxAllLogic2x1:muxInvb
@@ -2970,8 +2844,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit21
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -2981,13 +2856,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit21|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit21|muxAllLogic2x1:muxInvb
@@ -3020,8 +2888,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit22
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3031,13 +2900,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit22|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit22|muxAllLogic2x1:muxInvb
@@ -3070,8 +2932,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit23
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3081,13 +2944,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit23|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit23|muxAllLogic2x1:muxInvb
@@ -3120,8 +2976,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit24
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3131,13 +2988,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit24|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit24|muxAllLogic2x1:muxInvb
@@ -3170,8 +3020,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit25
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3181,13 +3032,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit25|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit25|muxAllLogic2x1:muxInvb
@@ -3220,8 +3064,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3231,13 +3076,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit26|muxAllLogic2x1:muxInvb
@@ -3270,8 +3108,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit27
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3281,13 +3120,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit27|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit27|muxAllLogic2x1:muxInvb
@@ -3320,8 +3152,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit28
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3331,13 +3164,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit28|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit28|muxAllLogic2x1:muxInvb
@@ -3370,8 +3196,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit29
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3381,13 +3208,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit29|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit29|muxAllLogic2x1:muxInvb
@@ -3420,8 +3240,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit30
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3431,13 +3252,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit30|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit30|muxAllLogic2x1:muxInvb
@@ -3470,8 +3284,9 @@ saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit31
-entradaA => muxalllogic2x1:muxInva.entradaA_MUX
-entradaA => muxalllogic2x1:muxInva.entradaB_MUX
+entradaA => comb.IN1
+entradaA => comb.IN1
+entradaA => somadorula:soma.entradaA
 entradaB => muxalllogic2x1:muxInvb.entradaA_MUX
 seletor[0] => muxgenerico4x2:Muxao.seletor_MUX[0]
 seletor[1] => muxgenerico4x2:Muxao.seletor_MUX[1]
@@ -3481,13 +3296,6 @@ vem_1 => somadorula:soma.vem_1
 vai_1 <= somadorula:soma.vai_1
 saida <= muxgenerico4x2:Muxao.saida_MUX
 entradaB_inv => muxalllogic2x1:muxInvb.entradaB_MUX
-
-
-|TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit31|muxAllLogic2x1:muxInva
-entradaA_MUX => saida_MUX.DATAA
-entradaB_MUX => saida_MUX.DATAB
-seletor_MUX => saida_MUX.OUTPUTSELECT
-saida_MUX <= saida_MUX.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |TopLevel|CPU:processador|FluxoDados:FD|ULA:ULA_bit31|muxAllLogic2x1:muxInvb

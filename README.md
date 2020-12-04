@@ -15,8 +15,13 @@ Projeto de um Processador MIPS implementado em VHDL para a disciplina de Design 
 Insper - Engenharia da Computação - 2020.2
 ___
 
-<object data="http://github.com.com/slimkaki/MIPS/MIPS_architecture.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="http://github.com.com/slimkaki/MIPS/MIPS_architecture.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://yoursite.com/the.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+**Arquitetura do nosso processador:**
+![Arquitetura MIPS](https://github.com/slimkaki/MIPS/MIPS_architecture.png)
+
+*OBS: O desenho da arquitetura pode ser visto com melhor qualidade no arquivo MIPS_architecture.pdf*
+
+**Mais informações do projeto no arquivo:**
+https://github.com/slimkaki/MIPS/DOCS_MIPS.pdf
+
+**Interação com o usuário:**
+![Top Level](https://github.com/slimkaki/MIPS/fpga_mips.png)

@@ -3,10 +3,6 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
 
 entity ULA is
-    generic
-    (
-        larguraDados : natural := 32
-    );
     port
     (
       entradaA, entradaB  :  in STD_LOGIC;
@@ -53,7 +49,7 @@ architecture comportamento of ULA is
       Muxao : entity work.muxGenerico4x2 port map(entrada0 => (entradaA and saidaB),
                                                   entrada1 => (entradaA or  saidaB),
                                                   entrada2 => saidaSomador,
-                                                  entrada3 => overflow,
+                                                  entrada3 => saidaSomador,
                                                   seletor_MUX => selMuxzao,
                                                   saida_MUX => outputMuxzao);
 

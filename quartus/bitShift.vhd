@@ -16,7 +16,7 @@ architecture arch of bitShift is
 signal shift1 : std_logic_vector((dataWidth - 1) downto 0);
 
 begin
-    process(clock) is
+    process(clock, entrada) is
     begin
         saida <= std_logic_vector(shift_left(unsigned(entrada), shiftSize));
     end process;

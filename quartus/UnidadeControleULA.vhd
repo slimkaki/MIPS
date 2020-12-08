@@ -14,7 +14,6 @@ end UnidadeControleULA;
 architecture arch of UnidadeControleULA is
     alias opcode : std_logic_vector is opCodeFunct(11 downto 6);
     alias funct  : std_logic_vector is opCodeFunct(5 downto 0);
-    signal Functcrtl : std_logic_vector(2 downto 0);
 begin
     -- Operacoes a serem realizadas
 	 -- Primeiro bit reservado para inversao do B
@@ -25,22 +24,20 @@ begin
 	 --       - 10: SOMA/SUBTRACAO
 	 --       - 11: SLT
 	 
-    Functcrtl <= "010" WHEN (opcode = add_R(11 downto 6) and funct = add_R(5 downto 0)) or 
-                            (opcode = addu_R(11 downto 6) and funct = addu_R(5 downto 0)) or
-                            (opcode = addi_I(11 downto 6)) ELSE
-                 "110" WHEN (opcode = sub_R(11 downto 6) and funct = sub_R(5 downto 0)) or
-                            (opcode = subu_R(11 downto 6) and funct = subu_R(5 downto 0)) or
-                            (opcode = beq_I(11 downto 6)) or (opcode = bne_I(11 downto 6)) ELSE
-                 "110" WHEN (opcode = slt_r(11 downto 6) and funct = slt_R(5 downto 0)) or
-                            (opcode = sltu_R(11 downto 6) and funct = sltu_R(5 downto 0)) or 
-									 (opcode = slti_I(11 downto 6)) ELSE
-                 "000" WHEN (opcode = and_R(11 downto 6) and funct = and_R(5 downto 0)) or
-                            (opcode = andi_I(11 downto 6)) ELSE
-                 "001" WHEN (opcode = or_R(11 downto 6) and funct = or_R(5 downto 0)) or
-                            (opcode = ori_I(11 downto 6));
-
-    ULActrl <= Functcrtl WHEN (ULAop = "10") ELSE 
-                   "110" WHEN (ULAop = "01") ELSE 
-                   "010" WHEN (ULAop = "00");
+    ULActrl <=   "010" WHEN (opcode = add_R(11 downto 6) and funct = add_R(5 downto 0) and (ULAop = "10")) or 
+                            (opcode = addu_R(11 downto 6) and funct = addu_R(5 downto 0) and (ULAop = "10")) or
+                            (opcode = addi_I(11 downto 6) and (ULAop = "10")) ELSE
+                 "110" WHEN (opcode = sub_R(11 downto 6) and funct = sub_R(5 downto 0) and (ULAop = "10")) or
+                            (opcode = subu_R(11 downto 6) and funct = subu_R(5 downto 0) and (ULAop = "10")) or
+                            (opcode = beq_I(11 downto 6) and (ULAop = "10")) or (opcode = bne_I(11 downto 6) and (ULAop = "10")) ELSE
+                 "111" WHEN (opcode = slt_r(11 downto 6) and funct = slt_R(5 downto 0) and (ULAop = "10")) or
+                            (opcode = sltu_R(11 downto 6) and funct = sltu_R(5 downto 0) and (ULAop = "10")) or 
+									 (opcode = slti_I(11 downto 6) and (ULAop = "10")) ELSE
+                 "000" WHEN (opcode = and_R(11 downto 6) and funct = and_R(5 downto 0) and (ULAop = "10")) or
+                            (opcode = andi_I(11 downto 6) and (ULAop = "10")) ELSE
+                 "001" WHEN (opcode = or_R(11 downto 6) and funct = or_R(5 downto 0) and (ULAop = "10")) or
+                            (opcode = ori_I(11 downto 6) and (ULAop = "10")) ELSE
+                 "110" WHEN (ULAop = "01") ELSE
+                 "010" WHEN (ULAop = "00") ;
 
 end architecture;

@@ -301,8 +301,6 @@ begin
 		-- concatena 31 zeros com o xor da saida da ULA e o overflow
 		result_slt <= "0000000000000000000000000000000" & (saidaULA(31) xor overflow_slt);
 		 
---		CASO_LUI : entity work.extensorSinal_LUI port map (estendeSinal_IN => entradaB,
---																			estendeSinal_OUT => );
       saida_lui <= imediato & std_logic_vector(TO_UNSIGNED(0, 16));
 
 		 -- Salvando a saida da ULA como output do fluxo de dados

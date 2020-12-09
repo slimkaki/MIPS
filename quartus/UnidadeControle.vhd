@@ -5,12 +5,12 @@ use work.constants.all;
 
 entity UnidadeControle is
   generic ( 
-        controlWidth : natural := 17
+        controlWidth : natural := 18
     );
   port (
     clk, rst          : in std_logic;
     opCodeFunct       : in std_logic_vector (11 downto 0);
-    palavraControle   : out std_logic_vector(16 downto 0)
+    palavraControle   : out std_logic_vector(17 downto 0)
   );
 end UnidadeControle; 
 
@@ -20,14 +20,14 @@ architecture arch of UnidadeControle is
     alias funct  : std_logic_vector(5 downto 0) is opCodeFunct(5 downto 0);
 	
 	 -- Separando a palavra controle para melhor tratamento
-	 alias LUI           : std_logic is palavraControle(16);
-    alias BNE           : std_logic is palavraControle(15);
-    alias muxJR         : std_logic is palavraControle(14);
-    alias muxR31        : std_logic is palavraControle(13);
-    alias muxJUMP       : std_logic_vector is palavraControle(12 downto 11);
-    alias muxRtRd       : std_logic is palavraControle(10);
-    alias habEscritaReg : std_logic is palavraControle(9);
-    alias muxRtImed     : std_logic is palavraControle(8);
+	 alias LUI           : std_logic is palavraControle(17);
+    alias BNE           : std_logic is palavraControle(16);
+    alias muxJR         : std_logic is palavraControle(15);
+    alias muxR31        : std_logic is palavraControle(14);
+    alias muxJUMP       : std_logic_vector is palavraControle(13 downto 12);
+    alias muxRtRd       : std_logic is palavraControle(11);
+    alias habEscritaReg : std_logic is palavraControle(10);
+    alias muxRtImed     : std_logic_vector is palavraControle(9 downto 8);
     alias ULActrl       : std_logic_vector(2 downto 0) is palavraControle(7 downto 5);
     alias muxULAMem     : std_logic_vector(1 downto 0) is palavraControle(4 downto 3);
     alias BEQ           : std_logic is palavraControle(2);
@@ -76,18 +76,19 @@ begin
 									 (opCode = slt_R(11 downto 6)) or
                             (opCode = slti_I(11 downto 6)) or
                             (opCode = sltiu_I(11 downto 6)) or
-									 (opcode = jal_J (11 downto 6)) else '0';
+									 (opcode = jal_J (11 downto 6)) or
+									 (opCode = "000000" and funct /= "000000") else '0';
 									 
   -- Escolhe a entrada B da ULA, entre o imediato e a segunda saida do banco de registradores
-  muxRtImed <= '1' when (opCode = addi_I(11 downto 6)) or
-                        (opCode = addiu_I(11 downto 6)) or
-                        (opCode = andi_I(11 downto 6)) or
-                        (opCode = lui_I(11 downto 6)) or
-                        (opCode = ori_I(11 downto 6)) or
-                        (opCode = slti_I(11 downto 6)) or
-                        (opCode = sltiu_I(11 downto 6)) or
-								(opCode = sw_I(11 downto 6)) or
-								(opCode = lw_I(11 downto 6)) else '0';
+  muxRtImed <= "10" when (opCode = andi_I(11 downto 6)) or
+								 (opCode = ori_I(11 downto 6)) else
+					"01"  when (opCode = addi_I(11 downto 6)) or
+                          (opCode = addiu_I(11 downto 6)) or
+                          (opCode = lui_I(11 downto 6)) or
+                          (opCode = slti_I(11 downto 6)) or
+                          (opCode = sltiu_I(11 downto 6)) or
+								  (opCode = sw_I(11 downto 6)) or
+								  (opCode = lw_I(11 downto 6)) else "00";
 
   -- Escolhe o que deve ser escrito no banco de registradres, entre a saida da ULA, saida da memoria ram
   -- ou o vetor extendido do lui ou tambem o valor do jal

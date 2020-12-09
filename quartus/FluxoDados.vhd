@@ -8,7 +8,7 @@ entity FluxoDados is
     );
     port(
         clk, rst        :  in std_logic;
-        palavraControle :  in std_logic_vector(16 downto 0);
+        palavraControle :  in std_logic_vector(17 downto 0);
         opCodeFunct     :  out std_logic_vector(11 downto 0);
         saida_PC        :  out std_logic_vector(31 downto 0);
         mSaidaULA, saidaMegaMux : out std_logic_vector(31 downto 0)
@@ -38,19 +38,20 @@ architecture comportamento of FluxoDados is
 	 
 	 
 	 -- Dividindo a palavra controle
-	 alias LUI           : std_logic is palavraControle(16);
-    alias BNE           : std_logic is palavraControle(15);
-    alias muxJR         : std_logic is palavraControle(14);
-    alias muxR31        : std_logic is palavraControle(13);
-    alias muxJUMP       : std_logic_vector is palavraControle(12 downto 11);
-    alias muxRtRd       : std_logic is palavraControle(10);
-    alias habEscritaReg : std_logic is palavraControle(9);
-    alias muxRtImed     : std_logic is palavraControle(8);
-    alias ULActrl         : std_logic_vector(2 downto 0) is palavraControle(7 downto 5);
+	 alias LUI           : std_logic is palavraControle(17);
+    alias BNE           : std_logic is palavraControle(16);
+    alias muxJR         : std_logic is palavraControle(15);
+    alias muxR31        : std_logic is palavraControle(14);
+    alias muxJUMP       : std_logic_vector is palavraControle(13 downto 12);
+    alias muxRtRd       : std_logic is palavraControle(11);
+    alias habEscritaReg : std_logic is palavraControle(10);
+    alias muxRtImed     : std_logic_vector is palavraControle(9 downto 8);
+    alias ULActrl       : std_logic_vector(2 downto 0) is palavraControle(7 downto 5);
     alias muxULAMem     : std_logic_vector(1 downto 0) is palavraControle(4 downto 3);
     alias BEQ           : std_logic is palavraControle(2);
     alias habLeituraMEM : std_logic is palavraControle(1);
     alias habEscritaMEM : std_logic is palavraControle(0);
+
 
     begin
 		  -- Instruction Fetch
@@ -107,6 +108,8 @@ architecture comportamento of FluxoDados is
 																 LUIcase => LUI,
                                                  mSaidaULA => saidaULA,
                                                  flagZ => flagZ);
+																 
+--      saida_lui <= extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16));
 		 
 		 -- saida da ULA adicionando o caso SLT e o caso LUI
 		 -- recebe result_slt quando a instrucao for SLT ou SLTI
@@ -125,6 +128,11 @@ architecture comportamento of FluxoDados is
                                                         larguraDadoSaida   => instructWidth)
                                            port map (estendeSinal_IN  => extendInstruc,
                                                      estendeSinal_OUT => saidaSigExt);
+																	  
+			ZeroSinalExtensor : entity work.ZeroSignExtend generic map (larguraDadoEntrada => 16, 
+                                                        larguraDadoSaida   => instructWidth)
+                                           port map (estendeSinal_IN  => extendInstruc,
+                                                     estendeSinal_OUT => sigExtZero);
 	    
 		 -- Seleciona se o endereco do registrador 3 no banco de registradores sera igual
 		 -- a endereco B ou endereco C
@@ -144,11 +152,18 @@ architecture comportamento of FluxoDados is
 
 		  -- Seleciona a entrada B da ULA entre a saida do registrador 2 do banco e 
 		  -- o imediato extendido
-        mux_RTimed  : entity work.muxGenerico2x1 generic map (larguraDados => 32)
-																port map (entradaA_MUX  => outB,
-                                                          entradaB_MUX  => saidaSigExt,
-                                                          seletor_MUX   => muxRtImed,
-                                                          saida_MUX     => saida_MUXimed);
+--        mux_RTimed  : entity work.muxGenerico2x1 generic map (larguraDados => 32)
+--																port map (entradaA_MUX  => outB,
+--                                                          entradaB_MUX  => saidaSigExt,
+--                                                          seletor_MUX   => muxRtImed,
+--                                                          saida_MUX     => saida_MUXimed);
+
+			mux_RTimed  : entity work.muxGenerico4x2_32 port map (entrada0 => outB,
+                                                          entrada1 => saidaSigExt,
+                                                          entrada2 => sigExtZero,
+                                                          entrada3 => outB,
+                                                          seletor_MUX => muxRtImed,
+                                                          saida_MUX => saida_MUXimed);
 																 
 			-- Memoria RAM ou memoria de dados
 			memRAM    : entity work.RAMMIPS port map(clk => clk,

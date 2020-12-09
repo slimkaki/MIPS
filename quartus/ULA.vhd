@@ -40,7 +40,7 @@ architecture comportamento of ULA is
                                               entradaB => saidaB,
                                               vem_1 => vem_1,
                                               vai_1 => vai_1,
-                                              saida => saidaSomador);		
+                                              saida => saidaSomador);
 		
 
       Muxao : entity work.muxGenerico4x2 port map(entrada0 => (entradaA and saidaB),

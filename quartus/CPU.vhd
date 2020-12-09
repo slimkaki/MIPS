@@ -5,7 +5,7 @@ library ieee ;
 entity CPU is
   generic (
     instructWidth : natural := 32;
-    controlWidth  : natural := 16
+    controlWidth  : natural := 17
   );
   port (
    clk, rst : in std_logic;
@@ -14,7 +14,7 @@ entity CPU is
 end CPU; 
 
 architecture arch of CPU is
-    signal palavraControle : std_logic_vector(15 downto 0);
+    signal palavraControle : std_logic_vector(16 downto 0);
     signal opCodeFunct     : std_logic_vector(11 downto 0);
 
 begin

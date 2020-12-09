@@ -5,12 +5,12 @@ use work.constants.all;
 
 entity UnidadeControle is
   generic ( 
-        controlWidth : natural := 15
+        controlWidth : natural := 17
     );
   port (
     clk, rst          : in std_logic;
     opCodeFunct       : in std_logic_vector (11 downto 0);
-    palavraControle   : out std_logic_vector(15 downto 0)
+    palavraControle   : out std_logic_vector(16 downto 0)
   );
 end UnidadeControle; 
 
@@ -20,6 +20,7 @@ architecture arch of UnidadeControle is
     alias funct  : std_logic_vector(5 downto 0) is opCodeFunct(5 downto 0);
 	
 	 -- Separando a palavra controle para melhor tratamento
+	 alias LUI           : std_logic is palavraControle(16);
     alias BNE           : std_logic is palavraControle(15);
     alias muxJR         : std_logic is palavraControle(14);
     alias muxR31        : std_logic is palavraControle(13);
@@ -36,6 +37,9 @@ architecture arch of UnidadeControle is
     signal ULAop : std_logic_vector(1 downto 0);
 
 begin
+  -- Bit reservado para dizer se a saida da ULA sera o LUI
+  LUI <= '1' when (opCode = lui_I (11 downto 6)) else '0';
+	
   -- Bit reservado para instrucao BNE
   BNE <= '1' when (opCode = bne_I (11 downto 6)) else '0';
 	

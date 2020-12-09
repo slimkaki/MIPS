@@ -8,7 +8,7 @@ entity FluxoDados is
     );
     port(
         clk, rst        :  in std_logic;
-        palavraControle :  in std_logic_vector(15 downto 0);
+        palavraControle :  in std_logic_vector(16 downto 0);
         opCodeFunct     :  out std_logic_vector(11 downto 0);
         saida_PC        :  out std_logic_vector(31 downto 0);
         mSaidaULA, saidaMegaMux : out std_logic_vector(31 downto 0)
@@ -38,6 +38,7 @@ architecture comportamento of FluxoDados is
 	 
 	 
 	 -- Dividindo a palavra controle
+	 alias LUI           : std_logic is palavraControle(16);
     alias BNE           : std_logic is palavraControle(15);
     alias muxJR         : std_logic is palavraControle(14);
     alias muxR31        : std_logic is palavraControle(13);
@@ -80,12 +81,6 @@ architecture comportamento of FluxoDados is
 		  -- Imediato das instrucoes do tipo I
         extendInstruc            <= instrucao(15 downto 0);
 		  
-		  -- MUX JR para definir entrada no banco de registradores no primeiro endereco
-			-- mux_JR : entity work.muxGenerico2x1 generic map (larguraDados => 5)
-			-- 													port map (entradaA_MUX  => endA,
-            --                                               entradaB_MUX  => std_logic_vector(TO_UNSIGNED(31, 5)),
-            --                                               seletor_MUX   => muxJR,
-            --                                               saida_MUX     => saida_mux_jr);
 		  -- Banco de registradores
         BancoReg : entity work.bancoRegistradores port map (clk => clk,
                                                             enderecoA => endA,
@@ -97,28 +92,30 @@ architecture comportamento of FluxoDados is
                                                             saidaB => outB);
 		  
 		  -- saida de overflow da ULA
-		  overflow_slt <= vai_1_all(30) xor vai_1_all(31);
+--		  overflow_slt <= vai_1_all(30) xor vai_1_all(31);
 		  
 		  -- Sinal usado para o caso da instrucao selecionar SLT
 		  -- concatena 31 zeros com o xor da saida da ULA e o overflow
-		  result_slt <= "0000000000000000000000000000000" & (saidaULA(31) xor overflow_slt);
+--		  result_slt <= "0000000000000000000000000000000" & (saidaULA(31) xor overflow_slt);
 	
 		  
 		  ULA_32bits : entity work.ULA_32 port map(clk => clk, rst => rst,
 																 ULActrl => ULActrl,
 																 entradaA => outA,
 																 entradaB => saida_MUXimed,
-                                                                 mSaidaULA => saidaULA,
-                                                                 flagZ => flagZ);
+																 imediato => extendInstruc,
+																 LUIcase => LUI,
+                                                 mSaidaULA => saidaULA,
+                                                 flagZ => flagZ);
 		 
 		 -- saida da ULA adicionando o caso SLT e o caso LUI
 		 -- recebe result_slt quando a instrucao for SLT ou SLTI
 		 -- recebe saida_lui quando a instrucao for lui
-        saidaULA_final <= saida_lui WHEN instrucao(31 downto 26) = "001111"
-						  ELSE saidaULA;
+--        saidaULA_final <= saida_lui WHEN instrucao(31 downto 26) = "001111"
+--						  ELSE saidaULA;
 								  
 		 -- Salvando a saida da ULA como output do fluxo de dados
-		 mSaidaULA <= saidaULA_final;
+		 mSaidaULA <= saidaULA;
 		 -- ================================================================
 		 
 			
@@ -152,18 +149,6 @@ architecture comportamento of FluxoDados is
                                                           entradaB_MUX  => saidaSigExt,
                                                           seletor_MUX   => muxRtImed,
                                                           saida_MUX     => saida_MUXimed);
-
-		  -- Porta logica AND entre flagZ e BEQ
-		  -- importante para a instrucao BEQ no fetch
-        -- LogicAND : entity work.LogicAnd port map(flagZ  => flagZ,
-        --                                          BEQ    => BEQ,
-        --                                          andOUT => andBEQZero);
-																 
-		--   -- Porta logica AND entre flagZ e BNE
-		--   -- importante para a instrucao BNE no fetch
-        -- LogicAND2 : entity work.LogicAnd port map(flagZ  => not flagZ,
-        --                                          BEQ    => BNE,
-        --                                          andOUT => andBNEZero);
 																 
 			-- Memoria RAM ou memoria de dados
 			memRAM    : entity work.RAMMIPS port map(clk => clk,
@@ -174,14 +159,14 @@ architecture comportamento of FluxoDados is
 														  
 		  -- Para o caso jal
 		  -- soma +4 ao program counter atual
-		  SOMA : entity work.somador generic map (larguraDados => 32)
+		  SOMA_JAL : entity work.somador generic map (larguraDados => 32)
 								   port map (entradaA => sigSaida_PC,
 										     entradaB => std_logic_vector(TO_UNSIGNED(4, 32)),
 											 saida => pc_in);
 		  
 		  -- Mux ULA/RAM
 		  -- Decide qual dado que vai ser escrito no banco de registradores
-        muxULAram  : entity work.muxGenerico4x2_32 port map (entrada0 => saidaULA_final,
+        muxULAram  : entity work.muxGenerico4x2_32 port map (entrada0 => saidaULA,
                                                           entrada1 => saidaRAM,
                                                           entrada2 => saidaSigExt,
                                                           entrada3 => pc_in,

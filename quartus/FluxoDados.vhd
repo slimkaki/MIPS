@@ -103,10 +103,12 @@ architecture comportamento of FluxoDados is
 																 ULActrl => ULActrl,
 																 entradaA => outA,
 																 entradaB => saida_MUXimed,
-																 imediato => extendInstruc,
-																 LUIcase => LUI,
                                                  mSaidaULA => saidaULA,
                                                  flagZ => flagZ);
+																 
+		--		CASO_LUI : entity work.extensorSinal_LUI port map (estendeSinal_IN => entradaB,
+		--																			estendeSinal_OUT => );
+      saida_lui <= extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16));
 		 
 		 -- saida da ULA adicionando o caso SLT e o caso LUI
 		 -- recebe result_slt quando a instrucao for SLT ou SLTI
@@ -152,7 +154,7 @@ architecture comportamento of FluxoDados is
 																 
 			-- Memoria RAM ou memoria de dados
 			memRAM    : entity work.RAMMIPS port map(clk => clk,
-															 Endereco => saidaULA_final,
+															 Endereco => saidaULA,
 															 Dado_in => outB,
 															 Dado_out => saidaRAM,
 															 we => habEscritaMEM);
@@ -168,7 +170,7 @@ architecture comportamento of FluxoDados is
 		  -- Decide qual dado que vai ser escrito no banco de registradores
         muxULAram  : entity work.muxGenerico4x2_32 port map (entrada0 => saidaULA,
                                                           entrada1 => saidaRAM,
-                                                          entrada2 => saidaSigExt,
+                                                          entrada2 => saida_lui,
                                                           entrada3 => pc_in,
                                                           seletor_MUX => muxULAMem,
                                                           saida_MUX => saida_MUXulaRAM);

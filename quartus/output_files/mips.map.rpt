@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips
-Wed Dec  9 02:42:14 2020
+Wed Dec  9 02:58:14 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -70,9 +70,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  62. Parameter Settings for User Entity Instance: CPU:processador|FluxoDados:FD|muxGenerico2x1:mux_R31
  63. Parameter Settings for User Entity Instance: CPU:processador|FluxoDados:FD|muxGenerico2x1:mux_RTimed
  64. Parameter Settings for User Entity Instance: CPU:processador|FluxoDados:FD|RAMMIPS:memRAM
- 65. Parameter Settings for User Entity Instance: CPU:processador|FluxoDados:FD|somador:SOMA
+ 65. Parameter Settings for User Entity Instance: CPU:processador|FluxoDados:FD|somador:SOMA_JAL
  66. Parameter Settings for User Entity Instance: CPU:processador|UnidadeControle:UC
- 67. Port Connectivity Checks: "CPU:processador|FluxoDados:FD|somador:SOMA"
+ 67. Port Connectivity Checks: "CPU:processador|FluxoDados:FD|somador:SOMA_JAL"
  68. Port Connectivity Checks: "CPU:processador|FluxoDados:FD|muxGenerico2x1:mux_R31"
  69. Port Connectivity Checks: "CPU:processador|FluxoDados:FD|ULA_32:ULA_32bits|ULA:ULA_bit0"
  70. Port Connectivity Checks: "CPU:processador|FluxoDados:FD|ULA_32:ULA_32bits|somador:inverte_B"
@@ -108,7 +108,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Dec  9 02:42:14 2020       ;
+; Analysis & Synthesis Status     ; Successful - Wed Dec  9 02:58:14 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mips                                        ;
 ; Top-level Entity Name           ; TopLevel                                    ;
@@ -272,14 +272,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 969                      ;
+; Estimate of Logic utilization (ALMs needed) ; 971                      ;
 ;                                             ;                          ;
-; Combinational ALUT usage for logic          ; 1408                     ;
+; Combinational ALUT usage for logic          ; 1412                     ;
 ;     -- 7 input functions                    ; 144                      ;
 ;     -- 6 input functions                    ; 215                      ;
 ;     -- 5 input functions                    ; 204                      ;
-;     -- 4 input functions                    ; 339                      ;
-;     -- <=3 input functions                  ; 506                      ;
+;     -- 4 input functions                    ; 341                      ;
+;     -- <=3 input functions                  ; 508                      ;
 ;                                             ;                          ;
 ; Dedicated logic registers                   ; 833                      ;
 ;                                             ;                          ;
@@ -289,7 +289,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; edgeDetector:edges|saida ;
 ; Maximum fan-out                             ; 832                      ;
-; Total fan-out                               ; 8474                     ;
+; Total fan-out                               ; 8486                     ;
 ; Average fan-out                             ; 3.57                     ;
 +---------------------------------------------+--------------------------+
 
@@ -299,9 +299,9 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+------------------------+--------------+
 ; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Entity Name            ; Library Name ;
 +-----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------+------------------------+--------------+
-; |TopLevel                               ; 1408 (0)            ; 833 (0)                   ; 0                 ; 0          ; 67   ; 0            ; |TopLevel                                                                                    ; TopLevel               ; work         ;
-;    |CPU:processador|                    ; 1313 (0)            ; 832 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador                                                                    ; CPU                    ; work         ;
-;       |FluxoDados:FD|                   ; 1290 (0)            ; 832 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD                                                      ; FluxoDados             ; work         ;
+; |TopLevel                               ; 1412 (0)            ; 833 (0)                   ; 0                 ; 0          ; 67   ; 0            ; |TopLevel                                                                                    ; TopLevel               ; work         ;
+;    |CPU:processador|                    ; 1317 (0)            ; 832 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador                                                                    ; CPU                    ; work         ;
+;       |FluxoDados:FD|                   ; 1294 (0)            ; 832 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD                                                      ; FluxoDados             ; work         ;
 ;          |RAMMIPS:memRAM|               ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|RAMMIPS:memRAM                                       ; RAMMIPS                ; work         ;
 ;          |ULA_32:ULA_32bits|            ; 634 (64)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA_32:ULA_32bits                                    ; ULA_32                 ; work         ;
 ;             |ULA:ULA_bit0|              ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA_32:ULA_32bits|ULA:ULA_bit0                       ; ULA                    ; work         ;
@@ -386,14 +386,14 @@ https://fpgasoftware.intel.com/eula.
 ;                |somadorULA:soma|        ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA_32:ULA_32bits|ULA:ULA_bit9|somadorULA:soma       ; somadorULA             ; work         ;
 ;             |somador:inverte_B|         ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|ULA_32:ULA_32bits|somador:inverte_B                  ; somador                ; work         ;
 ;          |bancoRegistradores:BancoReg|  ; 484 (484)           ; 768 (768)                 ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|bancoRegistradores:BancoReg                          ; bancoRegistradores     ; work         ;
-;          |fetch:fetchInstruction|       ; 105 (0)             ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction                               ; fetch                  ; work         ;
-;             |ROMMIPS:ROM|               ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|ROMMIPS:ROM                   ; ROMMIPS                ; work         ;
+;          |fetch:fetchInstruction|       ; 109 (0)             ; 32 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction                               ; fetch                  ; work         ;
+;             |ROMMIPS:ROM|               ; 35 (35)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|ROMMIPS:ROM                   ; ROMMIPS                ; work         ;
 ;             |muxGenerico4x2_32:PROX_PC| ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|muxGenerico4x2_32:PROX_PC     ; muxGenerico4x2_32      ; work         ;
 ;             |registradorGenerico:PC|    ; 6 (6)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|registradorGenerico:PC        ; registradorGenerico    ; work         ;
 ;             |somador:SOMASIGEXT|        ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|fetch:fetchInstruction|somador:SOMASIGEXT            ; somador                ; work         ;
 ;          |muxGenerico2x1:mux_R31|       ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|muxGenerico2x1:mux_R31                               ; muxGenerico2x1         ; work         ;
 ;          |muxGenerico4x2_32:muxULAram|  ; 34 (34)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|muxGenerico4x2_32:muxULAram                          ; muxGenerico4x2_32      ; work         ;
-;          |somador:SOMA|                 ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|somador:SOMA                                         ; somador                ; work         ;
+;          |somador:SOMA_JAL|             ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|FluxoDados:FD|somador:SOMA_JAL                                     ; somador                ; work         ;
 ;       |UnidadeControle:UC|              ; 23 (8)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|UnidadeControle:UC                                                 ; UnidadeControle        ; work         ;
 ;          |UnidadeControleULA:UC_ULA|    ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|CPU:processador|UnidadeControle:UC|UnidadeControleULA:UC_ULA                       ; UnidadeControleULA     ; work         ;
 ;    |conversorHex7Segmentos:showHEX0|    ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |TopLevel|conversorHex7Segmentos:showHEX0                                                    ; conversorHex7Segmentos ; work         ;
@@ -1351,13 +1351,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: CPU:processador|FluxoDados:FD|somador:SOMA ;
-+----------------+-------+----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                           ;
-+----------------+-------+----------------------------------------------------------------+
-; larguradados   ; 32    ; Signed Integer                                                 ;
-+----------------+-------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CPU:processador|FluxoDados:FD|somador:SOMA_JAL ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; larguradados   ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1371,15 +1371,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------+
-; Port Connectivity Checks: "CPU:processador|FluxoDados:FD|somador:SOMA" ;
-+-----------------+-------+----------+-----------------------------------+
-; Port            ; Type  ; Severity ; Details                           ;
-+-----------------+-------+----------+-----------------------------------+
-; entradab[31..3] ; Input ; Info     ; Stuck at GND                      ;
-; entradab[1..0]  ; Input ; Info     ; Stuck at GND                      ;
-; entradab[2]     ; Input ; Info     ; Stuck at VCC                      ;
-+-----------------+-------+----------+-----------------------------------+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:processador|FluxoDados:FD|somador:SOMA_JAL" ;
++-----------------+-------+----------+---------------------------------------+
+; Port            ; Type  ; Severity ; Details                               ;
++-----------------+-------+----------+---------------------------------------+
+; entradab[31..3] ; Input ; Info     ; Stuck at GND                          ;
+; entradab[1..0]  ; Input ; Info     ; Stuck at GND                          ;
+; entradab[2]     ; Input ; Info     ; Stuck at VCC                          ;
++-----------------+-------+----------+---------------------------------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -1449,7 +1449,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 800                         ;
 ;     ENA CLR           ; 2                           ;
 ;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 1409                        ;
+; arriav_lcell_comb     ; 1413                        ;
 ;     arith             ; 605                         ;
 ;         0 data inputs ; 27                          ;
 ;         1 data inputs ; 381                         ;
@@ -1458,18 +1458,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 1                           ;
 ;     extend            ; 144                         ;
 ;         7 data inputs ; 144                         ;
-;     normal            ; 660                         ;
+;     normal            ; 664                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 9                           ;
-;         2 data inputs ; 49                          ;
+;         2 data inputs ; 51                          ;
 ;         3 data inputs ; 12                          ;
-;         4 data inputs ; 171                         ;
+;         4 data inputs ; 173                         ;
 ;         5 data inputs ; 203                         ;
 ;         6 data inputs ; 215                         ;
 ; boundary_port         ; 67                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 41.90                       ;
-; Average LUT depth     ; 25.79                       ;
+; Average LUT depth     ; 25.80                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1478,7 +1478,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1488,7 +1488,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Dec  9 02:41:59 2020
+    Info: Processing started: Wed Dec  9 02:57:59 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips -c mips
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ULA_32.vhd
@@ -1620,14 +1620,14 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[9]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 10
     Warning (15610): No output dependent on input pin "KEY[2]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 11
     Warning (15610): No output dependent on input pin "KEY[3]" File: /home/rafaelalmada/Documents/MIPS/quartus/TopLevel.vhd Line: 11
-Info (21057): Implemented 2267 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2271 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 2200 logic cells
+    Info (21061): Implemented 2204 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 522 megabytes
-    Info: Processing ended: Wed Dec  9 02:42:14 2020
+    Info: Peak virtual memory: 530 megabytes
+    Info: Processing ended: Wed Dec  9 02:58:14 2020
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:28
+    Info: Total CPU time (on all processors): 00:00:26
 
 

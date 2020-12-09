@@ -3891,7 +3891,7 @@ we => memRAM~38.DATAIN
 we => memRAM.WE
 
 
-|TopLevel|CPU:processador|FluxoDados:FD|somador:SOMA
+|TopLevel|CPU:processador|FluxoDados:FD|somador:SOMA_JAL
 entradaA[0] => Add0.IN32
 entradaA[1] => Add0.IN31
 entradaA[2] => Add0.IN30

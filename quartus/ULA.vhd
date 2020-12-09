@@ -23,7 +23,7 @@ architecture comportamento of ULA is
     signal outputMuxzao : std_logic;
     signal saidaB : std_logic;
 
-    signal overflow, saidaSomador : std_logic;
+    signal saidaSomador : std_logic;
 
 
     begin
@@ -40,10 +40,7 @@ architecture comportamento of ULA is
                                               entradaB => saidaB,
                                               vem_1 => vem_1,
                                               vai_1 => vai_1,
-                                              saida => saidaSomador);
-      
-      overflow <= (vai_1 xor vem_1);
-		
+                                              saida => saidaSomador);		
 		
 
       Muxao : entity work.muxGenerico4x2 port map(entrada0 => (entradaA and saidaB),

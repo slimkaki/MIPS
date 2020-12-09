@@ -10,6 +10,8 @@ entity ULA_32 is
         clk, rst        :  in std_logic;
         ULActrl :  in std_logic_vector(2 downto 0);
 		  entradaA, entradaB : in std_logic_vector((instructWidth-1) downto 0);
+		  imediato : in std_logic_vector(15 downto 0);
+		  LUIcase : in std_logic;
         flagZ     :  out std_logic;
         mSaidaULA : out std_logic_vector((instructWidth-1) downto 0)
     );
@@ -298,9 +300,13 @@ begin
 		-- Sinal usado para o caso da instrucao selecionar SLT
 		-- concatena 31 zeros com o xor da saida da ULA e o overflow
 		result_slt <= "0000000000000000000000000000000" & (saidaULA(31) xor overflow_slt);
-	
+		 
+--		CASO_LUI : entity work.extensorSinal_LUI port map (estendeSinal_IN => entradaB,
+--																			estendeSinal_OUT => );
+      saida_lui <= imediato & std_logic_vector(TO_UNSIGNED(0, 16));
 
 		 -- Salvando a saida da ULA como output do fluxo de dados
-		 mSaidaULA <= result_slt when ULActrl = "111" else
+		 mSaidaULA <= saida_lui when LUIcase = '1' else
+						  result_slt when ULActrl = "111" else
                     saidaULA;
 end;

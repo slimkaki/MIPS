@@ -92,14 +92,6 @@ architecture comportamento of FluxoDados is
                                                             saidaA => outA,
                                                             saidaB => outB);
 		  
-		  -- saida de overflow da ULA
---		  overflow_slt <= vai_1_all(30) xor vai_1_all(31);
-		  
-		  -- Sinal usado para o caso da instrucao selecionar SLT
-		  -- concatena 31 zeros com o xor da saida da ULA e o overflow
---		  result_slt <= "0000000000000000000000000000000" & (saidaULA(31) xor overflow_slt);
-	
-		  
 		  ULA_32bits : entity work.ULA_32 port map(clk => clk, rst => rst,
 																 ULActrl => ULActrl,
 																 entradaA => outA,
@@ -109,13 +101,6 @@ architecture comportamento of FluxoDados is
                                                  mSaidaULA => saidaULA,
                                                  flagZ => flagZ);
 																 
---      saida_lui <= extendInstruc & std_logic_vector(TO_UNSIGNED(0, 16));
-		 
-		 -- saida da ULA adicionando o caso SLT e o caso LUI
-		 -- recebe result_slt quando a instrucao for SLT ou SLTI
-		 -- recebe saida_lui quando a instrucao for lui
---        saidaULA_final <= saida_lui WHEN instrucao(31 downto 26) = "001111"
---						  ELSE saidaULA;
 								  
 		 -- Salvando a saida da ULA como output do fluxo de dados
 		 mSaidaULA <= saidaULA;
@@ -150,13 +135,6 @@ architecture comportamento of FluxoDados is
                                                           seletor_MUX   => muxR31,
                                                           saida_MUX     => saidaR31);
 
-		  -- Seleciona a entrada B da ULA entre a saida do registrador 2 do banco e 
-		  -- o imediato extendido
---        mux_RTimed  : entity work.muxGenerico2x1 generic map (larguraDados => 32)
---																port map (entradaA_MUX  => outB,
---                                                          entradaB_MUX  => saidaSigExt,
---                                                          seletor_MUX   => muxRtImed,
---                                                          saida_MUX     => saida_MUXimed);
 
 			mux_RTimed  : entity work.muxGenerico4x2_32 port map (entrada0 => outB,
                                                           entrada1 => saidaSigExt,

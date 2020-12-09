@@ -99,7 +99,7 @@ begin
                          (opCode = lhu_I(11 downto 6)) or
                          (opCode = lw_I(11 downto 6)) else "00";
   -- Bit reservado para instrucao BNE
-  BEQ <= '1' when (opCode = beq_I(11 downto 6));
+  BEQ <= '1' when (opCode = beq_I(11 downto 6)) else '0';
   
   -- Permite a escrita na memoria ram, tambem conhecida como memoria de dados
   habLeituraMEM <= '1' when (opCode = ll_I(11 downto 6)) or

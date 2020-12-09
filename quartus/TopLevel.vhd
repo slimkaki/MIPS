@@ -7,9 +7,9 @@ entity TopLevel is
            controlWidth : natural := 16);
   port (
     clock : in std_logic;
-    SW : in std_logic_vector(9 downto 0);
-    KEY : in std_logic_vector(3 downto 0);
-    LEDR : out std_logic_vector(9 downto 0);
+    SW : in std_logic_vector(1 downto 0);
+    KEY : in std_logic_vector(1 downto 0);
+    LEDR : out std_logic_vector(7 downto 0);
     HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : out std_logic_vector(6 downto 0)
   );
 end TopLevel; 
@@ -55,6 +55,5 @@ begin
     showHEX5 : entity work.conversorHex7Segmentos port map (dadoHex => data(23 downto 20), saida7seg => HEX5);
 	 
 	 -- Colocando os dados nos LEDs
-	 LEDR(9 downto 8) <= "00";
     LEDR(7 downto 0) <= data(31 downto 24);
 end architecture;
